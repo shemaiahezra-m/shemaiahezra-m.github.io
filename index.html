@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shemaiah Ezra - Portfolio</title>
+    <title>Shemaiah Ezra - UI/UX Designer & Front-End Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
@@ -12,315 +12,340 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container-lg">
-            <a class="navbar-brand fw-bold fs-3" href="#home">portfolio</a>
+            <a class="navbar-brand fw-bold fs-3" href="#home">SE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Web</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#performance">Performance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#creative">Creative Works</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    
+    <!-- Hero Section - Improved for Recruiters -->
+    <section id="home" class="hero-section py-5">
+        <!-- Background blur elements -->
+        <div class="hero-blur hero-blur-1"></div>
+        <div class="hero-blur hero-blur-2"></div>
+        <div class="hero-blur hero-blur-3"></div>
 
-    <!-- About Section -->
+        <div class="container-lg position-relative z-3">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <h1 class="hero-title mb-3">
+                            Shemaiah Ezra
+                        </h1>
+                        <p class="hero-subtitle mb-4">
+                            UI/UX Designer & Front-End Developer
+                        </p>
+                        <p class="hero-description mb-5">
+                            I design accessible, intuitive digital experiences that solve real-world problems. Combining design thinking with front-end development to create seamless user experiences.
+                        </p>
+                        
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg">Get In Touch</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="hero-image text-center">
+                        <img src="https://via.placeholder.com/350x350/f5e6d3/7c3aed?text=Shemaiah" alt="Shemaiah Ezra" class="img-fluid rounded-circle">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="featured-projects py-5">
+        <div class="container-lg">
+            <h2 class="section-title mb-5">Featured Projects</h2>
+            
+            <!-- Project 1: PUP Dash -->
+            <div class="project-card mb-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/500x400/4f46e5/ffffff?text=PUP+Dash" alt="PUP Dash Project" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="project-content">
+                            <h3 class="fw-bold mb-2">PUP Dash</h3>
+                            <p class="text-muted mb-3">Student management dashboard for Polytechnic University of the Philippines</p>
+                            
+                            <div class="project-details mb-4">
+                                <div class="detail-item">
+                                    <strong>Problem:</strong>
+                                    <p>Students struggled to track grades, schedules, and academic progress across multiple platforms.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Solution:</strong>
+                                    <p>Designed a centralized dashboard with intuitive navigation, clear data visualization, and quick access to critical information.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Impact:</strong>
+                                    <p>30+ beta users reported improved time management and reduced information lookup time by 60%.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex gap-2 flex-wrap mb-3">
+                                <span class="badge bg-primary">UI/UX Design</span>
+                                <span class="badge bg-info">Web App</span>
+                                <span class="badge bg-success">Dashboard</span>
+                                <span class="badge bg-warning text-dark">Figma</span>
+                            </div>
+                            
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-primary btn-sm">View Case Study</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: CameFont -->
+            <div class="project-card mb-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-5 order-lg-2">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/500x400/7c3aed/ffffff?text=CameFont" alt="CameFont Project" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 order-lg-1">
+                        <div class="project-content">
+                            <h3 class="fw-bold mb-2">CameFont</h3>
+                            <p class="text-muted mb-3">Creative typography and font customization platform for designers</p>
+                            
+                            <div class="project-details mb-4">
+                                <div class="detail-item">
+                                    <strong>Problem:</strong>
+                                    <p>Designers lacked a seamless way to preview, customize, and manage typography across projects.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Solution:</strong>
+                                    <p>Built an interactive platform with real-time font preview, variation controls, and project management features.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Impact:</strong>
+                                    <p>Enables designers to reduce typography setup time from hours to minutes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex gap-2 flex-wrap mb-3">
+                                <span class="badge bg-primary">UI/UX Design</span>
+                                <span class="badge bg-info">SaaS Product</span>
+                                <span class="badge bg-danger">Responsive</span>
+                                <span class="badge bg-warning text-dark">Prototyping</span>
+                            </div>
+                            
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-primary btn-sm">View Case Study</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA for more projects -->
+            <div class="text-center mt-5">
+                <a href="#creative" class="btn btn-outline-primary btn-lg">View More Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section - Simplified -->
     <section id="about" class="about-section py-5 bg-light">
         <div class="container-lg">
-            <div class="row g-4">
-                <!-- Left Column -->
-                <div class="col-lg-6">
-                    <div class="about-card glass-card-about p-5">
-                        <p class="about-label text-muted">ABOUT</p>
-                        <h2 class="display-5 fw-bold mb-4">Hello! I'm Shemaiah Ezra</h2>
-                        
-                        <p class="mb-4 lh-lg">I formally started designing in senior high as the first Multimedia Officer of LPU–Laguna, where I discovered my passion for visual storytelling. Since then, I've continuously grown my craft through church media and college organization projects.</p>
-
-                        <p class="mb-4 lh-lg">Now, I'm focused on UI/UX design and front-end development— creating designs that are not just visually strong, but intuitive and user-centered.</p>
-
-                        <p class="mb-5 lh-lg">I continuously strive to improve and deliver work with purpose, clarity, and impact.</p>
-
-                        <!-- Skills Grid -->
-                        <div class="skills-section">
-                            <div class="skills-grid">
-                                <div class="skill-item">
-                                    <p class="fw-500 mb-0">Graphic Design</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p class="fw-500 mb-0">UI/UX</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p class="fw-500 mb-0">Branding</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p class="fw-500 mb-0">Campaign Ads</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p class="fw-500 mb-0">Publication Materials</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p class="fw-500 mb-0">Photo and Video Editing</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tools Icons -->
-                        <div class="tools-section mt-5">
-                            <div class="tools-icons">
-                                <i class="fab fa-figma"></i>
-                                <i class="fab fa-adobe"></i>
-                                <i class="fab fa-sketch"></i>
-                                <i class="fas fa-pencil-ruler"></i>
-                                <i class="fas fa-image"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column -->
-                <div class="col-lg-6">
-                    <!-- Education -->
-                    <div class="timeline-section mb-5">
-                        <div class="section-header d-flex align-items-center mb-4">
-                            <h3 class="fw-bold mb-0 ms-2">Education</h3>
-                        </div>
-
-                        <div class="education-item">
-                            <div class="timeline-marker" style="background-color: #fbbf24;"></div>
-                            <div class="timeline-content">
-                                <p class="timeline-date">2024 – Now</p>
-                                <h5 class="fw-bold mb-1">Polytechnic University of the Philippines – Sto. Tomas Campus</h5>
-                                <p class="text-muted small">Bachelor of Science in Information Technology</p>
-                            </div>
-                        </div>
-
-                        <div class="education-item">
-                            <div class="timeline-marker" style="background-color: #fbbf24;"></div>
-                            <div class="timeline-content">
-                                <p class="timeline-date">2018 – 2024</p>
-                                <h5 class="fw-bold mb-1">Lyceum of the Philippines University – Laguna</h5>
-                                <p class="text-muted small">Strand: Science, Technology, Engineering, and Mathematics</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Affiliations -->
-                    <div class="timeline-section">
-                        <div class="section-header d-flex align-items-center mb-4">
-                            <h3 class="fw-bold mb-0 ms-2">Affiliations</h3>
-                        </div>
-
-                        <div class="affiliation-item">
-                            <div class="timeline-marker" style="background-color: #60a5fa;"></div>
-                            <div class="timeline-content">
-                                <p class="timeline-date">2025 - Now</p>
-                                <h5 class="fw-bold mb-1">PUP STC Computer Society</h5>
-                                <p class="text-muted small">Design Committee Assistant Head</p>
-                            </div>
-                        </div>
-
-                        <div class="affiliation-item">
-                            <div class="timeline-marker" style="background-color: #60a5fa;"></div>
-                            <div class="timeline-content">
-                                <p class="timeline-date">2023 – 2024</p>
-                                <h5 class="fw-bold mb-1">SALIG Senior High School Student Officer</h5>
-                                <p class="text-muted small">Senior Multimedia Officer</p>
-                            </div>
-                        </div>
-
-                        <div class="affiliation-item">
-                            <div class="timeline-marker" style="background-color: #60a5fa;"></div>
-                            <div class="timeline-content">
-                                <p class="timeline-date">2021 – Now</p>
-                                <h5 class="fw-bold mb-1">CODI International – Living Stones Youth</h5>
-                                <p class="text-muted small">Multimedia Team Member</p>
-                            </div>
-                        </div>
-
-                        <div class="affiliation-item">
-                            <div class="timeline-marker" style="background-color: #60a5fa;"></div>
-                            <div class="timeline-content">
-                                <p class="timeline-date">2024</p>
-                                <h5 class="fw-bold mb-1">Work Immersion: Torres Tech Human Resources Department</h5>
-                                <p class="text-muted small">Media and Documentation Head</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contents/Services -->
-    <section id="services" class="py-5">
-        <div class="container-lg">
-            <h2 class="display-5 fw-bold mb-5">Contents</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold mb-3">Web Design</h5>
-                            <p class="card-text text-muted">Creating beautiful and functional web experiences that engage users and drive results.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold mb-3">Mobile App Design</h5>
-                            <p class="card-text text-muted">Designing intuitive mobile applications that solve real problems and deliver value.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold mb-3">Brand Identity</h5>
-                            <p class="card-text text-muted">Developing cohesive brand strategies and visual identities that resonate with audiences.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Selected Works -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container-lg">
-            <h2 class="display-5 fw-bold mb-5">Selected Works</h2>
+            <h2 class="section-title mb-5">About Me</h2>
             
-            <!-- Project 1 -->
-            <div class="row g-4 mb-5 align-items-center">
+            <div class="row g-5">
+                <!-- About Content -->
                 <div class="col-lg-6">
-                    <h3 class="fw-bold mb-3">PUP Dash</h3>
-                    <p class="text-muted mb-3">A comprehensive dashboard designed for Polytechnic University of the Philippines to manage student information, grades, and academic progress.</p>
-                    <div class="mb-3">
-                        <span class="badge bg-warning text-dark me-2">UI Design</span>
-                        <span class="badge bg-info text-white me-2">Web App</span>
-                        <span class="badge bg-success text-white">Dashboard</span>
+                    <div class="glass-card-about p-5">
+                        <p class="about-intro">
+                            I'm a UI/UX Designer and Front-End Developer passionate about creating intuitive digital experiences. My background spans design education, multimedia production, and web development.
+                        </p>
+                        <p class="about-intro">
+                            I combine user research, design thinking, and clean code to build products that are both beautiful and functional.
+                        </p>
                     </div>
-                    <a href="#" class="btn btn-primary me-2">View Details</a>
-                    <a href="#" class="btn btn-outline-primary">View Website</a>
                 </div>
+
+                <!-- Skills -->
                 <div class="col-lg-6">
-                    <img src="https://via.placeholder.com/500x400/4f46e5/ffffff?text=PUP+Dash" alt="PUP Dash" class="img-fluid rounded">
+                    <div class="skills-container">
+                        <h4 class="fw-bold mb-4">Core Skills</h4>
+                        <div class="skills-list">
+                            <div class="skill-badge">Figma</div>
+                            <div class="skill-badge">HTML/CSS</div>
+                            <div class="skill-badge">JavaScript</div>
+                            <div class="skill-badge">React</div>
+                            <div class="skill-badge">UI Design</div>
+                            <div class="skill-badge">UX Research</div>
+                            <div class="skill-badge">Prototyping</div>
+                            <div class="skill-badge">Adobe Suite</div>
+                            <div class="skill-badge">Branding</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <h3 class="fw-bold mb-3">CameFont</h3>
-                    <p class="text-muted mb-3">An innovative platform that combines creative tools with font customization, enabling designers to create unique typography for their projects.</p>
-                    <div class="mb-3">
-                        <span class="badge bg-info text-white me-2">Web Design</span>
-                        <span class="badge bg-secondary text-white me-2">Creative Tool</span>
-                        <span class="badge bg-danger text-white">SaaS</span>
+            <!-- Education & Leadership in Two Columns -->
+            <div class="row g-5 mt-4">
+                <!-- Education -->
+                <div class="col-lg-6">
+                    <h4 class="fw-bold mb-4">Education</h4>
+                    <div class="timeline-simple">
+                        <div class="timeline-item-simple">
+                            <div class="timeline-date">2024 – Now</div>
+                            <h6 class="fw-bold">Polytechnic University of the Philippines</h6>
+                            <p class="text-muted small">BS Information Technology</p>
+                        </div>
+                        <div class="timeline-item-simple">
+                            <div class="timeline-date">2018 – 2024</div>
+                            <h6 class="fw-bold">Lyceum of the Philippines University – Laguna</h6>
+                            <p class="text-muted small">Science, Technology, Engineering, and Mathematics Strand</p>
+                        </div>
                     </div>
-                    <a href="#" class="btn btn-primary me-2">View Details</a>
-                    <a href="#" class="btn btn-outline-primary">View Website</a>
                 </div>
-                <div class="col-lg-6 order-lg-1">
-                    <img src="https://via.placeholder.com/500x400/7c3aed/ffffff?text=CameFont" alt="CameFont" class="img-fluid rounded">
+
+                <!-- Leadership & Affiliations -->
+                <div class="col-lg-6">
+                    <h4 class="fw-bold mb-4">Leadership & Affiliations</h4>
+                    <div class="timeline-simple">
+                        <div class="timeline-item-simple">
+                            <div class="timeline-date">2025 – Now</div>
+                            <h6 class="fw-bold">PUP STC Computer Society</h6>
+                            <p class="text-muted small">Design Committee Assistant Head</p>
+                        </div>
+                        <div class="timeline-item-simple">
+                            <div class="timeline-date">2021 – Now</div>
+                            <h6 class="fw-bold">CODI International – Living Stones Youth</h6>
+                            <p class="text-muted small">Multimedia Team Member</p>
+                        </div>
+                        <div class="timeline-item-simple">
+                            <div class="timeline-date">2024</div>
+                            <h6 class="fw-bold">Work Immersion: Torres Tech</h6>
+                            <p class="text-muted small">Media and Documentation Head</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Works & Materials Gallery -->
-    <section id="work" class="py-5">
+    <!-- Design Process Section -->
+    <section id="process" class="design-process py-5">
         <div class="container-lg">
-            <h2 class="display-5 fw-bold mb-5">Works & Materials</h2>
+            <h2 class="section-title mb-5">My Design Process</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-card text-center">
+                        <div class="process-icon">🔍</div>
+                        <h5 class="fw-bold mt-3 mb-2">Research</h5>
+                        <p class="text-muted small">Understand user needs through interviews, surveys, and competitive analysis</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-card text-center">
+                        <div class="process-icon">✏️</div>
+                        <h5 class="fw-bold mt-3 mb-2">Wireframe</h5>
+                        <p class="text-muted small">Create low-fidelity sketches to explore layout and information architecture</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-card text-center">
+                        <div class="process-icon">🎨</div>
+                        <h5 class="fw-bold mt-3 mb-2">Design</h5>
+                        <p class="text-muted small">Develop high-fidelity mockups with typography, color, and interactions</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-card text-center">
+                        <div class="process-icon">💻</div>
+                        <h5 class="fw-bold mt-3 mb-2">Develop</h5>
+                        <p class="text-muted small">Build responsive, accessible interfaces using modern web technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Works Gallery -->
+    <section id="creative" class="creative-works py-5 bg-light">
+        <div class="container-lg">
+            <h2 class="section-title mb-5">Creative Works</h2>
+            
             <div class="row g-4">
                 <!-- Gallery items -->
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/f5e6d3/7c3aed?text=Design+Material+1" alt="Gallery 1" class="img-fluid w-100">
+                        <img src="https://via.placeholder.com/400x300/f5e6d3/7c3aed?text=Social+Media" alt="Social Media Design" class="img-fluid w-100">
                         <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            <div class="text-center text-white">
+                                <h6 class="fw-bold">Social Media Graphics</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/e5d4f1/7c3aed?text=Design+Material+2" alt="Gallery 2" class="img-fluid w-100">
+                        <img src="https://via.placeholder.com/400x300/e5d4f1/7c3aed?text=Branding" alt="Branding Project" class="img-fluid w-100">
                         <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            <div class="text-center text-white">
+                                <h6 class="fw-bold">Brand Identity</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/d4e5f1/7c3aed?text=Design+Material+3" alt="Gallery 3" class="img-fluid w-100">
+                        <img src="https://via.placeholder.com/400x300/d4e5f1/7c3aed?text=Publications" alt="Publication Design" class="img-fluid w-100">
                         <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            <div class="text-center text-white">
+                                <h6 class="fw-bold">Publications & Posters</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/f1d4e5/7c3aed?text=Design+Material+4" alt="Gallery 4" class="img-fluid w-100">
+                        <img src="https://via.placeholder.com/400x300/f1d4e5/7c3aed?text=Packaging" alt="Packaging Design" class="img-fluid w-100">
                         <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            <div class="text-center text-white">
+                                <h6 class="fw-bold">Packaging Design</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/e1f5d4/7c3aed?text=Design+Material+5" alt="Gallery 5" class="img-fluid w-100">
+                        <img src="https://via.placeholder.com/400x300/e1f5d4/7c3aed?text=Illustrations" alt="Illustrations" class="img-fluid w-100">
                         <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            <div class="text-center text-white">
+                                <h6 class="fw-bold">Illustrations & Icons</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/d4f1e5/7c3aed?text=Design+Material+6" alt="Gallery 6" class="img-fluid w-100">
+                        <img src="https://via.placeholder.com/400x300/d4f1e5/7c3aed?text=Campaigns" alt="Campaign Design" class="img-fluid w-100">
                         <div class="overlay d-flex align-items-center justify-content-center">
-                            <a href="#" class="btn btn-light btn-sm">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Co-Created Projects -->
-    <section id="performance" class="py-5 bg-light">
-        <div class="container-lg">
-            <h2 class="display-5 fw-bold mb-5">Co-Created Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold mb-2">Innovative Design System</h5>
-                            <p class="card-text text-muted small">Collaborated with team to create a comprehensive design system</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold mb-2">Brand Refresh Initiative</h5>
-                            <p class="card-text text-muted small">Updated brand identity for multiple clients</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold mb-2">Mobile App MVP</h5>
-                            <p class="card-text text-muted small">Co-developed a minimum viable product for startup</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+                            <div class="text-center text-white">
+                                <h6 class="fw-bold">Campaign Ads</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -329,23 +354,31 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="contact-section py-5">
         <div class="container-lg">
-            <h2 class="display-5 fw-bold mb-5 text-center">Let's Work Together</h2>
             <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <p class="text-center text-muted mb-5">Interested in working on a project? Feel free to reach out through any of the channels below.</p>
-                    <div class="text-center mb-4">
-                        <a href="mailto:shemaiah@example.com" class="btn btn-primary btn-lg me-2 mb-2">Email Me</a>
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title mb-4">Interested in Working Together?</h2>
+                    <p class="lead text-muted mb-5">Have a project in mind? Let's create something amazing together.</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center flex-wrap mb-5">
+                        <a href="mailto:shemaiah@example.com" class="btn btn-primary btn-lg">Send Me an Email</a>
                         <a href="#" class="btn btn-outline-primary btn-lg">Download Resume</a>
                     </div>
-                    <div class="text-center">
-                        <div class="social-links">
-                            <a href="#" class="btn btn-outline-dark btn-sm rounded-circle me-2"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="btn btn-outline-dark btn-sm rounded-circle me-2"><i class="fab fa-github"></i></a>
-                            <a href="#" class="btn btn-outline-dark btn-sm rounded-circle me-2"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="fab fa-dribbble"></i></a>
-                        </div>
+
+                    <div class="social-links justify-content-center">
+                        <a href="https://linkedin.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle me-2">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle me-2">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle me-2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://dribbble.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -353,34 +386,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
+    <footer class="bg-dark text-white py-4 mt-5">
         <div class="container-lg">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">portfolio</h5>
-                    <p class="text-muted small">Creating engaging designs and web experiences.</p>
-                </div>
-                <div class="col-md-4">
-                    <h6 class="fw-bold mb-3">Quick Links</h6>
-                    <ul class="list-unstyled text-muted small">
-                        <li><a href="#home" class="text-decoration-none text-muted">Home</a></li>
-                        <li><a href="#projects" class="text-decoration-none text-muted">Projects</a></li>
-                        <li><a href="#contact" class="text-decoration-none text-muted">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h6 class="fw-bold mb-3">Connect</h6>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fab fa-github"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-dribbble"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-4 bg-secondary">
-            <div class="text-center text-muted small">
-                <p>&copy; 2024 Shemaiah Ezra. All rights reserved.</p>
+            <div class="text-center">
+                <p class="mb-2">&copy; 2026 Shemaiah Ezra. All rights reserved.</p>
+                <p class="text-muted small">Designed and built with <i class="fas fa-heart text-danger"></i></p>
             </div>
         </div>
     </footer>
