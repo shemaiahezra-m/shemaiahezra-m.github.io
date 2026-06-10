@@ -3,399 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shemaiah Ezra - UI/UX Designer & Front-End Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <meta name="description" content="Portfolio of Shemaiah Ezra Magpayo, a UI/UX Designer and Frontend Developer.">
+    <title>Shemaiah Ezra Magpayo | UI/UX Designer & Frontend Developer</title>
+    <link rel="icon" type="image/png" href="assets/images/DarkLogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container-lg">
-            <a class="navbar-brand fw-bold fs-3" href="#home">SE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#creative">Creative Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+    <main class="page-shell">
+        <section class="hero-card card-surface" aria-labelledby="intro-title">
+            <header class="topbar" aria-label="Portfolio header">
+                <a class="brand-mark" href="#" aria-label="Shemaiah Ezra home">
+                    <img src="assets/images/DarkLogo.png" alt="S3 logo">
+                    <span>Portfolio</span>
+                </a>
+                <nav class="top-actions" aria-label="Primary">
+                    <a href="mailto:magpayo.shemaiahezra@gmail.com">Let's talk</a>
+                    <button type="button" aria-label="Menu"><span></span><span></span></button>
+                </nav>
+            </header>
+
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <p class="micro-label">BSIT Sophomore • UI/UX Designer • Frontend Developer</p>
+                    <h1 id="intro-title">Shemaiah Ezra Magpayo</h1>
+                    <p>I design and build clean, user-centered digital experiences that are functional, accessible, and visually engaging.</p>
+                    <p>Currently exploring the intersection of design and development through UI/UX, frontend development, and creative digital projects.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-accent" href="#selected-work">My Work</a>
+                        <a class="btn btn-glass" href="mailto:magpayo.shemaiahezra@gmail.com">Contact Me</a>
+                    </div>
+                </div>
+
+                <aside class="hero-portrait card-surface" aria-label="Profile portrait">
+                    <img src="assets/images/Shemaiah.png" alt="Shemaiah Ezra">
+                    <div class="social-dock" aria-label="Social links">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="GitHub">gh</a>
+                        <a href="#" aria-label="Instagram">ig</a>
+                        <a href="mailto:magpayo.shemaiahezra@gmail.com" aria-label="Email">@</a>
+                    </div>
+                </aside>
             </div>
+
+            <div class="quick-highlights" aria-label="Quick highlights">
+                <article>
+                    <span>01</span>
+                    <h2>BSIT Sophomore</h2>
+                    <p>Polytechnic University of the Philippines</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h2>UI/UX + Frontend</h2>
+                    <p>Designing and building digital experiences</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h2>Creative Background</h2>
+                    <p>5+ years in publication and visual design</p>
+                </article>
+                <article>
+                    <span>04</span>
+                    <h2>Open for Opportunities</h2>
+                    <p>Student projects, collaborations, and internships</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="skill-rail" aria-label="Services">
+            <span>Mobile Design</span>
+            <span>Website Design</span>
+            <span>Frontend Development</span>
+            <span>UI/UX Design</span>
+            <span>Creative Digital Projects</span>
+            <span>Visual Communication</span>
         </div>
-    </nav>
 
-    <!-- Hero Section - Improved for Recruiters -->
-    <section id="home" class="hero-section py-5">
-        <!-- Background blur elements -->
-        <div class="hero-blur hero-blur-1"></div>
-        <div class="hero-blur hero-blur-2"></div>
-        <div class="hero-blur hero-blur-3"></div>
-
-        <div class="container-lg position-relative z-3">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-8">
-                    <div class="hero-content">
-                        <h1 class="hero-title mb-3">
-                            Shemaiah Ezra
-                        </h1>
-                        <p class="hero-subtitle mb-4">
-                            UI/UX Designer & Front-End Developer
-                        </p>
-                        <p class="hero-description mb-5">
-                            I design accessible, intuitive digital experiences that solve real-world problems. Combining design thinking with front-end development to create seamless user experiences.
-                        </p>
-                        
-                        <div class="d-flex gap-3 flex-wrap">
-                            <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
-                            <a href="#contact" class="btn btn-outline-primary btn-lg">Get In Touch</a>
-                        </div>
-                    </div>
+        <section id="selected-work" class="section-wrap work-section" aria-labelledby="work-title">
+            <div class="section-header">
+                <div>
+                    <p>Featured Projects</p>
+                    <h2 id="work-title">Selected Work</h2>
                 </div>
-                <div class="col-lg-4 d-none d-lg-block">
-                    <div class="hero-image text-center">
-                        <img src="https://via.placeholder.com/350x350/f5e6d3/7c3aed?text=Shemaiah" alt="Shemaiah Ezra" class="img-fluid rounded-circle">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="projects" class="featured-projects py-5">
-        <div class="container-lg">
-            <h2 class="section-title mb-5">Featured Projects</h2>
-            
-            <!-- Project 1: PUP Dash -->
-            <div class="project-card mb-5">
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-5">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/500x400/4f46e5/ffffff?text=PUP+Dash" alt="PUP Dash Project" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="project-content">
-                            <h3 class="fw-bold mb-2">PUP Dash</h3>
-                            <p class="text-muted mb-3">Student management dashboard for Polytechnic University of the Philippines</p>
-                            
-                            <div class="project-details mb-4">
-                                <div class="detail-item">
-                                    <strong>Problem:</strong>
-                                    <p>Students struggled to track grades, schedules, and academic progress across multiple platforms.</p>
-                                </div>
-                                <div class="detail-item">
-                                    <strong>Solution:</strong>
-                                    <p>Designed a centralized dashboard with intuitive navigation, clear data visualization, and quick access to critical information.</p>
-                                </div>
-                                <div class="detail-item">
-                                    <strong>Impact:</strong>
-                                    <p>30+ beta users reported improved time management and reduced information lookup time by 60%.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="d-flex gap-2 flex-wrap mb-3">
-                                <span class="badge bg-primary">UI/UX Design</span>
-                                <span class="badge bg-info">Web App</span>
-                                <span class="badge bg-success">Dashboard</span>
-                                <span class="badge bg-warning text-dark">Figma</span>
-                            </div>
-                            
-                            <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-primary btn-sm">View Case Study</a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a class="section-link" href="#creative-archive">View all projects</a>
             </div>
 
-            <!-- Project 2: CameFont -->
-            <div class="project-card mb-5">
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-5 order-lg-2">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/500x400/7c3aed/ffffff?text=CameFont" alt="CameFont Project" class="img-fluid rounded">
-                        </div>
+            <div class="work-list">
+                <article class="work-card card-surface">
+                    <div class="work-media">
+                        <img src="assets/images/projects/makikonek.png" alt="MakiKonek project preview">
+                        <span>01</span>
                     </div>
-                    <div class="col-lg-7 order-lg-1">
-                        <div class="project-content">
-                            <h3 class="fw-bold mb-2">CameFont</h3>
-                            <p class="text-muted mb-3">Creative typography and font customization platform for designers</p>
-                            
-                            <div class="project-details mb-4">
-                                <div class="detail-item">
-                                    <strong>Problem:</strong>
-                                    <p>Designers lacked a seamless way to preview, customize, and manage typography across projects.</p>
-                                </div>
-                                <div class="detail-item">
-                                    <strong>Solution:</strong>
-                                    <p>Built an interactive platform with real-time font preview, variation controls, and project management features.</p>
-                                </div>
-                                <div class="detail-item">
-                                    <strong>Impact:</strong>
-                                    <p>Enables designers to reduce typography setup time from hours to minutes.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="d-flex gap-2 flex-wrap mb-3">
-                                <span class="badge bg-primary">UI/UX Design</span>
-                                <span class="badge bg-info">SaaS Product</span>
-                                <span class="badge bg-danger">Responsive</span>
-                                <span class="badge bg-warning text-dark">Prototyping</span>
-                            </div>
-                            
-                            <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-primary btn-sm">View Case Study</a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a>
-                            </div>
-                        </div>
+                    <div class="work-copy">
+                        <h3>MakiKonek</h3>
+                        <p class="project-type">Barangay Digital Service Portal</p>
+                        <p>A digital platform that connects residents and officials through streamlined services and transparent transactions.</p>
+                        <div class="tag-row"><span>UI/UX Design</span><span>Frontend Development</span><span>System Design</span></div>
+                        <a class="text-link" href="#">View Case Study</a>
                     </div>
+                </article>
+
+                <article class="work-card card-surface">
+                    <div class="work-media">
+                        <img src="assets/images/projects/pickled.png" alt="PICKLED project preview">
+                        <span>02</span>
+                    </div>
+                    <div class="work-copy">
+                        <h3>PICKLED</h3>
+                        <p class="project-type">Court and Events Booking Management System</p>
+                        <p>A web-based system for efficient scheduling, court booking, and event management.</p>
+                        <div class="tag-row"><span>Database Design</span><span>Frontend Development</span><span>Information Management</span></div>
+                        <a class="text-link" href="#">View Case Study</a>
+                    </div>
+                </article>
+
+                <article class="work-card card-surface">
+                    <div class="work-media">
+                        <img src="assets/images/projects/pup-dash.png" alt="PUP Dash project preview">
+                        <span>03</span>
+                    </div>
+                    <div class="work-copy">
+                        <h3>PUP Dash</h3>
+                        <p class="project-type">Educational 2D Game</p>
+                        <p>A 2D game built with Python and Pygame designed to make learning fun through interactive gameplay.</p>
+                        <div class="tag-row"><span>Python</span><span>Game Development</span><span>UI Design</span></div>
+                        <a class="text-link" href="#">View Case Study</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="creative-archive" class="section-wrap creative-archive" aria-labelledby="creative-title">
+            <div class="section-header">
+                <div>
+                    <p>Creative Works</p>
+                    <h2 id="creative-title">Creative Archive</h2>
                 </div>
+                <a class="section-link" href="#about-title">View all creative works</a>
+            </div>
+            <p class="archive-intro">A collection of publication materials, campaign graphics, social media designs, event branding, and visual communication projects created throughout my creative journey.</p>
+
+            <div class="archive-filters" aria-label="Creative archive categories">
+                <span class="active">All Works</span>
+                <span>Campaign Materials</span>
+                <span>Social Media Graphics</span>
+                <span>Event Branding</span>
+                <span>Frame Designs</span>
+                <span>Jersey & Merchandise</span>
+                <span>Video & Reel Thumbnails</span>
             </div>
 
-            <!-- CTA for more projects -->
-            <div class="text-center mt-5">
-                <a href="#creative" class="btn btn-outline-primary btn-lg">View More Work</a>
+            <div class="archive-grid">
+                <article><img src="assets/images/creative/brand-campaigns.png" alt="Brand campaign creative preview"><h3>Brand Campaigns</h3></article>
+                <article><img src="assets/images/creative/social-media-designs.png" alt="Social media design creative preview"><h3>Social Media Designs</h3></article>
+                <article><img src="assets/images/creative/pubmats.png" alt="Pubmat creative preview"><h3>Pubmats</h3></article>
+                <article><img src="assets/images/creative/stage-design.png" alt="Stage design creative preview"><h3>Stage Design</h3></article>
+                <article><img src="assets/images/creative/event-coverage.png" alt="Event coverage creative preview"><h3>Event Coverage</h3></article>
+                <article><img src="assets/images/creative/jersey-designs.png" alt="Jersey design creative preview"><h3>Jersey Designs</h3></article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Me Section - Simplified -->
-    <section id="about" class="about-section py-5 bg-light">
-        <div class="container-lg">
-            <h2 class="section-title mb-5">About Me</h2>
-            
-            <div class="row g-5">
-                <!-- About Content -->
-                <div class="col-lg-6">
-                    <div class="glass-card-about p-5">
-                        <p class="about-intro">
-                            I'm a UI/UX Designer and Front-End Developer passionate about creating intuitive digital experiences. My background spans design education, multimedia production, and web development.
-                        </p>
-                        <p class="about-intro">
-                            I combine user research, design thinking, and clean code to build products that are both beautiful and functional.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Skills -->
-                <div class="col-lg-6">
-                    <div class="skills-container">
-                        <h4 class="fw-bold mb-4">Core Skills</h4>
-                        <div class="skills-list">
-                            <div class="skill-badge">Figma</div>
-                            <div class="skill-badge">HTML/CSS</div>
-                            <div class="skill-badge">JavaScript</div>
-                            <div class="skill-badge">React</div>
-                            <div class="skill-badge">UI Design</div>
-                            <div class="skill-badge">UX Research</div>
-                            <div class="skill-badge">Prototyping</div>
-                            <div class="skill-badge">Adobe Suite</div>
-                            <div class="skill-badge">Branding</div>
-                        </div>
-                    </div>
-                </div>
+        <section class="section-wrap about-section" aria-labelledby="about-title">
+            <div class="section-title centered">
+                <p>About Me</p>
+                <h2 id="about-title">Let's Get to Know Me</h2>
             </div>
 
-            <!-- Education & Leadership in Two Columns -->
-            <div class="row g-5 mt-4">
-                <!-- Education -->
-                <div class="col-lg-6">
-                    <h4 class="fw-bold mb-4">Education</h4>
-                    <div class="timeline-simple">
-                        <div class="timeline-item-simple">
-                            <div class="timeline-date">2024 – Now</div>
-                            <h6 class="fw-bold">Polytechnic University of the Philippines</h6>
-                            <p class="text-muted small">BS Information Technology</p>
-                        </div>
-                        <div class="timeline-item-simple">
-                            <div class="timeline-date">2018 – 2024</div>
-                            <h6 class="fw-bold">Lyceum of the Philippines University – Laguna</h6>
-                            <p class="text-muted small">Science, Technology, Engineering, and Mathematics Strand</p>
-                        </div>
+            <div class="about-grid">
+                <div class="photo-stack" aria-label="Creative portraits">
+                    <img class="photo-one" src="assets/images/profile-placeholder.jpg" alt="Portrait placeholder">
+                    <img class="photo-two" src="assets/images/creative/social-media-designs.png" alt="Creative work placeholder">
+                </div>
+                <article class="about-copy">
+                    <p class="micro-label">Call Me Shemaiah</p>
+                    <h3>My journey into technology began through design.</h3>
+                    <p>I started exploring visual communication through publication materials, social media graphics, and youth media projects. Over the years, I worked on creative campaigns, branding materials, event publicity, and digital content for various organizations.</p>
+                    <p>As I continued creating designs, I became increasingly curious about the systems and interfaces behind them. That curiosity eventually led me to pursue Information Technology and explore how meaningful digital experiences are designed and built.</p>
+                    <p>Today, I combine my background in visual design with growing technical skills in UI/UX and frontend development, focusing on experiences that are both functional and visually engaging.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-wrap detail-section" aria-label="Journey and education">
+            <article class="detail-card card-surface">
+                <p class="micro-label">Journey</p>
+                <h2>My Journey</h2>
+                <div class="journey-list">
+                    <div><span>2018</span><p>Started exploring graphic design and creative media.</p></div>
+                    <div><span>2021</span><p>Created publication materials, social media graphics, and visual campaigns.</p></div>
+                    <div><span>2024</span><p>Began my BSIT journey at Polytechnic University of the Philippines.</p></div>
+                    <div><span>Present</span><p>Exploring UI/UX design, frontend development, and user-centered digital experiences.</p></div>
+                </div>
+            </article>
+
+            <article class="detail-card card-surface">
+                <p class="micro-label">Education</p>
+                <h2>Education</h2>
+                <div class="education-list">
+                    <div>
+                        <h3>Polytechnic University of the Philippines Sto. Tomas Campus</h3>
+                        <p>Bachelor of Science in Information Technology</p>
+                        <span>2024 - Present</span>
+                        <div class="tag-row"><span>UI/UX Design</span><span>Frontend Development</span><span>Web Technologies</span><span>Human-Centered Design</span></div>
+                    </div>
+                    <div>
+                        <h3>Lyceum of the Philippines University Laguna</h3>
+                        <p>Senior High School - STEM Strand</p>
+                        <span>2018 - 2024</span>
                     </div>
                 </div>
+            </article>
+        </section>
 
-                <!-- Leadership & Affiliations -->
-                <div class="col-lg-6">
-                    <h4 class="fw-bold mb-4">Leadership & Affiliations</h4>
-                    <div class="timeline-simple">
-                        <div class="timeline-item-simple">
-                            <div class="timeline-date">2025 – Now</div>
-                            <h6 class="fw-bold">PUP STC Computer Society</h6>
-                            <p class="text-muted small">Design Committee Assistant Head</p>
-                        </div>
-                        <div class="timeline-item-simple">
-                            <div class="timeline-date">2021 – Now</div>
-                            <h6 class="fw-bold">CODI International – Living Stones Youth</h6>
-                            <p class="text-muted small">Multimedia Team Member</p>
-                        </div>
-                        <div class="timeline-item-simple">
-                            <div class="timeline-date">2024</div>
-                            <h6 class="fw-bold">Work Immersion: Torres Tech</h6>
-                            <p class="text-muted small">Media and Documentation Head</p>
-                        </div>
-                    </div>
+        <section class="section-wrap foundation-section" aria-label="Creative foundation and technical skills">
+            <article class="profile-intro">
+                <p>Creative Foundation</p>
+                <h2>Before transitioning into UI/UX and frontend development, I spent several years creating visual communication assets.</h2>
+                <p>Publication materials, social media campaigns, event branding, and organization visuals helped me develop a strong understanding of visual hierarchy, typography, layout composition, branding systems, user attention, and storytelling through design.</p>
+            </article>
+
+            <div class="skills-panel card-surface">
+                <div><h3>Frontend</h3><p><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></p></div>
+                <div><h3>Backend & Database</h3><p><span>PHP</span><span>MySQL</span></p></div>
+                <div><h3>Design</h3><p><span>Figma</span><span>Adobe Photoshop</span><span>Canva</span></p></div>
+                <div><h3>Development Tools</h3><p><span>Git</span><span>GitHub</span><span>VS Code</span></p></div>
+                <div><h3>Languages</h3><p><span>English</span><span>Filipino</span></p></div>
+            </div>
+        </section>
+
+        <section class="section-wrap profile-section" aria-label="Experience and background">
+            <article class="profile-intro">
+                <p>Organizations & Leadership</p>
+                <h2>Creating digital assets, event branding, and visual systems for organizations and community initiatives.</h2>
+                <p>My creative and leadership roles continue to shape how I communicate ideas, organize visual information, and design with real audiences in mind.</p>
+                <a class="btn btn-glass" href="mailto:magpayo.shemaiahezra@gmail.com">Discuss with me</a>
+            </article>
+
+            <div class="experience-list card-surface">
+                <div>
+                    <p>2025 - Present</p>
+                    <h3>Computer Society</h3>
+                    <span>Design Committee Assistant Head. Creating publication materials, event branding, and digital assets for organization initiatives.</span>
+                </div>
+                <div>
+                    <p>2021 - Present</p>
+                    <h3>CODI Living Stones Youth</h3>
+                    <span>Multimedia Team. Producing graphics, documentation materials, social media content, and event visuals.</span>
+                </div>
+                <div>
+                    <p>2023 - 2024</p>
+                    <h3>SALIG Student Government</h3>
+                    <span>Senior Multimedia Officer. Led the design and production of publication materials, campaign visuals, and organization branding assets.</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Design Process Section -->
-    <section id="process" class="design-process py-5">
-        <div class="container-lg">
-            <h2 class="section-title mb-5">My Design Process</h2>
-            
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="process-card text-center">
-                        <div class="process-icon">🔍</div>
-                        <h5 class="fw-bold mt-3 mb-2">Research</h5>
-                        <p class="text-muted small">Understand user needs through interviews, surveys, and competitive analysis</p>
-                    </div>
+        <section class="section-wrap fun-fact-section" aria-label="Fun fact">
+            <article class="fun-fact card-surface">
+                <p class="micro-label">Fun Fact</p>
+                <h2>I never expected that learning basic HTML in Grade 7 would become part of the path I chose in college.</h2>
+                <p>Before discovering my passion for technology and design, I actually thought I would pursue a career in medicine. Looking back, that early exposure to web development became the first step toward the field I enjoy today.</p>
+            </article>
+        </section>
+
+        <footer class="cta-footer">
+            <div>
+                <img src="assets/images/LightLogo.png" alt="S3 logo">
+                <h2>Let's Build Something Meaningful</h2>
+                <p>Whether it's a design project, a website, or a creative collaboration, I'd love to connect.</p>
+                <div class="contact-emails">
+                    <a href="mailto:magpayo.shemaiahezra@gmail.com">magpayo.shemaiahezra@gmail.com</a>
+                    <a href="mailto:shemaiahezrabmagpayo@iskolarngbayan.pup.edu.ph">shemaiahezrabmagpayo@iskolarngbayan.pup.edu.ph</a>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="process-card text-center">
-                        <div class="process-icon">✏️</div>
-                        <h5 class="fw-bold mt-3 mb-2">Wireframe</h5>
-                        <p class="text-muted small">Create low-fidelity sketches to explore layout and information architecture</p>
-                    </div>
+                <a class="btn btn-light" href="mailto:magpayo.shemaiahezra@gmail.com">Let's talk</a>
+                <p>Follow Me</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="GitHub">gh</a>
+                    <a href="#" aria-label="Instagram">ig</a>
+                    <a href="mailto:magpayo.shemaiahezra@gmail.com" aria-label="Email">@</a>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="process-card text-center">
-                        <div class="process-icon">🎨</div>
-                        <h5 class="fw-bold mt-3 mb-2">Design</h5>
-                        <p class="text-muted small">Develop high-fidelity mockups with typography, color, and interactions</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="process-card text-center">
-                        <div class="process-icon">💻</div>
-                        <h5 class="fw-bold mt-3 mb-2">Develop</h5>
-                        <p class="text-muted small">Build responsive, accessible interfaces using modern web technologies</p>
-                    </div>
-                </div>
+                <small>© 2026 Shemaiah Ezra Magpayo. Designed and built with care.</small>
             </div>
-        </div>
-    </section>
+        </footer>
+    </main>
 
-    <!-- Creative Works Gallery -->
-    <section id="creative" class="creative-works py-5 bg-light">
-        <div class="container-lg">
-            <h2 class="section-title mb-5">Creative Works</h2>
-            
-            <div class="row g-4">
-                <!-- Gallery items -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/f5e6d3/7c3aed?text=Social+Media" alt="Social Media Design" class="img-fluid w-100">
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <div class="text-center text-white">
-                                <h6 class="fw-bold">Social Media Graphics</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/e5d4f1/7c3aed?text=Branding" alt="Branding Project" class="img-fluid w-100">
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <div class="text-center text-white">
-                                <h6 class="fw-bold">Brand Identity</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/d4e5f1/7c3aed?text=Publications" alt="Publication Design" class="img-fluid w-100">
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <div class="text-center text-white">
-                                <h6 class="fw-bold">Publications & Posters</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/f1d4e5/7c3aed?text=Packaging" alt="Packaging Design" class="img-fluid w-100">
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <div class="text-center text-white">
-                                <h6 class="fw-bold">Packaging Design</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/e1f5d4/7c3aed?text=Illustrations" alt="Illustrations" class="img-fluid w-100">
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <div class="text-center text-white">
-                                <h6 class="fw-bold">Illustrations & Icons</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded">
-                        <img src="https://via.placeholder.com/400x300/d4f1e5/7c3aed?text=Campaigns" alt="Campaign Design" class="img-fluid w-100">
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <div class="text-center text-white">
-                                <h6 class="fw-bold">Campaign Ads</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5">
-        <div class="container-lg">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title mb-4">Interested in Working Together?</h2>
-                    <p class="lead text-muted mb-5">Have a project in mind? Let's create something amazing together.</p>
-                    
-                    <div class="d-flex gap-3 justify-content-center flex-wrap mb-5">
-                        <a href="mailto:shemaiah@example.com" class="btn btn-primary btn-lg">Send Me an Email</a>
-                        <a href="#" class="btn btn-outline-primary btn-lg">Download Resume</a>
-                    </div>
-
-                    <div class="social-links justify-content-center">
-                        <a href="https://linkedin.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle me-2">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle me-2">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle me-2">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://dribbble.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle">
-                            <i class="fab fa-dribbble"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container-lg">
-            <div class="text-center">
-                <p class="mb-2">&copy; 2026 Shemaiah Ezra. All rights reserved.</p>
-                <p class="text-muted small">Designed and built with <i class="fas fa-heart text-danger"></i></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
