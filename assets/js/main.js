@@ -24,6 +24,28 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     });
 });
 
+const heroArchiveCards = document.querySelectorAll("[data-archive-card]");
+
+const selectHeroArchiveCard = (selectedCard) => {
+    const shouldCollapse = selectedCard.classList.contains("is-selected");
+
+    heroArchiveCards.forEach((card) => {
+        const isSelected = !shouldCollapse && card === selectedCard;
+        card.classList.toggle("is-selected", isSelected);
+        card.setAttribute("aria-pressed", String(isSelected));
+    });
+};
+
+heroArchiveCards.forEach((card) => {
+    card.addEventListener("click", () => selectHeroArchiveCard(card));
+    card.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+
+        event.preventDefault();
+        selectHeroArchiveCard(card);
+    });
+});
+
 const libraryStage = document.querySelector("[data-library-stage]");
 const bookPreview = document.querySelector("[data-book-preview]");
 const archiveBooks = document.querySelectorAll(".archive-book");
