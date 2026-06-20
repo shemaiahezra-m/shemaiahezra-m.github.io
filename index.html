@@ -11,296 +11,129 @@
 </head>
 <body>
     <main class="page-shell">
-        <section class="hero-card card-surface" aria-labelledby="intro-title">
-            <header class="topbar" aria-label="Portfolio header">
+        <section class="hero-card archive-intro-hero" aria-labelledby="intro-title">
+            <header class="archive-nav" aria-label="Portfolio header">
                 <a class="brand-mark" href="index.html" aria-label="Shemaiah Ezra home">
                     <img src="assets/images/DarkLogo.png" alt="S3 logo">
-                    <span>Portfolio</span>
                 </a>
-                <nav class="top-actions" aria-label="Primary">
-                    <a href="mailto:magpayo.shemaiahezra@gmail.com">Let's talk</a>
-                    <a class="menu-link" href="about.html" aria-label="About page"><span></span><span></span></a>
-                </nav>
+                
             </header>
 
-            <div class="hero-layout">
-                <div class="hero-copy">
-                    <p class="micro-label">BSIT Sophomore • UI/UX Designer • Frontend Developer</p>
+            <div class="archive-intro-layout">
+                <div class="archive-hero-title">
+                    <p class="micro-label">UI/UX Designer/Frontend Developer</p>
                     <h1 id="intro-title">Shemaiah Ezra Magpayo</h1>
-                    <p>I design and build clean, user-centered digital experiences that are functional, accessible, and visually engaging.</p>
-                    <p>Currently exploring the intersection of design and development through UI/UX, frontend development, and creative digital projects.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-accent" href="#selected-work">My Work</a>
-                        <a class="btn btn-glass" href="mailto:magpayo.shemaiahezra@gmail.com">Contact Me</a>
+                    <p>Curating selected work, creative practice, leadership experiences, and digital craftsmanship.</p>
+                    <div class="hero-actions archive-hero-actions">
                     </div>
                 </div>
 
-                <aside class="hero-portrait card-surface" aria-label="Profile portrait">
-                    <img src="assets/images/Shemaiah.png" alt="Shemaiah Ezra">
-                    <div class="social-dock" aria-label="Social links">
-                        <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
-                        <a href="https://github.com/" aria-label="GitHub">gh</a>
-                        <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
-                        <a href="mailto:magpayo.shemaiahezra@gmail.com" aria-label="Email">@</a>
+                <aside class="catalog-drawer" aria-label="Archive catalog drawer preview">
+                    <div class="drawer-cards" aria-hidden="true">
+                        <article class="drawer-card selected-file">
+                            <span>01</span>
+                            <strong>BSIT Sophomore</strong>
+                            <em>PUP Sto. Tomas</em>
+                        </article>
+                        <article class="drawer-card creative-file">
+                            <span>02</span>
+                            <strong>UI/UX Design</strong>
+                            <em>Frontend Development</em>
+                        </article>
+                        <article class="drawer-card experience-file">
+                            <span>03</span>
+                            <strong>Creative Practice</strong>
+                            <em>5+ years visual communication</em>
+                        </article>
+                        <article class="drawer-card credentials-file">
+                            <span>04</span>
+                            <strong>Calamba, Laguna</strong>
+                            <em>Philippines</em>
+                        </article>
+                        <article class="drawer-card about-file">
+                            <span>05</span>
+                            <strong>2018-Present</strong>
+                            <em>Design journey</em>
+                        </article>
+                    </div>
+                    <div class="drawer-front">
+                        <div class="catalog-card-top">
+                            <span>Archivist Note</span>
+                            <strong>2026</strong>
+                        </div>
+                        <p>I never expected that learning HTML in Grade 7 would become part of the path I chose in college.</p>
+                        <a class="text-link" href="#personal-archive">Proceed to Bookshelf</a>
                     </div>
                 </aside>
             </div>
-
-            <div class="quick-highlights" aria-label="Quick highlights">
-                <article>
-                    <span>01</span>
-                    <h2>BSIT Sophomore</h2>
-                    <p>Polytechnic University of the Philippines</p>
-                </article>
-                <article>
-                    <span>02</span>
-                    <h2>UI/UX + Frontend</h2>
-                    <p>Designing and building digital experiences</p>
-                </article>
-                <article>
-                    <span>03</span>
-                    <h2>Creative Background</h2>
-                    <p>5+ years in publication and visual design</p>
-                </article>
-                <article>
-                    <span>04</span>
-                    <h2>Open for Opportunities</h2>
-                    <p>Student projects, collaborations, and internships</p>
-                </article>
-            </div>
         </section>
 
-        <div class="skill-rail" aria-label="Services">
-            <span>Mobile Design</span>
-            <span>Website Design</span>
-            <span>Frontend Development</span>
-            <span>UI/UX Design</span>
-            <span>Creative Digital Projects</span>
-            <span>Visual Communication</span>
-        </div>
-
-        <section id="selected-work" class="section-wrap personal-curation" aria-labelledby="curation-title">
+        <section id="personal-archive" class="section-wrap personal-curation" aria-labelledby="curation-title">
             <div class="curation-header">
-                <p>Gallery Archive</p>
-                <h2 id="curation-title">The Personal Curation</h2>
-                <span>A carefully curated collection of my work, experiences, achievements, and creative journey.</span>
+                <h2 id="curation-title">The Personal Archive</h2>
+                <span>Choose a volume to enter a curated collection from my work, story, creative practice, experience records, and credentials.</span>
             </div>
 
             <div class="library-stage" data-library-stage>
                 <div class="shelf-light" aria-hidden="true"></div>
                 <div class="bookshelf" aria-label="Personal curation bookshelf">
-                    <button class="archive-book selected-book" type="button" data-collection="selected" style="--book-width: 142px; --book-height: 360px; --tilt: -1.5deg;">
+                    <a class="archive-book selected-book" href="selected-work.html" data-collection="selected" style="--book-width: 142px; --book-height: 360px; --tilt: -1.5deg; --idle-delay: 0;">
                         <span class="book-edge"></span>
                         <span class="book-number">01</span>
                         <span class="book-title">Selected Work</span>
-                        <span class="book-subtitle">Case Study Archive</span>
-                        <span class="book-meta">4 projects inside</span>
-                    </button>
-                    <button class="archive-book creative-book" type="button" data-collection="creative" style="--book-width: 108px; --book-height: 392px; --tilt: 1.2deg;">
+                        <span class="book-subtitle">Project Volume</span>
+                        <span class="book-meta">4 exhibits</span>
+                    </a>
+                    <a class="archive-book creative-book" href="creative.html" data-collection="creative" style="--book-width: 108px; --book-height: 392px; --tilt: 1.2deg; --idle-delay: .35;">
                         <span class="book-edge"></span>
                         <span class="book-number">02</span>
                         <span class="book-title">Creative Archive</span>
                         <span class="book-subtitle">Editorial Collection</span>
-                        <span class="book-meta">7 collections</span>
-                    </button>
-                    <button class="archive-book experience-book" type="button" data-collection="experience" style="--book-width: 126px; --book-height: 338px; --tilt: -0.4deg;">
+                        <span class="book-meta">6 collections</span>
+                    </a>
+                    <a class="archive-book experience-book" href="experience.html" data-collection="experience" style="--book-width: 126px; --book-height: 338px; --tilt: -0.4deg; --idle-delay: .7;">
                         <span class="book-edge"></span>
                         <span class="book-number">03</span>
                         <span class="book-title">Experience</span>
                         <span class="book-subtitle">Leadership Binder</span>
-                        <span class="book-meta">7 roles filed</span>
-                    </button>
-                    <button class="archive-book awards-book" type="button" data-collection="awards" style="--book-width: 118px; --book-height: 372px; --tilt: 1.8deg;">
+                        <span class="book-meta">6 records</span>
+                    </a>
+                    <a class="archive-book certifications-book" href="certifications.html" data-collection="certifications" style="--book-width: 118px; --book-height: 372px; --tilt: 1.8deg; --idle-delay: 1.05;">
                         <span class="book-edge"></span>
                         <span class="book-number">04</span>
-                        <span class="book-title">Certifications &amp; Achievements</span>
-                        <span class="book-subtitle">Academic Archive</span>
-                        <span class="book-meta">Awards and badges</span>
-                    </button>
+                        <span class="book-title">Certifications</span>
+                        <span class="book-subtitle">Credential File</span>
+                        <span class="book-meta">6 documents</span>
+                    </a>
+                    <a class="archive-book about-book" href="about.html" data-collection="about" style="--book-width: 116px; --book-height: 348px; --tilt: -1deg; --idle-delay: 1.4;">
+                        <span class="book-edge"></span>
+                        <span class="book-number">05</span>
+                        <span class="book-title">About Me</span>
+                        <span class="book-subtitle">Personal Notes</span>
+                        <span class="book-meta">Story and philosophy</span>
+                    </a>
                 </div>
 
                 <aside class="book-preview" data-book-preview aria-live="polite">
                     <p>Hover a book</p>
-                    <h3>Open a Collection</h3>
+                    <h3>Enter a Collection</h3>
                     <span>Choose one chapter from the shelf.</span>
                 </aside>
-            </div>
-
-            <div class="collection-reader" data-reader aria-live="polite">
-                <button class="return-library" type="button" data-return-library>← Return to Library</button>
-
-                <article class="collection-panel" data-panel="selected">
-                    <div class="collection-heading">
-                        <span>01 / Selected Work</span>
-                        <h3>Case Study Archive</h3>
-                    </div>
-                    <div class="premium-project-grid">
-                        <article class="premium-project-card">
-                            <img src="assets/images/projects/makikonek.png" alt="MakiKonek project preview">
-                            <div>
-                                <p>Barangay Digital Service Portal</p>
-                                <h4>MakiKonek</h4>
-                                <span>Role: UI/UX Designer and Frontend Developer</span>
-                                <span>Technologies: HTML, CSS, JavaScript, System Design</span>
-                                <p>A digital platform that connects residents and officials through streamlined services and transparent transactions.</p>
-                                <a class="text-link" href="projects.html#makikonek">View Case Study</a>
-                            </div>
-                        </article>
-                        <article class="premium-project-card">
-                            <img src="assets/images/projects/pickled.png" alt="PICKLED project preview">
-                            <div>
-                                <p>Court &amp; Events Booking Management System</p>
-                                <h4>PICKLED</h4>
-                                <span>Role: Frontend Developer and Database Designer</span>
-                                <span>Technologies: PHP, MySQL, HTML, CSS, JavaScript</span>
-                                <p>A booking management system for court reservations, private sessions, events, and administrative workflows.</p>
-                                <a class="text-link" href="projects.html#pickled">View Case Study</a>
-                            </div>
-                        </article>
-                        <article class="premium-project-card">
-                            <img src="assets/images/projects/pup-dash.png" alt="PUP Dash project preview">
-                            <div>
-                                <p>Educational Game</p>
-                                <h4>PUP Dash</h4>
-                                <span>Role: Game UI Designer and Developer</span>
-                                <span>Technologies: Python, Pygame, UI Design</span>
-                                <p>An interactive 2D game designed to make learning more engaging through visual feedback and playful progression.</p>
-                                <a class="text-link" href="projects.html#pup-dash">View Case Study</a>
-                            </div>
-                        </article>
-                        <article class="premium-project-card">
-                            <img src="assets/images/DarkLogo.png" alt="Portfolio website logo preview">
-                            <div>
-                                <p>Personal Branding Project</p>
-                                <h4>Portfolio Website</h4>
-                                <span>Role: Designer and Frontend Developer</span>
-                                <span>Technologies: HTML, CSS, JavaScript</span>
-                                <p>A personal portfolio crafted around clean interaction, visual storytelling, and a curated archive structure.</p>
-                                <a class="text-link" href="projects.html">View Case Study</a>
-                            </div>
-                        </article>
-                    </div>
-                </article>
-
-                <article class="collection-panel" data-panel="creative">
-                    <div class="collection-heading">
-                        <span>02 / Creative Archive</span>
-                        <h3>Editorial Collections</h3>
-                    </div>
-                    <div class="creative-folder-grid">
-                        <a href="creative.html"><img src="assets/images/creative/social-media-designs.png" alt="Social media designs preview"><span>Social Media Designs</span></a>
-                        <a href="creative.html"><img src="assets/images/creative/pubmats.png" alt="Publication materials preview"><span>Publication Materials</span></a>
-                        <a href="creative.html"><img src="assets/images/creative/stage-design.png" alt="Event branding preview"><span>Event Branding</span></a>
-                        <a href="creative.html"><img src="assets/images/creative/brand-campaigns.png" alt="Church media preview"><span>Church Media</span></a>
-                        <a href="creative.html"><img src="assets/images/creative/event-coverage.png" alt="Video thumbnails preview"><span>Video Thumbnails</span></a>
-                        <a href="creative.html"><img src="assets/images/creative/event-coverage.png" alt="Event documentation preview"><span>Event Documentation</span></a>
-                        <a href="creative.html"><img src="assets/images/creative/jersey-designs.png" alt="Campaign graphics preview"><span>Campaign Graphics</span></a>
-                    </div>
-                </article>
-
-                <article class="collection-panel" data-panel="experience">
-                    <div class="collection-heading">
-                        <span>03 / Experience</span>
-                        <h3>Leadership &amp; Service Dossiers</h3>
-                    </div>
-                    <div class="dossier-list">
-                        <article><span>Classroom President</span><strong>Class Organization</strong><p>Duration: Academic year leadership</p><p>Guided class coordination, communication, and student representation.</p><em>Impact: Kept academic and activity workflows organized.</em></article>
-                        <article><span>Computer Society PRO</span><strong>PUP Computer Society</strong><p>Duration: 2025 - Present</p><p>Supported communication materials, public relations, and student engagement.</p><em>Impact: Strengthened organization visibility and information flow.</em></article>
-                        <article><span>Publications Committee Assistant Head</span><strong>Computer Society</strong><p>Duration: 2025 - Present</p><p>Assisted with publication planning, creative direction, and production quality.</p><em>Impact: Helped maintain consistent visual communication.</em></article>
-                        <article><span>Data Analytics Officer</span><strong>Student Organization Work</strong><p>Duration: Project-based</p><p>Handled organized data tasks, reporting, and insight support.</p><em>Impact: Turned records into clearer decisions.</em></article>
-                        <article><span>CWTS Design Committee</span><strong>NSTP / CWTS</strong><p>Duration: Course-based service</p><p>Created visual materials for civic and community activities.</p><em>Impact: Supported clearer outreach and event presentation.</em></article>
-                        <article><span>SPES Enumerator</span><strong>Public Service Program</strong><p>Duration: Seasonal</p><p>Assisted with field data gathering and records handling.</p><em>Impact: Built discipline in accuracy and people-facing service.</em></article>
-                        <article><span>Multimedia Volunteer</span><strong>CODI Living Stones Youth</strong><p>Duration: 2021 - Present</p><p>Created media assets, documentation, and digital materials for youth ministry work.</p><em>Impact: Sustained years of creative service and community storytelling.</em></article>
-                    </div>
-                </article>
-
-                <article class="collection-panel" data-panel="awards">
-                    <div class="collection-heading">
-                        <span>04 / Certifications &amp; Achievements</span>
-                        <h3>Awards, Certificates &amp; Badges</h3>
-                    </div>
-                    <div class="achievement-grid">
-                        <article><span>Certificate</span><h4>President's Lister</h4><p>Academic recognition for high scholastic performance.</p></article>
-                        <article><span>Award</span><h4>Leadership Award</h4><p>Recognition for service, initiative, and student leadership.</p></article>
-                        <article><span>Award</span><h4>NSTP Leadership Award</h4><p>Achievement earned through civic work and collaborative leadership.</p></article>
-                        <article><span>Research</span><h4>Best Research Paper</h4><p>Recognition for research quality, presentation, and contribution.</p></article>
-                        <article><span>Academic</span><h4>With High Honors</h4><p>Consistent academic performance and discipline.</p></article>
-                        <article><span>Seminars</span><h4>Seminars &amp; Workshops</h4><p>Ongoing learning through technical, creative, and leadership events.</p></article>
-                        <article><span>Badge</span><h4>Future Certifications</h4><p>A growing space for upcoming credentials and professional development.</p></article>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="section-wrap about-section" aria-labelledby="about-title">
-            <div class="section-title centered">
-                <p>About Me</p>
-                <h2 id="about-title">Let's Get to Know Me</h2>
-            </div>
-
-            <div class="about-grid">
-                <div class="photo-stack" aria-label="Creative portraits">
-                    <img class="photo-one" src="assets/images/profile-placeholder.jpg" alt="Portrait placeholder">
-                    <img class="photo-two" src="assets/images/creative/social-media-designs.png" alt="Creative work placeholder">
-                </div>
-                <article class="about-copy">
-                    <p class="micro-label">Call Me Shemaiah</p>
-                    <h3>My journey into technology began through design.</h3>
-                    <p>I started with publication materials, campaign graphics, and youth media projects before becoming curious about the systems and interfaces behind digital experiences.</p>
-                    <p>Today, I combine a visual design foundation with growing UI/UX and frontend development skills.</p>
-                    <a class="text-link" href="about.html">Read About Me</a>
-                </article>
-            </div>
-        </section>
-
-        <section class="experience-dark" aria-labelledby="experience-title">
-            <div class="experience-heading">
-                <p>/Experience</p>
-                <h2 id="experience-title">Organizations &amp; Leadership</h2>
-                <span>5+ years of creative work</span>
-            </div>
-            <div class="dark-experience-list">
-                <a href="about.html#leadership">
-                    <span>Computer Society</span>
-                    <strong>Design Committee Assistant Head</strong>
-                    <em>2025 - Present</em>
-                </a>
-                <a href="about.html#leadership">
-                    <span>CODI Living Stones Youth</span>
-                    <strong>Multimedia Team</strong>
-                    <em>2021 - Present</em>
-                </a>
-                <a href="about.html#leadership">
-                    <span>SALIG Student Government</span>
-                    <strong>Senior Multimedia Officer</strong>
-                    <em>2023 - 2024</em>
-                </a>
-                <a href="about.html#skills">
-                    <span>Frontend &amp; UI Practice</span>
-                    <strong>HTML, CSS, JavaScript, UI/UX</strong>
-                    <em>Ongoing</em>
-                </a>
             </div>
         </section>
 
         <footer class="cta-footer">
             <div>
-                <img src="assets/images/LightLogo.png" alt="S3 logo">
-                <h2>Let's Build Something Meaningful</h2>
-                <p>Whether it's a design project, a website, or a creative collaboration, I'd love to connect.</p>
                 <div class="contact-emails">
                     <a href="mailto:magpayo.shemaiahezra@gmail.com">magpayo.shemaiahezra@gmail.com</a>
-                    <a href="mailto:shemaiahezrabmagpayo@iskolarngbayan.pup.edu.ph">shemaiahezrabmagpayo@iskolarngbayan.pup.edu.ph</a>
                 </div>
-                <a class="btn btn-light" href="mailto:magpayo.shemaiahezra@gmail.com">Let's talk</a>
-                <p>Follow Me</p>
                 <div class="footer-socials">
                     <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
                     <a href="https://github.com/" aria-label="GitHub">gh</a>
                     <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
                     <a href="mailto:magpayo.shemaiahezra@gmail.com" aria-label="Email">@</a>
                 </div>
-                <small>© 2026 Shemaiah Ezra Magpayo. Designed and built with care.</small>
+                <small>© 2026 Shemaiah Ezra Magpayo</small>
             </div>
         </footer>
     </main>

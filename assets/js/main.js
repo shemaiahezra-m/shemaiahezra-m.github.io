@@ -1,4 +1,4 @@
-const revealTargets = document.querySelectorAll(".card-surface, .project-card, .creative-strip article, .personal-curation");
+const revealTargets = document.querySelectorAll(".card-surface, .project-card, .creative-strip article, .personal-curation, .archive-collection, .exhibit-placard, .art-panel, .record-file, .credential-document, .note-sheet");
 
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -26,31 +26,33 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
 const libraryStage = document.querySelector("[data-library-stage]");
 const bookPreview = document.querySelector("[data-book-preview]");
-const collectionReader = document.querySelector("[data-reader]");
-const returnLibrary = document.querySelector("[data-return-library]");
 const archiveBooks = document.querySelectorAll(".archive-book");
-const collectionPanels = document.querySelectorAll(".collection-panel");
 
 const previewContent = {
     selected: {
         title: "Selected Work",
-        meta: "Featured: MakiKonek, PICKLED, PUP Dash",
-        count: "4 projects inside",
+        meta: "MakiKonek, PICKLED, PUP Dash, Portfolio Website",
+        count: "4 project exhibits",
     },
     creative: {
         title: "Creative Archive",
-        meta: "Featured: Social Media Designs, Publication Materials, Event Branding",
-        count: "7 creative collections",
+        meta: "Publication materials, social graphics, church creatives, posters",
+        count: "6 visual collections",
     },
     experience: {
         title: "Experience",
-        meta: "Featured: Leadership, data work, public service, multimedia volunteer work",
-        count: "7 roles filed",
+        meta: "Leadership, data work, public service, multimedia team records",
+        count: "6 archived records",
     },
-    awards: {
-        title: "Certifications & Achievements",
-        meta: "Featured: President's Lister, Leadership Award, Best Research Paper",
-        count: "Awards, certificates, and badges",
+    certifications: {
+        title: "Certifications",
+        meta: "Academic, leadership, civic, research, and learning documents",
+        count: "6 credential files",
+    },
+    about: {
+        title: "About Me",
+        meta: "Personal story, design journey, frontend path, interests, philosophy",
+        count: "Personal notes",
     },
 };
 
@@ -65,31 +67,27 @@ const updatePreview = (book) => {
 
     libraryStage.classList.add("has-preview");
     libraryStage.style.setProperty("--light-x", `${lightX}%`);
-    bookPreview.innerHTML = `<p>${content.title}</p><h3>${content.count}</h3><span>${content.meta}<br>Open Collection -></span>`;
+    bookPreview.innerHTML = `<p>${content.title}</p><h3>${content.count}</h3><span>${content.meta}<br>Enter Collection -></span>`;
 };
 
 const resetPreview = () => {
-    if (!libraryStage || !bookPreview || libraryStage.classList.contains("is-opening")) return;
+    if (!libraryStage || !bookPreview || libraryStage.classList.contains("is-entering")) return;
 
     libraryStage.classList.remove("has-preview");
-    bookPreview.innerHTML = "<p>Hover a book</p><h3>Open a Collection</h3><span>Choose one chapter from the shelf.</span>";
+    bookPreview.innerHTML = "<p>Hover a book</p><h3>Enter a Collection</h3><span>Choose one chapter from the shelf.</span>";
 };
 
-const openCollection = (book) => {
-    if (!libraryStage || !collectionReader) return;
+const enterCollection = (event, book) => {
+    if (!libraryStage || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
-    const key = book.dataset.collection;
-    updatePreview(book);
+    event.preventDefault();
     archiveBooks.forEach((item) => item.classList.toggle("is-opening", item === book));
-    libraryStage.classList.add("is-opening", "has-preview");
+    libraryStage.classList.add("is-entering", "has-preview");
+    updatePreview(book);
 
     window.setTimeout(() => {
-        collectionPanels.forEach((panel) => {
-            panel.classList.toggle("is-active", panel.dataset.panel === key);
-        });
-        collectionReader.classList.add("is-active");
-        collectionReader.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }, 520);
+        window.location.href = book.href;
+    }, 420);
 };
 
 archiveBooks.forEach((book) => {
@@ -97,16 +95,5 @@ archiveBooks.forEach((book) => {
     book.addEventListener("focus", () => updatePreview(book));
     book.addEventListener("mouseleave", resetPreview);
     book.addEventListener("blur", resetPreview);
-    book.addEventListener("click", () => openCollection(book));
+    book.addEventListener("click", (event) => enterCollection(event, book));
 });
-
-if (returnLibrary && libraryStage && collectionReader) {
-    returnLibrary.addEventListener("click", () => {
-        collectionReader.classList.remove("is-active");
-        collectionPanels.forEach((panel) => panel.classList.remove("is-active"));
-        archiveBooks.forEach((book) => book.classList.remove("is-opening"));
-        libraryStage.classList.remove("is-opening");
-        resetPreview();
-        libraryStage.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
-}
