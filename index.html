@@ -12,16 +12,8 @@
 <body>
     <main class="page-shell">
         <section class="hero-card archive-intro-hero" aria-labelledby="intro-title">
-            <header class="archive-nav" aria-label="Portfolio header">
-                <a class="brand-mark" href="index.html" aria-label="Shemaiah Ezra home">
-                    <img src="assets/images/DarkLogo.png" alt="S3 logo">
-                </a>
-                
-            </header>
-
             <div class="archive-intro-layout">
                 <div class="archive-hero-title">
-                    <p class="micro-label">Archive Label</p>
                     <h1 id="intro-title">Shemaiah Ezra Magpayo</h1>
                     <p class="hero-roles">UI/UX Designer • Frontend Developer</p>
                     <p>A personal archive documenting my journey through design, technology, and creative practice.</p>
@@ -32,6 +24,7 @@
 
                 <aside class="catalog-drawer" aria-label="Archive catalog drawer preview">
                     <div class="drawer-cards">
+                        <p class="drawer-kicker">Currently on my shelf</p>
                         <article class="drawer-card selected-file" data-archive-card tabindex="0" role="button" aria-pressed="false">
                             <span>01</span>
                             <strong>First Love</strong>
@@ -56,8 +49,7 @@
                             <p>Fortunately,<br>I still enjoy them.</p>
                         </article>
                         <div class="drawer-front" aria-hidden="true">
-                            <span class="shelf-label">Currently on my</span>
-                            <span class="shelf-title"><em>she</em>lf</span>
+                            <span class="shelf-brand-mark"></span>
                         </div>
                     </div>
                 </aside>
@@ -73,40 +65,40 @@
             <div class="library-stage" data-library-stage>
                 <div class="shelf-light" aria-hidden="true"></div>
                 <div class="bookshelf" aria-label="Personal curation bookshelf">
-                    <a class="archive-book selected-book" href="selected-work.html" data-collection="selected" style="--book-width: 142px; --book-height: 360px; --tilt: -1.5deg; --idle-delay: 0;">
+                    <a class="archive-book selected-book" href="selected-work.html" data-collection="selected" data-cover-title="Selected Work" aria-label="Volume 01, Selected Work, Project Volume, 4 exhibits" style="--book-width: 142px; --book-height: 360px; --tilt: -1.5deg; --idle-delay: 0;">
                         <span class="book-edge"></span>
                         <span class="book-number">01</span>
                         <span class="book-title">Selected Work</span>
                         <span class="book-subtitle">Project Volume</span>
                         <span class="book-meta">4 exhibits</span>
                     </a>
-                    <a class="archive-book creative-book" href="creative.html" data-collection="creative" style="--book-width: 108px; --book-height: 392px; --tilt: 1.2deg; --idle-delay: .35;">
+                    <a class="archive-book creative-book" href="creative.html" data-collection="creative" data-cover-title="Creative Archive" aria-label="Volume 02, Creative Archive, Editorial Set, 6 collections" style="--book-width: 108px; --book-height: 392px; --tilt: 1.2deg; --idle-delay: .35;">
                         <span class="book-edge"></span>
                         <span class="book-number">02</span>
                         <span class="book-title">Creative Archive</span>
-                        <span class="book-subtitle">Editorial Collection</span>
+                        <span class="book-subtitle">Editorial Set</span>
                         <span class="book-meta">6 collections</span>
                     </a>
-                    <a class="archive-book experience-book" href="experience.html" data-collection="experience" style="--book-width: 126px; --book-height: 338px; --tilt: -0.4deg; --idle-delay: .7;">
+                    <a class="archive-book experience-book" href="experience.html" data-collection="experience" data-cover-title="Experience" aria-label="Volume 03, Experience, Leadership, 6 records" style="--book-width: 126px; --book-height: 338px; --tilt: -0.4deg; --idle-delay: .7;">
                         <span class="book-edge"></span>
                         <span class="book-number">03</span>
                         <span class="book-title">Experience</span>
-                        <span class="book-subtitle">Leadership Binder</span>
+                        <span class="book-subtitle">Leadership</span>
                         <span class="book-meta">6 records</span>
                     </a>
-                    <a class="archive-book certifications-book" href="certifications.html" data-collection="certifications" style="--book-width: 118px; --book-height: 372px; --tilt: 1.8deg; --idle-delay: 1.05;">
+                    <a class="archive-book certifications-book" href="certifications.html" data-collection="certifications" data-cover-title="Certifications" aria-label="Volume 04, Certifications, Credential, 6 documents" style="--book-width: 118px; --book-height: 372px; --tilt: 1.8deg; --idle-delay: 1.05;">
                         <span class="book-edge"></span>
                         <span class="book-number">04</span>
                         <span class="book-title">Certifications</span>
-                        <span class="book-subtitle">Credential File</span>
+                        <span class="book-subtitle">Credential</span>
                         <span class="book-meta">6 documents</span>
                     </a>
-                    <a class="archive-book about-book" href="about.html" data-collection="about" style="--book-width: 116px; --book-height: 348px; --tilt: -1deg; --idle-delay: 1.4;">
+                    <a class="archive-book about-book" href="about.html" data-collection="about" data-cover-title="About Me" aria-label="Volume 05, About Me, Personal Notes, Story Notes" style="--book-width: 116px; --book-height: 348px; --tilt: -1deg; --idle-delay: 1.4;">
                         <span class="book-edge"></span>
                         <span class="book-number">05</span>
                         <span class="book-title">About Me</span>
                         <span class="book-subtitle">Personal Notes</span>
-                        <span class="book-meta">Story and philosophy</span>
+                        <span class="book-meta">Story Notes</span>
                     </a>
                 </div>
 
@@ -121,9 +113,9 @@
         <footer class="cta-footer">
             <div>
                 <div class="footer-socials">
-                    <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
-                    <a href="https://github.com/" aria-label="GitHub">gh</a>
-                    <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
+                    <a href="https://www.linkedin.com/shemaiahezra" aria-label="LinkedIn">in</a>
+                    <a href="https://github.com/shemaiahezra-m" aria-label="GitHub">gh</a>
+                    <a href="https://www.instagram.com/shemaiahezra" aria-label="Instagram">ig</a>
                     <a href="mailto:magpayo.shemaiahezra@gmail.com" aria-label="Email">@</a>
                 </div>
                 <small>© 2026 Shemaiah Ezra Magpayo</small>

@@ -55,27 +55,49 @@ const previewContent = {
         title: "Selected Work",
         meta: "MakiKonek, PICKLED, PUP Dash, Portfolio Website",
         count: "4 project exhibits",
+        volume: "Volume 01",
     },
     creative: {
         title: "Creative Archive",
         meta: "Publication materials, social graphics, church creatives, posters",
         count: "6 visual collections",
+        volume: "Volume 02",
     },
     experience: {
         title: "Experience",
         meta: "Leadership, data work, public service, multimedia team records",
         count: "6 archived records",
+        volume: "Volume 03",
     },
     certifications: {
         title: "Certifications",
         meta: "Academic, leadership, civic, research, and learning documents",
         count: "6 credential files",
+        volume: "Volume 04",
     },
     about: {
         title: "About Me",
         meta: "Personal story, design journey, frontend path, interests, philosophy",
         count: "Personal notes",
+        volume: "Volume 05",
     },
+};
+
+let volumePagePreview;
+
+const renderVolumePage = (book) => {
+    if (!libraryStage) return;
+
+    const content = previewContent[book.dataset.collection];
+
+    if (!volumePagePreview) {
+        volumePagePreview = document.createElement("div");
+        volumePagePreview.className = "volume-page-preview";
+        volumePagePreview.setAttribute("aria-hidden", "true");
+        libraryStage.appendChild(volumePagePreview);
+    }
+
+    volumePagePreview.innerHTML = `<p>Archive</p><span>${content.volume}</span><h3>${content.title}</h3><small>${content.count}</small>`;
 };
 
 const updatePreview = (book) => {
@@ -103,13 +125,18 @@ const enterCollection = (event, book) => {
     if (!libraryStage || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
     event.preventDefault();
+    renderVolumePage(book);
     archiveBooks.forEach((item) => item.classList.toggle("is-opening", item === book));
-    libraryStage.classList.add("is-entering", "has-preview");
+    libraryStage.classList.add("is-entering", "is-pulling-volume", "has-preview");
     updatePreview(book);
 
     window.setTimeout(() => {
+        libraryStage.classList.add("is-opening-volume");
+    }, 360);
+
+    window.setTimeout(() => {
         window.location.href = book.href;
-    }, 420);
+    }, 1200);
 };
 
 archiveBooks.forEach((book) => {
