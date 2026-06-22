@@ -52,9 +52,9 @@ const archiveBooks = document.querySelectorAll(".archive-book");
 
 const previewContent = {
     selected: {
-        title: "Selected Work",
-        meta: "MakiKonek, PICKLED, PUP Dash, Portfolio Website",
-        count: "4 project exhibits",
+        title: "Digital Projects",
+        meta: "Web development, UI/UX, frontend builds, and game development",
+        count: "4 digital projects",
         volume: "Volume 01",
     },
     creative: {
@@ -76,9 +76,9 @@ const previewContent = {
         volume: "Volume 04",
     },
     about: {
-        title: "Blank Volume",
-        meta: "Reserved for future content",
-        count: "Coming soon",
+        title: "Motion Archive",
+        meta: "Video editing, AVPs, event recaps, reels, and visual storytelling",
+        count: "Video records",
         volume: "Volume 05",
     },
 };
