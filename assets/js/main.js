@@ -64,21 +64,21 @@ const previewContent = {
         volume: "Volume 02",
     },
     experience: {
-        title: "Experience",
-        meta: "Leadership, data work, public service, multimedia team records",
-        count: "6 archived records",
+        title: "About & Experience",
+        meta: "Profile, journey, education, leadership, creative foundation, and skills",
+        count: "Profile record",
         volume: "Volume 03",
     },
-    certifications: {
-        title: "Certifications",
-        meta: "Academic, leadership, civic, research, and learning documents",
-        count: "6 credential files",
+    milestones: {
+        title: "Milestones",
+        meta: "Talks, recognitions, certificates, film distinctions, and service records",
+        count: "5 milestone records",
         volume: "Volume 04",
     },
     about: {
-        title: "About Me",
-        meta: "Personal story, design journey, frontend path, interests, philosophy",
-        count: "Personal notes",
+        title: "Blank Volume",
+        meta: "Reserved for future content",
+        count: "Coming soon",
         volume: "Volume 05",
     },
 };
