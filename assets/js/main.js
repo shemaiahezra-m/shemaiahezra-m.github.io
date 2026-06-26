@@ -146,3 +146,209 @@ archiveBooks.forEach((book) => {
     book.addEventListener("blur", resetPreview);
     book.addEventListener("click", (event) => enterCollection(event, book));
 });
+
+const creativeGalleries = {
+    brand: {
+        title: "Brand Campaign Materials",
+        meta: "Collection 01 / 2024",
+        items: [
+            { type: "image", src: "assets/images/brand-campaigns/lalal-co/Screenshot 2026-06-22 at 1.05.40 AM.png", title: "Lalal Co Brand Study" },
+            { type: "image", src: "assets/images/brand-campaigns/lalal-co/Screenshot 2026-06-22 at 1.06.45 AM.png", title: "Lalal Co Product System" },
+            { type: "image", src: "assets/images/brand-campaigns/lalal-co/Screenshot 2026-06-22 at 1.07.17 AM.png", title: "Lalal Co Campaign Detail" },
+            { type: "image", src: "assets/images/brand-campaigns/lalal-co/Screenshot 2026-06-22 at 1.07.44 AM.png", title: "Lalal Co Application" },
+            { type: "image", src: "assets/images/brand-campaigns/wabbles/wabbles1.png", title: "Wabbles Brand Preview" },
+            { type: "image", src: "assets/images/brand-campaigns/wabbles/wabbles2.png", title: "Wabbles Visual System" },
+            { type: "image", src: "assets/images/brand-campaigns/wabbles/wabbles3.png", title: "Wabbles Campaign Asset" },
+        ],
+    },
+    campaigns: {
+        title: "Social Media Campaign Materials",
+        meta: "Collection 02 / 2020 - 2025",
+        items: [
+            { type: "link", title: "Layag Inklusibo 2022", label: "Credentials", href: "https://canva.link/8f78d95gcnmci2p" },
+            { type: "link", title: "Aninag 2023", label: "DP Blast", href: "https://canva.link/8f78d95gcnmci2p" },
+            { type: "link", title: "Aninag 2023", label: "Credentials", href: "https://canva.link/c7xr46maxf6izjk" },
+            { type: "link", title: "Aninag 2023", label: "Platforms", href: "https://canva.link/c7xr46maxf6izjk" },
+            { type: "link", title: "Comspire 2025", label: "Platforms", href: "https://canva.link/kzrntfqudr1qbhi" },
+            { type: "placeholder", title: "Campaign Materials", label: "Placeholder" },
+        ],
+    },
+    pubmats: {
+        title: "Social Media Pubmats",
+        meta: "Collection 03 / 2023 - 2024",
+        items: [
+            { type: "link", title: "SALIG Pubmats", label: "2023 - 2024", href: "https://canva.link/3fkuk9aw2lg60g3" },
+            { type: "link", title: "Living Stones", label: "Pubmats", href: "https://canva.link/fby56cwv2utjuad" },
+            { type: "placeholder", title: "Community Posts", label: "Placeholder" },
+            { type: "placeholder", title: "Announcements", label: "Placeholder" },
+            { type: "placeholder", title: "Church Media", label: "Placeholder" },
+            { type: "placeholder", title: "Organization Graphics", label: "Placeholder" },
+        ],
+    },
+    reels: {
+        title: "Reels Thumbnails",
+        meta: "Collection 04 / 2025",
+        items: [
+            { type: "link", title: "Living Stones Reels", label: "Thumbnail Collection", href: "https://canva.link/wxx8df2x8yw2xvy" },
+            { type: "placeholder", title: "Reel Cover", label: "Placeholder" },
+            { type: "placeholder", title: "Story Hook", label: "Placeholder" },
+            { type: "placeholder", title: "Series Cover", label: "Placeholder" },
+            { type: "placeholder", title: "Short-form Layout", label: "Placeholder" },
+            { type: "placeholder", title: "Campaign Thumbnail", label: "Placeholder" },
+        ],
+    },
+    frames: {
+        title: "Frame Pubmats",
+        meta: "Collection 05 / 2025",
+        items: [
+            { type: "placeholder", title: "Display Picture Frame", label: "2025" },
+            { type: "placeholder", title: "DP Blast Template", label: "Frame" },
+            { type: "placeholder", title: "Campaign Frame", label: "Template" },
+            { type: "placeholder", title: "Event Frame", label: "Event" },
+            { type: "placeholder", title: "Participation Frame", label: "Pubmat" },
+            { type: "placeholder", title: "Archive Slot", label: "Pending" },
+        ],
+    },
+    stage: {
+        title: "Stage Design",
+        meta: "Collection 06 / 2023",
+        items: [
+            { type: "image", src: "assets/images/stage-designs/cornucopia.png", title: "Cornucopia Stage Design" },
+            { type: "image", src: "assets/images/stage-designs/cornucopia2.png", title: "Cornucopia Alternate Stage Design" },
+        ],
+    },
+    jersey: {
+        title: "Jersey and T-shirt Designs",
+        meta: "Collection 07 / 2023 - 2025",
+        items: [
+            { type: "image", src: "assets/images/shirt-jersey/GREEN FRONT.PNG", title: "Green Jersey Front" },
+            { type: "image", src: "assets/images/shirt-jersey/GREEN BACK.PNG", title: "Green Jersey Back" },
+            { type: "image", src: "assets/images/shirt-jersey/NAVY BLUE FRONT.PNG", title: "Navy Blue Jersey Front" },
+            { type: "image", src: "assets/images/shirt-jersey/NAVY BLUE BACK.PNG", title: "Navy Blue Jersey Back" },
+            { type: "image", src: "assets/images/shirt-jersey/RED FRONT.PNG", title: "Red Jersey Front" },
+            { type: "image", src: "assets/images/shirt-jersey/RED BACK.PNG", title: "Red Jersey Back" },
+            { type: "image", src: "assets/images/shirt-jersey/VIOLET FRONT.PNG", title: "Violet Jersey Front" },
+            { type: "image", src: "assets/images/shirt-jersey/VIOLET BACK.PNG", title: "Violet Jersey Back" },
+            { type: "image", src: "assets/images/shirt-jersey/YELLOW FRONT.PNG", title: "Yellow Jersey Front" },
+            { type: "image", src: "assets/images/shirt-jersey/YELLOW BACK.PNG", title: "Yellow Jersey Back" },
+            { type: "image", src: "assets/images/shirt-jersey/IMG_0662.JPEG", title: "Shirt Mockup 01" },
+            { type: "image", src: "assets/images/shirt-jersey/IMG_0663.JPEG", title: "Shirt Mockup 02" },
+            { type: "image", src: "assets/images/shirt-jersey/IMG_1568.JPEG", title: "Shirt Mockup 03" },
+            { type: "image", src: "assets/images/shirt-jersey/IMG_1572.JPEG", title: "Shirt Mockup 04" },
+        ],
+    },
+    cocreated: {
+        title: "Co-Created Projects",
+        meta: "Collection 08 / 2023 - 2025",
+        items: [
+            { type: "placeholder", title: "Computer Society Bulletin Board", label: "Collaborative" },
+            { type: "placeholder", title: "General Assembly 2024 Display Picture Frame", label: "Frame" },
+            { type: "placeholder", title: "MIL Film Festival Poster", label: "Poster" },
+            { type: "placeholder", title: "Shared Production Support", label: "Archive" },
+            { type: "placeholder", title: "Organization Materials", label: "Design" },
+            { type: "placeholder", title: "Pending Filed Assets", label: "Soon" },
+        ],
+    },
+};
+
+const creativeCards = document.querySelectorAll("[data-gallery]");
+let activeGalleryTrigger = null;
+
+const closeCreativeGallery = () => {
+    const modal = document.querySelector("[data-creative-gallery-modal]");
+    if (!modal) return;
+
+    modal.remove();
+    document.body.classList.remove("gallery-is-open");
+    activeGalleryTrigger?.focus();
+};
+
+const renderGalleryItem = (item, index) => {
+    const itemNumber = String(index + 1).padStart(2, "0");
+
+    if (item.type === "image") {
+        return `
+            <figure class="creative-gallery-item">
+                <img src="${item.src}" alt="${item.title}">
+                <figcaption><span>${itemNumber}</span>${item.title}</figcaption>
+            </figure>
+        `;
+    }
+
+    if (item.type === "link") {
+        return `
+            <a class="creative-gallery-item creative-gallery-link" href="${item.href}" target="_blank" rel="noreferrer">
+                <div class="creative-gallery-placeholder"><span>${item.label}</span></div>
+                <strong>${item.title}</strong>
+                <em>Open Link</em>
+            </a>
+        `;
+    }
+
+    return `
+        <article class="creative-gallery-item">
+            <div class="creative-gallery-placeholder"><span>${item.label}</span></div>
+            <figcaption><span>${itemNumber}</span>${item.title}</figcaption>
+        </article>
+    `;
+};
+
+const openCreativeGallery = (key, trigger) => {
+    const gallery = creativeGalleries[key];
+    if (!gallery) return;
+
+    closeCreativeGallery();
+    activeGalleryTrigger = trigger;
+
+    const modal = document.createElement("div");
+    modal.className = "creative-gallery-modal";
+    modal.dataset.creativeGalleryModal = "";
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-modal", "true");
+    modal.setAttribute("aria-labelledby", "creative-gallery-title");
+    modal.innerHTML = `
+        <div class="creative-gallery-backdrop" data-gallery-close></div>
+        <section class="creative-gallery-panel">
+            <header class="creative-gallery-header">
+                <div>
+                    <p>${gallery.meta}</p>
+                    <h2 id="creative-gallery-title">${gallery.title}</h2>
+                    <span>${gallery.items.length} filed items</span>
+                </div>
+                <button type="button" class="creative-gallery-close" data-gallery-close aria-label="Close gallery">Close</button>
+            </header>
+            <div class="creative-gallery-grid">
+                ${gallery.items.map(renderGalleryItem).join("")}
+            </div>
+        </section>
+    `;
+
+    document.body.appendChild(modal);
+    document.body.classList.add("gallery-is-open");
+    modal.querySelector("[data-gallery-close]").focus();
+
+    modal.addEventListener("click", (event) => {
+        if (event.target.closest("[data-gallery-close]")) {
+            closeCreativeGallery();
+        }
+    });
+};
+
+creativeCards.forEach((card) => {
+    card.addEventListener("click", (event) => {
+        if (event.target.closest("a")) return;
+        openCreativeGallery(card.dataset.gallery, card);
+    });
+    card.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+
+        event.preventDefault();
+        openCreativeGallery(card.dataset.gallery, card);
+    });
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeCreativeGallery();
+    }
+});

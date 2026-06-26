@@ -392,20 +392,60 @@ button:focus-visible,
 
 .portrait-file {
     left: 1%;
-    top: 34px;
-    z-index: 6;
-    width: min(30%, 205px);
-    min-height: 0;
-    padding: 12px 12px 18px;
-    opacity: 1;
-    transform: rotate(-5deg) scale(0.98);
+    top: 124px;
+    z-index: 4;
+    width: 190px;
+    min-height: 238px;
+    opacity: 0.92;
+    transform: rotate(-5deg) scale(0.94);
 }
 
 .portrait-file:hover {
-    transform: translateY(-18px) rotate(-5deg) scale(0.98);
+    transform: translateY(-18px) rotate(-5deg) scale(0.94);
 }
 
-.portrait-file img {
+.drawer-photo {
+    position: absolute;
+    display: block;
+    width: 112px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    border: 7px solid rgba(255, 253, 247, 0.96);
+    border-bottom-width: 18px;
+    border-radius: 4px;
+    background: #F7F3EA;
+    box-shadow: 0 14px 26px rgba(73, 61, 48, 0.15);
+    pointer-events: none;
+}
+
+.portrait-photo-one {
+    left: 8%;
+    top: 72px;
+    z-index: 7;
+    width: 105px;
+    transform: rotate(-11deg);
+    filter: saturate(0.82) contrast(0.96);
+}
+
+.portrait-photo-two {
+    left: 24%;
+    top: 24px;
+    z-index: 8;
+    width: 126px;
+    transform: rotate(3deg);
+}
+
+.portrait-photo-three {
+    left: 43%;
+    top: 62px;
+    z-index: 6;
+    width: 108px;
+    transform: rotate(9deg);
+    filter: saturate(0.84) contrast(0.96);
+}
+
+.portrait-file > img {
     width: 100%;
     aspect-ratio: 4 / 4.35;
     object-fit: cover;
@@ -2452,6 +2492,15 @@ button:focus-visible,
     border-radius: 12px;
     background: rgba(255, 253, 247, 0.62);
     box-shadow: 0 18px 40px rgba(73, 61, 48, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.76);
+    cursor: pointer;
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.creative-collection-card:hover,
+.creative-collection-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: rgba(152, 24, 48, 0.24);
+    box-shadow: 0 22px 48px rgba(73, 61, 48, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.76);
 }
 
 .creative-preview-grid {
@@ -2585,6 +2634,159 @@ button:focus-visible,
 
 .creative-note-list {
     list-style: none;
+}
+
+.gallery-is-open {
+    overflow: hidden;
+}
+
+.creative-gallery-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: clamp(14px, 3vw, 38px);
+}
+
+.creative-gallery-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(27, 27, 27, 0.34);
+    backdrop-filter: blur(10px);
+}
+
+.creative-gallery-panel {
+    position: relative;
+    display: grid;
+    width: min(1120px, 100%);
+    max-height: min(88vh, 920px);
+    overflow: hidden;
+    border: 1px solid rgba(105, 92, 73, 0.18);
+    border-radius: 14px;
+    background:
+        linear-gradient(90deg, rgba(152, 24, 48, 0.14) 0 1px, transparent 1px 34px, rgba(105, 92, 73, 0.08) 34px 35px, transparent 35px),
+        repeating-linear-gradient(to bottom, transparent 0, transparent 43px, rgba(0, 0, 0, 0.032) 44px),
+        rgba(255, 253, 247, 0.96);
+    box-shadow: 0 30px 80px rgba(27, 27, 27, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+.creative-gallery-header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 18px;
+    padding: clamp(20px, 3vw, 34px);
+    border-bottom: 1px solid rgba(105, 92, 73, 0.16);
+}
+
+.creative-gallery-header p,
+.creative-gallery-header span {
+    margin: 0;
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.creative-gallery-header h2 {
+    margin: 6px 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 0.96;
+    font-weight: 520;
+}
+
+.creative-gallery-header span {
+    color: rgba(52, 49, 45, 0.48);
+}
+
+.creative-gallery-close {
+    flex: 0 0 auto;
+    min-height: 38px;
+    padding: 8px 14px;
+    border: 1px solid rgba(52, 49, 45, 0.16);
+    border-radius: 999px;
+    background: #34312D;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.creative-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(14px, 2vw, 22px);
+    min-height: 0;
+    overflow: auto;
+    padding: clamp(18px, 3vw, 34px);
+}
+
+.creative-gallery-item {
+    display: grid;
+    align-content: start;
+    gap: 9px;
+    min-width: 0;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid rgba(105, 92, 73, 0.14);
+    border-radius: 10px;
+    background: rgba(255, 253, 247, 0.72);
+    color: #1B1B1B;
+    text-decoration: none;
+    box-shadow: 0 12px 28px rgba(73, 61, 48, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.74);
+}
+
+.creative-gallery-item img,
+.creative-gallery-placeholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid rgba(105, 92, 73, 0.14);
+    border-radius: 7px;
+    background: rgba(250, 248, 244, 0.72);
+}
+
+.creative-gallery-item img {
+    object-fit: cover;
+}
+
+.creative-gallery-item figcaption,
+.creative-gallery-item strong {
+    display: grid;
+    gap: 3px;
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 760;
+    line-height: 1.18;
+}
+
+.creative-gallery-item figcaption span {
+    color: var(--accent);
+    font-size: 0.64rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.creative-gallery-placeholder {
+    display: grid;
+    place-items: center;
+    padding: 12px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(238, 232, 219, 0.58)),
+        repeating-linear-gradient(0deg, rgba(105, 92, 73, 0.08) 0 1px, transparent 1px 12px);
+}
+
+.creative-gallery-placeholder span,
+.creative-gallery-link em {
+    color: rgba(52, 49, 45, 0.52);
+    font-size: 0.68rem;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .selected-work-page .volume-record-sheet {
@@ -2916,9 +3118,9 @@ button:focus-visible,
 
 .profile-hero-record {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(180px, 280px);
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
     gap: clamp(24px, 5vw, 64px);
-    align-items: end;
+    align-items: center;
     padding-bottom: clamp(26px, 4vw, 42px);
     border-bottom: 1px solid rgba(105, 92, 73, 0.18);
 }
@@ -2964,9 +3166,13 @@ button:focus-visible,
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
+    object-position: center top;
     border: 1px solid rgba(105, 92, 73, 0.16);
     border-radius: 8px;
-    box-shadow: 0 18px 38px rgba(73, 61, 48, 0.12);
+    background: rgba(255, 253, 247, 0.86);
+    padding: 8px;
+    transform: rotate(2deg);
+    box-shadow: 0 22px 46px rgba(73, 61, 48, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.82);
 }
 
 .profile-highlight-grid,
@@ -3879,14 +4085,33 @@ button:focus-visible,
 
     .portrait-file {
         left: 0;
-        top: 54px;
-        width: min(48vw, 185px);
-        min-height: 0;
-        transform: rotate(-4deg) scale(0.96);
+        top: 138px;
+        width: 150px;
+        min-height: 220px;
+        transform: rotate(-4deg) scale(0.92);
     }
 
-    .portrait-file img {
-        max-height: 260px;
+    .drawer-photo {
+        border-width: 6px;
+        border-bottom-width: 16px;
+    }
+
+    .portrait-photo-one {
+        left: 4%;
+        top: 102px;
+        width: 82px;
+    }
+
+    .portrait-photo-two {
+        left: 25%;
+        top: 78px;
+        width: 96px;
+    }
+
+    .portrait-photo-three {
+        left: 52%;
+        top: 110px;
+        width: 82px;
     }
 
     .drawer-front {
@@ -3914,7 +4139,7 @@ button:focus-visible,
     }
 
     .portrait-file:hover {
-        transform: translateY(-18px) rotate(-4deg) scale(0.96);
+        transform: translateY(-18px) rotate(-4deg) scale(0.92);
     }
 
     .portrait-file.is-selected {
@@ -4092,6 +4317,32 @@ button:focus-visible,
     .creative-note-list {
         display: grid;
         align-items: start;
+    }
+
+    .creative-gallery-modal {
+        padding: 8px;
+        align-items: end;
+    }
+
+    .creative-gallery-panel {
+        max-height: 92vh;
+        border-radius: 12px;
+    }
+
+    .creative-gallery-header {
+        display: grid;
+        gap: 12px;
+        padding: 18px;
+    }
+
+    .creative-gallery-header h2 {
+        font-size: clamp(1.9rem, 10vw, 2.7rem);
+        line-height: 1.02;
+    }
+
+    .creative-gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 14px;
     }
 
     .milestone-record,
