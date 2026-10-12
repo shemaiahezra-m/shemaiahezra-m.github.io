@@ -69,6 +69,13 @@
         text-decoration: none;
       }
 
+      .brand img {
+        display: block;
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+      }
+
       .brand-mark {
         width: 29px;
         text-align: center;
@@ -93,11 +100,20 @@
         font-size: 12px;
         font-weight: 500;
         text-decoration: none;
+        transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
       }
 
-      .nav a:first-child,
-      .nav a:hover {
+      .nav a[aria-current="page"] {
         background: rgba(255, 255, 255, 0.12);
+        color: white;
+      }
+
+      .nav a:hover:not([aria-current="page"]) {
+        color: white;
+        transform: translateY(-1px);
+      }
+
+      .nav a:focus-visible:not([aria-current="page"]) {
         color: white;
       }
 
@@ -1118,7 +1134,19 @@
         box-shadow: 0 15px 30px rgba(23, 23, 23, 0.17);
         overflow: hidden;
         transform-origin: center bottom;
-        transition: transform 360ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 260ms ease;
+        transition: transform 360ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 260ms ease, opacity 260ms ease;
+      }
+
+      .mini-project:nth-child(n + 4) {
+        z-index: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(18px) scale(0.92);
+      }
+
+      .mini-project:nth-child(-n + 3) {
+        visibility: visible;
+        opacity: 1;
       }
 
       .mini-project::before {
@@ -1128,6 +1156,39 @@
         background:
           radial-gradient(circle at 72% 28%, rgba(255, 255, 255, 0.8) 0 11%, transparent 12%),
           linear-gradient(135deg, color-mix(in srgb, var(--pocket-color) 70%, #6079d5), var(--pocket-color));
+      }
+
+      /* Use the portfolio's real work as the browser-window previews. */
+      .mini-project > img {
+        position: absolute;
+        z-index: 1;
+        top: 18px;
+        right: 0;
+        bottom: 42px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 60px);
+        object-fit: cover;
+        object-position: center 28%;
+        background: #f5f4f1;
+      }
+
+      .mini-project > iframe {
+        position: absolute;
+        z-index: 1;
+        top: 18px;
+        left: 0;
+        width: 300%;
+        height: 300%;
+        border: 0;
+        background: #f7f7f7;
+        transform: scale(0.333333);
+        transform-origin: top left;
+        pointer-events: none;
+      }
+
+      .mini-project::before {
+        display: none;
       }
 
       .mini-project::after {
@@ -1185,6 +1246,7 @@
 
       .mini-project strong {
         position: absolute;
+        z-index: 3;
         right: 5px;
         bottom: 21px;
         left: 7px;
@@ -1196,6 +1258,7 @@
 
       .mini-project small {
         position: absolute;
+        z-index: 3;
         right: 5px;
         bottom: 6px;
         left: 7px;
@@ -1311,6 +1374,9 @@
       }
 
       .pocket {
+        display: block;
+        color: inherit;
+        text-decoration: none;
         transition: transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1), filter 300ms ease;
       }
 
@@ -1319,6 +1385,72 @@
         z-index: 8;
         transform: translateY(-9px);
         filter: saturate(1.04);
+      }
+
+      .pocket:focus-visible {
+        outline: 3px solid #4f6edb;
+        outline-offset: 8px;
+        border-radius: 22px;
+      }
+
+      .pocket:focus-within .pocket-file {
+        top: 54px;
+        transform: rotate(0);
+      }
+
+      .pocket-front > span:not(.folder-tags) {
+        position: absolute;
+        right: 28px;
+        left: 28px;
+      }
+
+      .pocket-front .pocket-copy {
+        top: 52px;
+        bottom: auto;
+        display: grid;
+        gap: 3px;
+        border: 0;
+        padding: 0;
+        font: inherit;
+        pointer-events: none;
+      }
+
+      .pocket-copy strong {
+        display: block;
+        font-size: clamp(20px, 1.45vw, 26px);
+        line-height: 1.1;
+        font-weight: 500;
+        letter-spacing: -0.05em;
+      }
+
+      .pocket-copy small {
+        max-width: 290px;
+        display: -webkit-box;
+        overflow: hidden;
+        color: rgba(31, 31, 33, 0.76);
+        font: 11px/1.35 "DM Sans", sans-serif;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .pocket-front .pocket-cta {
+        z-index: 3;
+        bottom: 14px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 8px;
+        border-top: 1px solid rgba(77, 43, 125, 0.28);
+        font: 8px "DM Mono", monospace;
+        pointer-events: none;
+      }
+
+      .folder-tags {
+        bottom: 42px !important;
+        pointer-events: none;
+      }
+
+      .folder-tags i {
+        line-height: 1.2;
       }
 
       .pocket:hover .mini-project:nth-child(1),
@@ -1341,6 +1473,34 @@
         box-shadow: 0 20px 38px rgba(23, 23, 23, 0.2);
       }
 
+      .pocket:focus-within .mini-project:nth-child(1) {
+        transform: translate(-25px, -2px) rotate(-6deg);
+      }
+
+      .pocket:focus-within .mini-project:nth-child(2) {
+        transform: translate(3px, -18px) rotate(0deg);
+      }
+
+      .pocket:focus-within .mini-project:nth-child(3) {
+        transform: translate(28px, -5px) rotate(6deg);
+      }
+
+      .pocket:focus-within .mini-project {
+        box-shadow: 0 20px 38px rgba(23, 23, 23, 0.2);
+      }
+
+      .mini-project i {
+        position: absolute;
+        z-index: 4;
+      }
+
+      .mini-project strong,
+      .mini-project small {
+        padding: 2px 4px;
+        border-radius: 3px;
+        background: rgba(255, 255, 255, 0.92);
+      }
+
       .pockets-section {
         background:
           radial-gradient(circle at 15% 25%, rgba(241, 138, 112, 0.15), transparent 24%),
@@ -1351,7 +1511,7 @@
 
       @media (min-width: 1101px) {
         .hero {
-          min-height: 780px;
+          min-height: 720px;
         }
 
         .intro {
@@ -1441,11 +1601,13 @@
         }
 
         .topbar-status {
-          font-size: 8px;
+          max-width: 150px;
+          font-size: 7px;
+          white-space: nowrap;
         }
 
         .clock {
-          display: none;
+          display: inline;
         }
 
         .hero {
@@ -1540,11 +1702,11 @@
 
         .pockets-section {
           min-height: auto;
-          padding: 75px 20px 85px;
+          padding: 54px 20px 66px;
         }
 
         .pockets-heading {
-          margin-bottom: 55px;
+          margin-bottom: 34px;
         }
 
         .pockets-heading h2 {
