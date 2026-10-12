@@ -22,7 +22,7 @@
       if (matches) visible += 1;
     });
 
-    count.textContent = `${String(visible).padStart(2, "0")} PROJECT${visible === 1 ? "" : "S"}`;
+    if (count) count.textContent = `${String(visible).padStart(2, "0")} PROJECT${visible === 1 ? "" : "S"}`;
     if (emptyState) emptyState.hidden = visible !== 0;
     if (updateHash) history.replaceState(null, "", selected === "all" ? location.pathname : `#${selected}`);
   }
