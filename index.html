@@ -18,14 +18,12 @@
 
 <body>
     <header class="topbar">
-        <a class="brand" href="#home"><span class="brand-mark">S</span> <span>Personal Archive</span></a>
+        <a class="brand" href="#home" aria-label="Shemaiah Ezra home"><img src="assets/images/DarkLogo.png" alt=""></a>
         <nav class="nav" aria-label="Main navigation">
-            <a href="#home">Desktop</a> <a href="projects.html">Work</a> <a href="creative.html">Archive</a> <a
-                href="about.html">About</a> <a href="milestones.html">Milestones</a>
+            <a href="#home" aria-current="page">Desktop</a> <a href="projects.html">Work</a> <a href="creative.html">Archive</a> <a
+                href="about.html">About</a>
         </nav>
-        <div class="topbar-status">
-            <span class="available">Open to opportunities</span> <span class="clock" id="clock"></span>
-        </div>
+        <div class="topbar-status"><time class="clock" data-clock aria-label="Current date and time in Manila"></time></div>
     </header>
     <main>
         <section class="hero" id="home">
@@ -76,8 +74,8 @@
                 </div>
             </div>
             <div class="intro">
-                <span class="mono intro-label">SHEMAIAH EZRA · THIRD-YEAR BSIT</span>
-                <h1>hi, i'm <em>shemaiah.</em></h1>
+                <span class="mono intro-label">UI/UX Designer · Frontend Developer</span>
+                <h1>hi, i'm <em>shemaiah ezra!</em></h1>
                 <p>A third-year BSIT student creating thoughtful interfaces, useful frontend experiences, and multimedia
                     work
                     with a little personality.</p>
@@ -101,61 +99,39 @@
                 <p>Open a pocket to pull out a piece of my personal archive.</p>
             </div>
             <div class="pocket-grid">
-                <article class="pocket open" data-pocket="work">
+                <a class="pocket" href="projects.html" aria-label="Open selected work and projects">
                     <div class="pocket-file">
                         <small>DIGITAL PROJECTS</small>
                         <div class="pocket-projects">
-                            <span class="mini-project"><i>01</i><strong>MakiKonek</strong><small>BARANGAY SERVICE
-                                    PORTAL</small></span> <span
-                                class="mini-project"><i>02</i><strong>PICKLED</strong><small>BOOKING
-                                    SYSTEM</small></span> <span
-                                class="mini-project"><i>03</i><strong>CameRent</strong><small>CAMERA RENTAL
-                                    WEBSITE</small></span>
-                        </div><a class="pocket-file-link" href="projects.html">Open full collection ↗</a>
+                            <span class="mini-project"><img src="assets/images/projects/makikonek.png" alt="MakiKonek barangay service portal preview" loading="lazy"><i>01</i><strong>MakiKonek</strong><small>BARANGAY SERVICE PORTAL</small></span>
+                            <span class="mini-project"><img src="assets/images/projects/pickled.png" alt="PICKLED booking system preview" loading="lazy"><i>02</i><strong>PICKLED</strong><small>BOOKING SYSTEM</small></span>
+                            <span class="mini-project mini-project-live"><iframe data-src="https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html" title="Live preview of Sidequest Bento Layout" loading="lazy" sandbox="allow-scripts allow-same-origin" tabindex="-1"></iframe><i>03</i><strong>Sidequest Bento Layout</strong><small>WEB DEVELOPMENT · LIVE PREVIEW</small></span>
+                        </div>
                     </div>
-                    <h3><button class="pocket-front">Selected Work</button></h3>
-                    <p><button class="pocket-front">UI/UX, frontend, and game development projects from my
-                            portfolio.</button></p><button class="pocket-front"><span
-                            class="folder-tags"><i>UI/UX</i><i>Frontend</i><i>Game UI</i></span> <span>Explore folder
-                            <b>↗</b></span></button>
-                </article>
-                <article class="pocket yellow" id="archive" data-pocket="archive">
+                    <div class="pocket-front"><span class="folder-tags"><i>UI/UX</i><i>Frontend</i><i>Game UI</i></span><span class="pocket-copy"><strong>Selected Work</strong><small>Interfaces, web builds, and game development projects.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                </a>
+                <a class="pocket yellow" href="creative.html" aria-label="Open Creative Archive">
                     <div class="pocket-file">
                         <small>CREATIVE COLLECTIONS</small>
                         <div class="pocket-projects">
-                            <span class="mini-project"><i>01</i><strong>Brand Campaigns</strong><small>BRAND
-                                    SYSTEMS</small></span>
-                            <span class="mini-project"><i>02</i><strong>Pubmats</strong><small>VISUAL
-                                    DESIGN</small></span>
-                            <span class="mini-project"><i>03</i><strong>Motion Archive</strong><small>VIDEO +
-                                    STORY</small></span>
-                        </div><a class="pocket-file-link" href="creative.html">Open full collection ↗</a>
+                            <span class="mini-project"><img src="assets/images/brand-campaigns/lalal-co/Screenshot%202026-06-22%20at%201.05.40%E2%80%AFAM.png" alt="Lalal Co campaign brand study preview" loading="lazy"><i>01</i><strong>Brand Campaigns</strong><small>LALAL CO. · BRAND STUDY</small></span>
+                            <span class="mini-project"><img src="assets/images/stage-designs/cornucopia.png" alt="Cornucopia stage design preview" loading="lazy"><i>02</i><strong>Stage Design</strong><small>EVENT VISUALS</small></span>
+                            <span class="mini-project"><img src="assets/images/brand-campaigns/wabbles/wabbles1.png" alt="Wabbles campaign branding preview" loading="lazy"><i>03</i><strong>Campaign Branding</strong><small>WABBLES · BRAND SYSTEMS</small></span>
+                        </div>
                     </div>
-                    <h3><button class="pocket-front">Creative Archive</button></h3>
-                    <p><button class="pocket-front">Campaigns, publication materials, stage visuals, merchandise, and
-                            motion
-                            work.</button></p><button class="pocket-front"><span
-                            class="folder-tags"><i>Campaigns</i><i>Pubmats</i><i>Motion</i></span> <span>Explore folder
-                            <b>↗</b></span></button>
-                </article>
-                <article class="pocket pink" id="about" data-pocket="about">
+                    <div class="pocket-front"><span class="folder-tags"><i>Campaigns</i><i>Pubmats</i><i>Motion</i></span><span class="pocket-copy"><strong>Creative Archive</strong><small>Campaigns, publication materials, stage visuals, and motion work.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                </a>
+                <a class="pocket pink" href="about.html" aria-label="Read about Shemaiah and her leadership journey">
                     <div class="pocket-file">
-                        <small>BIO + STACK</small>
+                        <small>PERSONAL · STORY &amp; LEADERSHIP</small>
                         <div class="pocket-projects">
-                            <span class="mini-project"><i>01</i><strong>BSIT · PUP</strong><small>STO. TOMAS
-                                    CAMPUS</small></span>
-                            <span class="mini-project"><i>02</i><strong>Computer Society</strong><small>DESIGN
-                                    COMMITTEE</small></span> <span class="mini-project"><i>03</i><strong>CODI Living
-                                    Stones</strong><small>MULTIMEDIA TEAM</small></span>
-                        </div><a class="pocket-file-link" href="about.html">Open full collection ↗</a>
+                            <span class="mini-project"><img src="assets/images/Shemaiah-2.JPG" alt="Portrait of Shemaiah Ezra Magpayo" loading="lazy"><i>01</i><strong>About Me</strong><small>BSIT · PUP STO. TOMAS</small></span>
+                            <span class="mini-project"><img src="assets/images/milestones/dc-award.JPG" alt="Outstanding Design Committee Member recognition" loading="lazy"><i>02</i><strong>Design Committee</strong><small>RECOGNITION · 2025</small></span>
+                            <span class="mini-project"><img src="assets/images/milestones/lpu-talk.png" alt="Student Council Candidacy Orientation Talk certificate" loading="lazy"><i>03</i><strong>Student Council Talk</strong><small>CANDIDACY ORIENTATION · 2024</small></span>
+                        </div>
                     </div>
-                    <h3><button class="pocket-front">About Me</button></h3>
-                    <p><button class="pocket-front">My background, interests, education, creative foundation, and
-                            journey into
-                            technology.</button></p><button class="pocket-front"><span
-                            class="folder-tags"><i>BSIT</i><i>UI/UX</i><i>Frontend</i></span> <span>Explore folder
-                            <b>↗</b></span></button>
-                </article>
+                    <div class="pocket-front"><span class="folder-tags"><i>BSIT</i><i>Leadership</i><i>Personal</i></span><span class="pocket-copy"><strong>About &amp; Leadership</strong><small>My background, creative journey, and student leadership story.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                </a>
             </div>
         </section>
     </main>
@@ -209,56 +185,74 @@
             keyboard.appendChild(rowElement);
         });
 
-        const pockets = [...document.querySelectorAll(".pocket")];
+        document.querySelectorAll(".pocket").forEach((pocket) => {
+            const projectStack = pocket.querySelector(".pocket-projects");
+            const extraPreviews = pocket.matches(".pocket.yellow") ? [
+                ["Lalal Co Product System", "BRAND CAMPAIGN · LALAL CO.", "assets/images/brand-campaigns/lalal-co/Screenshot%202026-06-22%20at%201.06.45%E2%80%AFAM.png"],
+                ["Lalal Co Campaign Detail", "BRAND CAMPAIGN · LALAL CO.", "assets/images/brand-campaigns/lalal-co/Screenshot%202026-06-22%20at%201.07.17%E2%80%AFAM.png"],
+                ["Lalal Co Brand Detail", "BRAND CAMPAIGN · LALAL CO.", "assets/images/brand-campaigns/lalal-co/Screenshot%202026-06-22%20at%201.07.44%E2%80%AFAM.png"],
+                ["Wabbles Visual System", "BRAND CAMPAIGN · WABBLES", "assets/images/brand-campaigns/wabbles/wabbles2.png"],
+                ["Wabbles Social Campaign", "BRAND CAMPAIGN · WABBLES", "assets/images/brand-campaigns/wabbles/wabbles3.png"],
+                ["Social Media Pubmats", "CREATIVE COLLECTION · PUBMATS", "assets/images/creative/pubmats.png"],
+                ["Reels Thumbnail Designs", "CREATIVE COLLECTION · SHORT-FORM", "assets/images/creative/social-media-designs.png"],
+                ["Cornucopia Stage Design", "CREATIVE COLLECTION · STAGE VISUALS", "assets/images/stage-designs/cornucopia2.png"],
+                ["Stage Design Collection", "CREATIVE COLLECTION · EVENT VISUALS", "assets/images/creative/stage-design.png"],
+                ["Jersey & T-shirt Designs", "CREATIVE COLLECTION · MERCH", "assets/images/creative/jersey-designs.png"],
+                ["MIL Film Festival Poster", "CO-CREATED PROJECT · MIL", "assets/images/milestones/lpu-filmfest.png"],
+                ["From Lost to Found", "MOTION · DOCUMENTARY · 2024", "assets/images/motion/lost-found.jpg"],
+                ["Sticky Note", "MOTION · SHORT FILM · 2023", "assets/images/motion/sticky-note.jpg"],
+                ["Byaheng Aninag 2026", "MOTION · COMMUNITY CAMPAIGN", "assets/images/motion/byaheng-aninag.jpg"],
+                ["Aninag Video Campaign", "MOTION · ADVOCACY", "assets/images/motion/byaheng-aninag.jpg"],
+                ["CODI Youth Camp 2026", "MOTION · EVENT HIGHLIGHTS", "assets/images/motion/codi-camp-2026.jpg"],
+                ["CODI Youth Camp 2025", "MOTION · EVENT HIGHLIGHTS", "assets/images/motion/codi-camp-2025.jpg"],
+                ["LPU Tanglaw Pirata", "MOTION · EVENT RECAP", "assets/images/motion/lpu-tanglaw.jpg"],
+                ["Living Stones 10th Anniversary", "MOTION · ANNIVERSARY AVP", "assets/images/motion/living-stones-10th.jpg"],
+                ["LPU Graduation AVP", "MOTION · FEATURE VIDEO", "assets/images/motion/lpu-graduation.jpg"],
+                ["Port of Call", "MOTION · FEATURE VIDEO", "assets/images/motion/port-of-call.jpg"],
+                ["Living Stones Reels", "MOTION · SHORT-FORM EDIT", "assets/images/motion/living-stones-reels.jpg"],
+                ["COMSOC Candidates", "MOTION · PROMOTIONAL EDIT", "assets/images/motion/comsoc-candidates.jpg"],
+            ] : pocket.matches(".pocket:not(.pink)") ? [
+                ["CameRent", "CAMERA RENTAL WEBSITE", "assets/images/projects/camerent.png"],
+                ["PUP Dash", "GAME DEVELOPMENT · PYTHON", "assets/images/projects/pup-dash.png"],
+                ["Instax Mini Evo", "PRODUCT WEBSITE PROTOTYPE", "assets/images/projects/instax-mini-evo.png"],
+            ] : [];
 
-        function togglePocket(selectedPocket) {
-            const willOpen = !selectedPocket.classList.contains("open");
-
-            pockets.forEach((pocket) => {
-                pocket.classList.remove("open");
-                const toggle = pocket.querySelector(".pocket-toggle");
-                toggle.setAttribute("aria-expanded", "false");
-                toggle.querySelector(".toggle-state b").textContent = "Open";
-                toggle.querySelector(".toggle-state i").textContent = "+";
+            extraPreviews.forEach(([title, label, src], index) => {
+                const card = document.createElement("span");
+                card.className = "mini-project";
+                card.innerHTML = `<img data-src="${src}" alt="${title} portfolio preview" loading="lazy"><i>${String(index + 4).padStart(2, "0")}</i><strong></strong><small></small>`;
+                card.querySelector("strong").textContent = title;
+                card.querySelector("small").textContent = label;
+                projectStack.append(card);
             });
 
-            if (willOpen) {
-                selectedPocket.classList.add("open");
-                const toggle = selectedPocket.querySelector(".pocket-toggle");
-                toggle.setAttribute("aria-expanded", "true");
-                toggle.querySelector(".toggle-state b").textContent = "Close";
-                toggle.querySelector(".toggle-state i").textContent = "−";
+            const hydratePreview = (card) => {
+                const preview = card?.querySelector("[data-src]");
+                if (!preview) return;
+                preview.src = preview.dataset.src;
+                preview.removeAttribute("data-src");
+            };
+            const hydrateVisiblePreviews = () => projectStack.querySelectorAll(".mini-project:nth-child(-n + 3)").forEach(hydratePreview);
+            hydrateVisiblePreviews();
+            let cycleTimer;
+
+            function reshufflePreview() {
+                projectStack.append(projectStack.firstElementChild);
+                hydrateVisiblePreviews();
             }
-        }
 
-        pockets.forEach((pocket) => {
-            pocket.querySelector(".pocket-toggle").addEventListener("click", () => togglePocket(pocket));
-            pocket.querySelector(".pocket-front").addEventListener("click", () => togglePocket(pocket));
-            pocket.addEventListener("mouseenter", () => {
-                if (!pocket.classList.contains("open")) togglePocket(pocket);
+            pocket.addEventListener("pointerenter", (event) => {
+                if (event.pointerType !== "mouse" && event.pointerType !== "pen") return;
+                reshufflePreview();
+                if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    cycleTimer = window.setInterval(reshufflePreview, 1500);
+                }
             });
-            pocket.addEventListener("mouseleave", () => {
-                pocket.classList.remove("open");
-                const toggle = pocket.querySelector(".pocket-toggle");
-                toggle.setAttribute("aria-expanded", "false");
-                toggle.querySelector(".toggle-state b").textContent = "Open";
-                toggle.querySelector(".toggle-state i").textContent = "+";
-            });
+            pocket.addEventListener("pointerleave", () => window.clearInterval(cycleTimer));
+            pocket.addEventListener("focus", reshufflePreview);
         });
-
-        function updateClock() {
-            document.querySelector("#clock").textContent = new Intl.DateTimeFormat("en-PH", {
-                weekday: "short",
-                month: "short",
-                day: "numeric",
-                hour: "numeric",
-                minute: "2-digit",
-            }).format(new Date());
-        }
-
-        updateClock();
-        window.setInterval(updateClock, 30000);
     </script>
+    <script src="assets/js/portfolio-pages.js" defer></script>
 </body>
 
 </html>
