@@ -1,7 +1,7 @@
 :root {
         --ink: #191919;
         --muted: #737277;
-        --paper: #fbfaf6;
+        --paper: #fafafa;
         --line: #e5e5e1;
         --white: #fff;
         --orange: #f4a477;
@@ -2695,4 +2695,221 @@
 
       @media (prefers-reduced-motion: reduce) {
         .physics-pill { will-change: auto; }
+      }
+
+      /* Floating navigation adapted from the supplied snippet. */
+      .nav-container {
+        position: fixed;
+        top: 24px;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-inline: 16px;
+        pointer-events: none;
+        transition: transform 260ms ease, opacity 260ms ease;
+      }
+
+      body.nav-hidden .nav-container {
+        transform: translateY(calc(-100% - 32px));
+        opacity: 0;
+      }
+
+      body.has-floating-nav { padding-top: 74px; }
+
+      .nav-pill-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        max-width: 100%;
+        pointer-events: auto;
+      }
+
+      .nav-container .nav-pill {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 6px 8px;
+        border: 1px solid rgba(228, 228, 237, .8);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, .87);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+        backdrop-filter: blur(16px);
+      }
+
+      .nav-container a { text-decoration: none; }
+
+      .nav-container .nav-monogram {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid #e4e4e7;
+        border-radius: 50%;
+        background: #f4f4f5;
+        color: #18181b;
+        transition: transform 180ms ease, background-color 180ms ease;
+      }
+
+      .nav-container .nav-monogram img {
+        display: block;
+        width: 23px;
+        height: 23px;
+        object-fit: contain;
+      }
+
+      .nav-container .nav-monogram:hover { transform: scale(1.05); }
+
+      .nav-container .nav-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: #52525b;
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+        transition: color 180ms ease, background-color 180ms ease;
+      }
+
+      .nav-container .nav-link svg,
+      .nav-contact svg {
+        width: 15px;
+        height: 15px;
+        flex: 0 0 auto;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .nav-container .nav-link:hover,
+      .nav-container .nav-link[aria-current="page"] {
+        background: #f4f4f5;
+        color: #18181b;
+      }
+
+      .nav-container .nav-contact {
+        display: grid;
+        width: 48px;
+        height: 48px;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid rgba(0, 0, 0, .04);
+        border-radius: 50%;
+        background: #f4f4f5;
+        box-shadow: 0 8px 20px rgba(24, 24, 27, .12);
+        color: #18181b;
+        transition: transform 180ms ease, background-color 180ms ease;
+      }
+
+      .nav-container .nav-contact:hover { transform: scale(1.06); background: #e4e4e7; }
+
+      @media (max-width: 600px) {
+        .nav-container { top: 12px; padding-inline: 8px; }
+        body.has-floating-nav { padding-top: 62px; }
+        .nav-pill-wrapper { gap: 5px; }
+        .nav-container .nav-pill { gap: 2px; padding: 4px; }
+        .nav-container .nav-monogram { width: 30px; height: 30px; }
+        .nav-container .nav-monogram img { width: 20px; height: 20px; }
+        .nav-container .nav-link { gap: 0; padding: 7px 6px; font-size: 9px; }
+        .nav-container .nav-link svg { display: none; }
+        .nav-container .nav-contact { width: 38px; height: 38px; }
+        .nav-contact svg { width: 15px; height: 15px; }
+      }
+
+      /* Shared dark contact footer. */
+      .framer-footer-wrapper {
+        position: relative;
+        overflow: hidden;
+        margin: 64px 0 0;
+        padding: 72px 24px 32px;
+        border-radius: 44px 44px 0 0;
+        background: #18181b;
+        color: #fafafa;
+      }
+
+      .footer-content {
+        display: flex;
+        width: min(100%, 1200px);
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .footer-eyes-row { display: flex; align-items: center; justify-content: center; gap: 14px; }
+
+      .eye-box {
+        position: relative;
+        display: grid;
+        width: 48px;
+        height: 64px;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 50%;
+        background: #fafafa;
+      }
+
+      .pupil {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #18181b;
+        transition: transform 100ms ease-out;
+      }
+
+      .footer-cta-text { margin: 0; color: #fafafa; font-size: clamp(20px, 3vw, 28px); line-height: 1.4; }
+
+      .footer-action-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+
+      .footer-pill-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 11px 18px;
+        border: 1px solid #3f3f46;
+        border-radius: 999px;
+        background: #27272a;
+        color: #e4e4e7;
+        font-size: 13px;
+        text-decoration: none;
+        transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+      }
+
+      .footer-pill-btn:hover { transform: translateY(-2px); border-color: #71717a; background: #3f3f46; }
+
+      .footer-big-name {
+        width: 100%;
+        margin: 8px 0 0;
+        color: #fafafa;
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(64px, 14vw, 176px);
+        font-weight: 400;
+        letter-spacing: -.045em;
+        line-height: .95;
+        user-select: none;
+      }
+
+      .footer-bottom-info {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 16px;
+        padding-top: 20px;
+        border-top: 1px solid #3f3f46;
+        color: #a1a1aa;
+        font-size: 12px;
+      }
+
+      @media (max-width: 600px) {
+        .framer-footer-wrapper { margin-top: 40px; padding: 52px 20px 24px; border-radius: 28px 28px 0 0; }
+        .footer-content { gap: 26px; }
+        .footer-big-name { font-size: clamp(56px, 17vw, 100px); }
+        .footer-bottom-info { flex-direction: column; align-items: center; gap: 8px; font-size: 11px; }
       }
