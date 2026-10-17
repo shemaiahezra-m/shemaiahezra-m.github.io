@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=Space+Mono:wght@400;700&amp;display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/redesign.css">
 </head>
@@ -19,78 +19,68 @@
 <body>
     <header class="topbar">
         <a class="brand" href="#home" aria-label="Shemaiah Ezra home"><img src="assets/images/DarkLogo.png" alt=""></a>
-        <nav class="nav" aria-label="Main navigation">
-            <a href="#home" aria-current="page">Desktop</a> <a href="projects.html">Work</a> <a href="creative.html">Archive</a> <a
+        <nav class="nav-pill nav" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a> <a href="projects.html">Works</a> <a href="creative.html">Playground</a> <a
                 href="about.html">About</a>
         </nav>
         <div class="topbar-status"><time class="clock" data-clock aria-label="Current date and time in Manila"></time></div>
     </header>
     <main>
         <section class="hero" id="home">
-            <div class="ui-sandbox" aria-hidden="true">
-                <div class="ui-screen">
-                    <div class="screen-bar">
-                        <span>portfolio-system.fig</span> <span>100%</span>
-                    </div>
-                    <div class="canvas">
-                        <div class="inspect-toolbar">
-                            <span>Move</span><span>Frame</span><span>Prototype</span>
-                        </div>
-                        <div class="component">
-                            <span class="component-label">Hero / Desktop</span>
-                            <div class="component-content">
-                                <small>DIGITAL PRODUCT DESIGN</small> <strong>Useful interfaces,<br>
-                                    built thoughtfully.</strong> <span class="component-button">View selected
-                                    work</span>
-                            </div><span class="measure">padding: 16px</span>
-                        </div><span class="grid-badge">12 COL GRID</span>
-                    </div>
-                </div>
-                <div class="token-card">
-                    <span>DESIGN_TOKENS.CSS</span> <code>:root {</code> <code>--primary: #F4A6C8;</code> <code>--radius:
-          12px;</code> <code>}</code>
-                </div>
-                <div class="code-card">
-                    <div>
-                        <span>01</span><code>&lt;main&gt;</code>
-                    </div>
-                    <div>
-                        <span>02</span><code>design + code</code>
-                    </div>
-                    <div>
-                        <span>03</span><code>&lt;/main&gt;</code>
-                    </div>
-                </div>
-            </div>
-            <div class="keyboard-scene">
-                <div class="keyboard">
-                    <div class="keyboard-meta">
-                        <span>interactive keyboard</span> <span>W: work · A: archive · M: about</span>
-                    </div>
-                    <div class="keyboard-keys" id="keyboard"></div>
-                    <div class="keyboard-output" id="key-output">
-                        Ready for input...
-                    </div>
-                </div>
-            </div>
             <div class="intro">
-                <span class="mono intro-label">UI/UX Designer · Frontend Developer</span>
+                <span class="mono intro-label sub-label">UI/UX &amp; Product Designer</span>
                 <h1>hi, i'm <em>shemaiah ezra!</em></h1>
-                <p>A third-year BSIT student creating thoughtful interfaces, useful frontend experiences, and multimedia
-                    work
-                    with a little personality.</p>
+                <p class="hero-bio">A third-year BSIT student creating user-centered digital products, research-backed interfaces, and intuitive web experiences.</p>
                 <div class="actions">
-                    <a class="primary-action" href="projects.html">Open selected work <span>↗</span></a> <a
+                    <a class="primary-action btn-primary" href="projects.html">View Case Studies ↓</a> <a
                         class="text-action" href="experience.html">Read my story →</a>
                 </div>
             </div>
-            <aside class="status-card">
-                <span class="mono">CURRENT STATUS</span>
-                <p>currently building, learning, and collecting little things.</p>
-                <div class="status-footer">
-                    <span>Year 3 · BSIT</span><span>2025—26</span>
+            <div class="hero-visual-container" role="group" aria-label="Interactive design workspace collage">
+                <div class="layer-figma-wireframe" role="img" aria-label="Figma prototype with three connected checkout wireframes">
+                    <div class="figma-titlebar">
+                        <span>portfolio-system.fig</span><span>100%</span>
+                    </div>
+                    <div class="figma-canvas">
+                        <div class="design-artboard">
+                            <span class="artboard-label">DIGITAL PRODUCT DESIGN</span>
+                            <strong>Useful interfaces<br>feel effortless.</strong>
+                            <i class="artboard-orbit" aria-hidden="true"></i>
+                            <span class="artboard-spec">padding: 16px</span>
+                        </div>
+                    </div>
+                    <span class="figma-caption">PORTFOLIO HOME · DESIGN SYSTEM PREVIEW</span>
                 </div>
-            </aside>
+                <div class="layer-token-badge" aria-label="Design system tokens: pink #F44E8C and radius 12 pixels">
+                    <span>DESIGN TOKENS</span><div class="token-color-row"><i></i><code>#F44E8C</code></div>
+                    <div class="token-type-row"><b>Aa</b><span>Instrument Serif<br><small>Display / 32</small></span></div>
+                </div>
+                <div class="layer-keyboard" aria-label="Interactive keyboard">
+                    <div class="keyboard-scene"><div class="keyboard">
+                        <div class="keyboard-meta"><span>interactive keyboard</span><span>W: work · A: archive · M: about</span></div>
+                        <div class="keyboard-keys" id="keyboard"></div>
+                        <div class="keyboard-output" id="key-output">Ready for input...</div>
+                    </div></div>
+                </div>
+                <aside class="layer-sticky-note">
+                    <span>CURRENT STATUS</span><strong>currently building, learning, and collecting little things.</strong>
+                    <small>Year 3 · BSIT <b>2025—26</b></small>
+                </aside>
+            </div>
+            <div class="hero-physics-pills" aria-label="Design principles you can drag">
+                <span class="physics-pill p-pink-pastel">THINKING SYSTEMS<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                <span class="physics-pill p-yellow-bright">IMPROVING UX<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span>
+                <span class="physics-pill p-mint-teal">REFRAMING PROBLEMS<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 9h16M4 15h16M10 3 8 21m8-18-2 18"/></svg></span>
+                <span class="physics-pill p-sky-blue">MOVING RECTANGLES<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m5 9-3 3 3 3m4-10 3-3 3 3m0 14 3 3 3-3m-3-10 3 3-3 3"/></svg></span>
+                <span class="physics-pill p-lavender">TESTING<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2zM14 2v6h6"/></svg></span>
+                <span class="physics-pill p-coral-bright">MAKING IT POP<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m15 14 5-5-5-5M4 19v-4a5 5 0 0 1 5-5h11"/></svg></span>
+                <span class="physics-pill p-lime-green">ROUNDING CORNERS<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="5"/></svg></span>
+                <span class="physics-pill p-offwhite">PROTOTYPING<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg></span>
+                <span class="physics-circle p-coral-bright" aria-label="Iteration"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m15 14 5-5-5-5M4 19v-4a5 5 0 0 1 5-5h11"/></svg></span>
+                <span class="physics-circle p-yellow-bright" aria-label="Ideas"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3zM19 16l.9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9L19 16z"/></svg></span>
+                <span class="physics-circle p-light-blue" aria-label="Time"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                <span class="physics-circle p-lavender" aria-label="Coffee"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8h1a4 4 0 0 1 0 8h-1M3 8h15v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8zM7 3v2m5-2v2"/></svg></span>
+            </div>
         </section>
         <section class="pockets-section" id="work">
             <div class="pockets-heading">
@@ -108,7 +98,7 @@
                             <span class="mini-project mini-project-live"><iframe data-src="https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html" title="Live preview of Sidequest Bento Layout" loading="lazy" sandbox="allow-scripts allow-same-origin" tabindex="-1"></iframe><i>03</i><strong>Sidequest Bento Layout</strong><small>WEB DEVELOPMENT · LIVE PREVIEW</small></span>
                         </div>
                     </div>
-                    <div class="pocket-front"><span class="folder-tags"><i>UI/UX</i><i>Frontend</i><i>Game UI</i></span><span class="pocket-copy"><strong>Selected Work</strong><small>Interfaces, web builds, and game development projects.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                    <div class="pocket-front"><span class="pocket-view-badge">View ↗</span><span class="folder-tags"><i>UI/UX</i><i>Frontend</i><i>Game UI</i></span><span class="pocket-copy"><strong>Selected Work</strong><small>Interfaces, web builds, and game development projects.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
                 </a>
                 <a class="pocket yellow" href="creative.html" aria-label="Open Creative Archive">
                     <div class="pocket-file">
@@ -119,7 +109,7 @@
                             <span class="mini-project"><img src="assets/images/brand-campaigns/wabbles/wabbles1.png" alt="Wabbles campaign branding preview" loading="lazy"><i>03</i><strong>Campaign Branding</strong><small>WABBLES · BRAND SYSTEMS</small></span>
                         </div>
                     </div>
-                    <div class="pocket-front"><span class="folder-tags"><i>Campaigns</i><i>Pubmats</i><i>Motion</i></span><span class="pocket-copy"><strong>Creative Archive</strong><small>Campaigns, publication materials, stage visuals, and motion work.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                    <div class="pocket-front"><span class="pocket-view-badge">View ↗</span><span class="folder-tags"><i>Campaigns</i><i>Pubmats</i><i>Motion</i></span><span class="pocket-copy"><strong>Creative Archive</strong><small>Campaigns, publication materials, stage visuals, and motion work.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
                 </a>
                 <a class="pocket pink" href="about.html" aria-label="Read about Shemaiah and her leadership journey">
                     <div class="pocket-file">
@@ -130,7 +120,7 @@
                             <span class="mini-project"><img src="assets/images/milestones/lpu-talk.png" alt="Student Council Candidacy Orientation Talk certificate" loading="lazy"><i>03</i><strong>Student Council Talk</strong><small>CANDIDACY ORIENTATION · 2024</small></span>
                         </div>
                     </div>
-                    <div class="pocket-front"><span class="folder-tags"><i>BSIT</i><i>Leadership</i><i>Personal</i></span><span class="pocket-copy"><strong>About &amp; Leadership</strong><small>My background, creative journey, and student leadership story.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                    <div class="pocket-front"><span class="pocket-view-badge">View ↗</span><span class="folder-tags"><i>BSIT</i><i>Leadership</i><i>Personal</i></span><span class="pocket-copy"><strong>About &amp; Leadership</strong><small>My background, creative journey, and student leadership story.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
                 </a>
             </div>
         </section>
@@ -151,37 +141,26 @@
             ["Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "Shift"],
             ["Ctrl", "Fn", "Alt", "⌘", "Space", "⌘", "Alt", "←", "↑", "→"],
         ];
-
-        const routes = { W: "projects.html", A: "creative.html", M: "about.html" };
+        const keyboardRoutes = { W: "projects.html", A: "creative.html", M: "about.html" };
         const keyboard = document.querySelector("#keyboard");
-        const output = document.querySelector("#key-output");
-
+        const keyOutput = document.querySelector("#key-output");
         keyboardRows.forEach((row) => {
             const rowElement = document.createElement("div");
             rowElement.className = "key-row";
-
             row.forEach((keyName) => {
                 const key = document.createElement("button");
                 key.className = "key";
                 key.type = "button";
                 key.textContent = keyName;
-
-                if (["Esc", "Tab", "Caps", "Shift", "Enter", "⌫"].includes(keyName)) {
-                    key.classList.add("wide");
-                }
+                if (["Esc", "Tab", "Caps", "Shift", "Enter", "⌫"].includes(keyName)) key.classList.add("wide");
                 if (keyName === "Space") key.classList.add("space");
-                if (routes[keyName]) key.dataset.route = routes[keyName];
-
+                if (keyboardRoutes[keyName]) key.dataset.route = keyboardRoutes[keyName];
                 key.addEventListener("click", () => {
-                    output.textContent = `Pressed: [ ${keyName} ]`;
-                    if (routes[keyName]) {
-                        window.location.href = routes[keyName];
-                    }
+                    keyOutput.textContent = `Pressed: [ ${keyName} ]`;
+                    if (keyboardRoutes[keyName]) window.location.href = keyboardRoutes[keyName];
                 });
-
                 rowElement.appendChild(key);
             });
-
             keyboard.appendChild(rowElement);
         });
 
@@ -236,6 +215,12 @@
             hydrateVisiblePreviews();
             let cycleTimer;
 
+            pocket.addEventListener("click", (event) => {
+                if (!window.matchMedia("(pointer: coarse)").matches || pocket.classList.contains("open")) return;
+                event.preventDefault();
+                pocket.classList.add("open");
+            });
+
             function reshufflePreview() {
                 projectStack.append(projectStack.firstElementChild);
                 hydrateVisiblePreviews();
@@ -251,7 +236,10 @@
             pocket.addEventListener("pointerleave", () => window.clearInterval(cycleTimer));
             pocket.addEventListener("focus", reshufflePreview);
         });
+
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js" defer></script>
+    <script src="assets/js/hero-physics.js" defer></script>
     <script src="assets/js/portfolio-pages.js" defer></script>
 </body>
 
