@@ -1830,3 +1830,869 @@
           transition-duration: 0.01ms !important;
         }
       }
+
+      @media (max-width: 760px) {
+        .topbar .nav {
+          box-sizing: border-box;
+          width: min(100%, 380px);
+          min-width: 0;
+          margin-inline: auto;
+          justify-content: space-between;
+          gap: 0;
+          padding: 5px 7px;
+        }
+
+        .topbar .nav a {
+          min-width: 0;
+          padding: 7px clamp(6px, 2vw, 12px);
+          font-size: clamp(10px, 3vw, 13px);
+          white-space: nowrap;
+        }
+
+        .hero {
+          display: flex;
+          flex-direction: column;
+          gap: 28px;
+          padding: 32px 20px 56px;
+          overflow: hidden;
+        }
+
+        .intro {
+          order: 0;
+          flex: 0 0 auto;
+        }
+
+        .ui-sandbox,
+        .keyboard-scene,
+        .status-card {
+          position: relative;
+          inset: auto;
+          flex: 0 0 auto;
+          margin: 0;
+        }
+
+        .ui-sandbox {
+          order: 1;
+          left: auto;
+          width: 100%;
+          height: 255px;
+        }
+
+        .keyboard-scene {
+          order: 2;
+          right: auto;
+          width: 100%;
+          transform: rotate(-2deg) scale(.94);
+          transform-origin: center top;
+        }
+
+        .status-card {
+          order: 3;
+          width: 100%;
+        }
+
+        .hero h1 {
+          margin-top: 22px;
+          font-size: clamp(35px, 9vw, 48px);
+          line-height: 1;
+          overflow-wrap: anywhere;
+        }
+
+        .actions {
+          flex-wrap: wrap;
+          gap: 12px 20px;
+        }
+      }
+
+      @media (min-width: 761px) {
+        .hero {
+          position: relative;
+          height: auto;
+          min-height: 100vh;
+        }
+
+        .pockets-section {
+          position: relative;
+          z-index: 2;
+          border-radius: 32px 32px 0 0;
+          box-shadow: 0 -20px 40px rgba(0, 0, 0, .08);
+        }
+      }
+
+      .physics-playground {
+        max-width: 900px;
+        margin: -28px auto 48px;
+      }
+
+      .physics-hint {
+        display: block;
+        margin-bottom: 7px;
+        color: var(--muted);
+        font-size: 8px;
+        text-align: center;
+      }
+
+      .physics-stage {
+        position: relative;
+        height: 112px;
+        overflow: hidden;
+        border-radius: 16px;
+        touch-action: none;
+      }
+
+      .physics-stage canvas {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: block;
+        touch-action: none;
+      }
+
+      .physics-pill-layer {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .physics-pill-layer span {
+        padding: 8px 13px;
+        border: 1px solid rgba(23, 23, 23, .12);
+        border-radius: 999px;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(23, 23, 23, .08);
+        font-size: 11px;
+      }
+
+      .physics-stage.is-physics-ready .physics-pill-layer {
+        visibility: hidden;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      @media (max-width: 760px) {
+        .physics-playground {
+          margin: -14px auto 32px;
+        }
+
+        .physics-stage {
+          height: 145px;
+        }
+      }
+
+      .token-palette {
+        display: flex;
+        gap: 4px;
+        margin: 2px 0 4px;
+      }
+
+      .token-palette i {
+        width: 18px;
+        height: 9px;
+        border: 1px solid rgba(23, 23, 23, .08);
+        border-radius: 999px;
+      }
+
+      .token-palette i:nth-child(1) { background: #f44e8c; }
+      .token-palette i:nth-child(2) { background: #252321; }
+      .token-palette i:nth-child(3) { background: #f4f3ef; }
+
+      .hero-visual-container {
+        position: absolute;
+        top: 50%;
+        right: 4%;
+        z-index: 3;
+        width: min(520px, 48%);
+        height: 420px;
+        transform: translateY(-50%);
+      }
+
+      .hero .intro { z-index: 10; }
+
+      .layer-keyboard {
+        position: absolute;
+        right: -2%;
+        bottom: -1%;
+        z-index: 1;
+        width: 100%;
+        height: 205px;
+        opacity: .58;
+      }
+
+      .layer-keyboard .keyboard-scene {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        z-index: auto;
+        width: 100%;
+        transform: rotate(-3deg) scale(.88);
+        transform-origin: right bottom;
+      }
+
+      .layer-figma-wireframe {
+        position: absolute;
+        top: 25px;
+        left: 2%;
+        z-index: 2;
+        width: 96%;
+        height: 295px;
+        overflow: visible;
+        border: 1px solid #e4e4e7;
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .09);
+      }
+
+      .figma-titlebar {
+        height: 32px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 0 11px;
+        border-bottom: 1px solid #ededeb;
+        color: #77787d;
+        font: 7px "DM Mono", monospace;
+      }
+
+      .figma-titlebar > span:last-child { justify-self: end; }
+
+      .figma-dots { display: flex; gap: 4px; }
+
+      .figma-dots i {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #d6d6d3;
+      }
+
+      .figma-canvas {
+        position: relative;
+        height: 222px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 14px;
+        padding: 14px 18px 5px;
+        background-color: #f8f8f7;
+        background-image: radial-gradient(#e4e5e5 0.7px, transparent 0.7px);
+        background-size: 12px 12px;
+      }
+
+      .flow-connectors {
+        position: absolute;
+        z-index: 1;
+        top: 16px;
+        right: 12%;
+        bottom: 16px;
+        left: 12%;
+        width: 76%;
+        height: calc(100% - 32px);
+        overflow: visible;
+      }
+
+      .flow-connectors path {
+        fill: none;
+        stroke: #9aa8c7;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+      }
+
+      .flow-screen {
+        position: relative;
+        z-index: 2;
+        width: 29%;
+        max-width: 118px;
+        height: 174px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 9px;
+        border: 1px solid #d9dce2;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 5px 12px rgba(40, 45, 55, .07);
+      }
+
+      .flow-screen-title {
+        color: #77787d;
+        font: 6px "DM Mono", monospace;
+      }
+
+      .flow-image {
+        position: relative;
+        height: 55px;
+        flex: 0 0 auto;
+        overflow: hidden;
+        border-radius: 4px;
+        background: linear-gradient(135deg, #f3e3eb, #e5eaf3);
+      }
+
+      .flow-image::before,
+      .flow-image::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 24px;
+        height: 1px;
+        background: #b6bbc5;
+      }
+
+      .flow-image::before { transform: translate(-50%, -50%) rotate(45deg); }
+      .flow-image::after { transform: translate(-50%, -50%) rotate(-45deg); }
+      .flow-image-two { background: linear-gradient(135deg, #e6ecf5, #e8f1ee); }
+      .flow-image-three { background: linear-gradient(135deg, #f4ede2, #e8e9f3); }
+
+      .flow-line {
+        width: 100%;
+        height: 5px;
+        flex: 0 0 auto;
+        border-radius: 999px;
+        background: #e0e2e5;
+      }
+
+      .flow-line.short { width: 64%; }
+
+      .flow-action {
+        width: 70%;
+        height: 15px;
+        flex: 0 0 auto;
+        align-self: flex-end;
+        margin-top: auto;
+        border-radius: 999px;
+        background: #f3d7e4;
+      }
+
+      .figma-caption {
+        display: block;
+        padding: 8px 12px;
+        color: #77787d;
+        font: 6px "DM Mono", monospace;
+      }
+
+      .figma-cursor {
+        position: absolute;
+        right: -16px;
+        bottom: 24px;
+        z-index: 4;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .figma-cursor svg { width: 23px; height: 27px; }
+
+      .figma-cursor b {
+        margin: 17px 0 0 -3px;
+        padding: 4px 7px;
+        border-radius: 7px 7px 7px 1px;
+        background: #3b82f6;
+        color: white;
+        font: 7px "DM Sans", sans-serif;
+      }
+
+      .layer-token-badge {
+        position: absolute;
+        top: 0;
+        right: -2%;
+        z-index: 3;
+        width: 172px;
+        display: grid;
+        gap: 9px;
+        padding: 13px 15px;
+        border: 1px solid #34343a;
+        border-radius: 11px;
+        background: #18181b;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .2);
+        color: #fafafa;
+        transform: rotate(2deg);
+      }
+
+      .layer-token-badge > span { color: #f6a9c9; font: 6px "DM Mono", monospace; letter-spacing: .08em; }
+      .token-color-row { display: flex; align-items: center; gap: 8px; font: 7px "DM Mono", monospace; }
+      .token-color-row i { width: 18px; height: 18px; border: 1px solid #ffffff50; border-radius: 6px; background: #f44e8c; }
+      .token-type-row { display: flex; align-items: center; gap: 9px; }
+      .token-type-row b { color: #f5a7c9; font: 23px/1 "Instrument Serif", serif; }
+      .token-type-row span { font: 7px/1.4 "DM Sans", sans-serif; }
+      .token-type-row small { color: #aaaab2; }
+
+      .layer-sticky-note {
+        position: absolute;
+        bottom: 3px;
+        left: -2%;
+        z-index: 3;
+        width: 220px;
+        display: grid;
+        gap: 9px;
+        padding: 15px 17px;
+        border: 1px solid #fde047;
+        border-radius: 8px;
+        background: #fef08a;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+        transform: rotate(-3deg);
+      }
+
+      .layer-sticky-note span,
+      .layer-sticky-note small { font: 6px "DM Mono", monospace; letter-spacing: .06em; }
+      .layer-sticky-note strong { color: #292516; font: 20px/1.05 "Instrument Serif", serif; }
+      .layer-sticky-note small { color: #716632; }
+
+      @media (max-width: 760px) {
+        .hero-visual-container {
+          position: relative;
+          top: auto;
+          right: auto;
+          order: 1;
+          flex: 0 0 auto;
+          width: 100%;
+          max-width: 520px;
+          height: 345px;
+          margin: 4px auto 0;
+          transform: none;
+        }
+
+        .layer-keyboard {
+          right: 0;
+          bottom: -12px;
+          width: 100%;
+          height: 150px;
+          opacity: .52;
+        }
+
+        .layer-keyboard .keyboard-scene {
+          top: auto;
+          right: -3%;
+          bottom: 0;
+          width: 100%;
+          transform: rotate(-3deg) scale(.76);
+        }
+
+        .layer-figma-wireframe {
+          top: 35px;
+          left: 0;
+          width: 100%;
+          height: 252px;
+        }
+
+        .figma-canvas {
+          height: 187px;
+          gap: 8px;
+          padding: 12px 11px 4px;
+        }
+
+        .flow-screen {
+          width: 29%;
+          height: 145px;
+          gap: 6px;
+          padding: 7px;
+        }
+
+        .flow-image { height: 42px; }
+        .flow-line { height: 4px; }
+        .flow-action { height: 12px; }
+        .figma-caption { padding: 6px 9px; }
+        .figma-cursor { right: -7px; bottom: 19px; }
+
+        .layer-token-badge {
+          top: 0;
+          right: 0;
+          width: 132px;
+          gap: 6px;
+          padding: 9px 11px;
+        }
+
+        .layer-token-badge > span,
+        .token-color-row,
+        .token-type-row span { font-size: 6px; }
+
+        .layer-sticky-note {
+          bottom: 0;
+          left: -2px;
+          width: 174px;
+          gap: 6px;
+          padding: 11px 12px;
+        }
+
+        .layer-sticky-note strong { font-size: 17px; }
+      }
+
+      .hero .physics-playground {
+        position: absolute;
+        inset: 0;
+        z-index: 11;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        pointer-events: none;
+      }
+
+      .hero .physics-hint { display: none; }
+
+      .hero .physics-stage {
+        position: absolute;
+        inset: 0;
+        height: auto;
+        overflow: hidden;
+        border-radius: 0;
+        pointer-events: none;
+      }
+
+      .hero .physics-stage canvas { pointer-events: none; }
+
+      .physics-pill-layer span:nth-child(1) { background: #fbcfe8; color: #831843; }
+      .physics-pill-layer span:nth-child(2) { background: #fef08a; color: #713f12; }
+      .physics-pill-layer span:nth-child(3) { background: #bbf7d0; color: #14532d; }
+      .physics-pill-layer span:nth-child(4) { background: #bfdbfe; color: #1e3a8a; }
+      .physics-pill-layer span:nth-child(5) { background: #e9d5ff; color: #581c87; }
+      .physics-pill-layer span:nth-child(6) { background: #fed7aa; color: #7c2d12; }
+      .physics-pill-layer span:nth-child(7) { background: #dbeafe; color: #1e3a8a; }
+
+      @media (max-width: 760px) {
+        .hero .physics-playground {
+          position: absolute;
+          inset: 0;
+          z-index: 11;
+        }
+
+        .hero .physics-stage { height: auto; }
+      }
+
+      /* Centered, text-only home hero */
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 0;
+        padding: 96px 24px 72px;
+      }
+
+      .hero .intro {
+        z-index: auto;
+        width: min(780px, 100%);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero h1 {
+        margin: 24px 0 22px;
+        font-size: clamp(52px, 8vw, 104px);
+        line-height: .98;
+        overflow-wrap: normal;
+      }
+
+      .hero .intro > p {
+        margin: 0 auto;
+      }
+
+      .hero .actions {
+        justify-content: center;
+      }
+
+      @media (min-width: 761px) {
+        .hero {
+          position: sticky;
+          top: 74px;
+          z-index: 1;
+          height: calc(100svh - 74px);
+          min-height: max(620px, calc(100svh - 74px));
+        }
+      }
+
+      @media (max-width: 760px) {
+        .hero {
+          min-height: min(760px, calc(100svh - 64px));
+          padding: 72px 20px 64px;
+        }
+
+        .hero h1 {
+          margin: 22px 0 18px;
+          font-size: clamp(42px, 11vw, 64px);
+          line-height: 1;
+          overflow-wrap: anywhere;
+        }
+
+        .hero .actions {
+          flex-wrap: wrap;
+          gap: 12px 20px;
+        }
+      }
+
+      /* Restore the right-side collage, with the keyboard in front of the UI cards. */
+      @media (min-width: 761px) {
+        .hero {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(420px, .95fr);
+          gap: clamp(28px, 4vw, 72px);
+          padding-right: 5vw;
+          padding-left: 7vw;
+        }
+
+        .hero .intro {
+          width: 100%;
+          text-align: left;
+        }
+
+        .hero h1 { font-size: clamp(56px, 6.2vw, 88px); }
+        .hero .intro > p { margin-left: 0; }
+        .hero .actions { justify-content: flex-start; }
+
+        .hero-visual-container {
+          position: relative;
+          inset: auto;
+          width: 100%;
+          max-width: 590px;
+          height: 530px;
+          margin: 0;
+          transform: none;
+        }
+      }
+
+      .layer-figma-wireframe { z-index: 1; }
+      .layer-token-badge { z-index: 2; }
+      .layer-keyboard { z-index: 3; }
+      .layer-sticky-note { z-index: 4; }
+
+      .layer-sticky-note small {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .layer-sticky-note small b { white-space: nowrap; }
+
+      @media (max-width: 760px) {
+        .hero {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 24px;
+          min-height: 0;
+          padding: 74px 20px 54px;
+        }
+
+        .hero .intro { order: 0; }
+        .hero-visual-container { order: 1; }
+        .hero .intro > p { margin-right: auto; margin-left: auto; }
+        .hero .actions { justify-content: center; }
+      }
+
+      /* Reference palette and single portfolio artboard (no tool tabs). */
+      .layer-figma-wireframe {
+        border-color: #dadbdd;
+        background: #fbfbfa;
+      }
+
+      .figma-titlebar {
+        grid-template-columns: 1fr auto;
+        background: #fbfbfa;
+        font-size: 7px;
+      }
+
+      .figma-canvas {
+        display: block;
+        padding: 24px 8%;
+        background-color: #eff0f1;
+        background-image:
+          linear-gradient(to right, transparent calc(100% - 1px), #dfe1e3 1px),
+          linear-gradient(to bottom, transparent calc(100% - 1px), #dfe1e3 1px);
+        background-size: 48px 48px;
+      }
+
+      .design-artboard {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        padding: 34px 28px;
+        border: 1px solid #657ce8;
+        background: #fff;
+      }
+
+      .artboard-label {
+        position: relative;
+        z-index: 1;
+        display: block;
+        color: #33343a;
+        font: 6px "DM Mono", monospace;
+        letter-spacing: .11em;
+      }
+
+      .design-artboard strong {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 78%;
+        margin-top: 14px;
+        color: #191919;
+        font: 700 clamp(23px, 2.5vw, 34px)/.98 "DM Sans", sans-serif;
+        letter-spacing: -.06em;
+      }
+
+      .artboard-orbit {
+        position: absolute;
+        top: 12px;
+        right: 8%;
+        width: 120px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: #f4a6c8;
+      }
+
+      .artboard-spec {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        z-index: 2;
+        padding: 5px 7px;
+        background: #f44e8c;
+        color: #fff;
+        font: 6px "DM Mono", monospace;
+      }
+
+      .token-color-row i { background: #f4a6c8; }
+      .layer-token-badge > span,
+      .token-type-row b { color: #f4a6c8; }
+
+      @media (max-width: 760px) {
+        .figma-canvas { padding: 18px 6%; }
+        .design-artboard { padding: 28px 18px; }
+        .artboard-orbit { width: 92px; }
+        .design-artboard strong { width: 86%; font-size: 24px; }
+      }
+
+      /* Matter.js pills from sample.html, constrained to the hero viewport. */
+      .hero-physics-pills {
+        position: absolute;
+        inset: 0;
+        z-index: 11;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .physics-pill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 24px;
+        border: 1px solid rgba(23, 23, 23, .1);
+        border-radius: 999px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+        font-family: "Space Mono", "DM Mono", monospace;
+        font-size: 13px;
+        font-weight: 50;
+        letter-spacing: .06em;
+        line-height: 1;
+        text-transform: uppercase;
+        white-space: nowrap;
+        user-select: none;
+        cursor: grab;
+        pointer-events: auto;
+        will-change: transform;
+      }
+
+      .physics-pill svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+        stroke-width: 2.2;
+      }
+
+      .physics-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        display: grid;
+        width: 48px;
+        height: 48px;
+        place-items: center;
+        border: 1px solid rgba(23, 23, 23, .1);
+        border-radius: 50%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .07);
+        cursor: grab;
+        pointer-events: auto;
+        user-select: none;
+        will-change: transform;
+      }
+
+      .physics-circle svg {
+        width: 20px;
+        height: 20px;
+        stroke-width: 2.2;
+      }
+
+      .physics-pill:active { cursor: grabbing; }
+      .physics-circle:active { cursor: grabbing; }
+      .p-yellow-bright { background: #ffd200; color: #18181b; }
+      .p-coral-bright { background: #ff7a38; color: #18181b; }
+      .p-lavender { background: #d8b4fe; color: #18181b; }
+      .p-sky-blue { background: #93c5fd; color: #18181b; }
+      .p-pink-pastel { background: #fbcfe8; color: #18181b; }
+      .p-lime-green { background: #d9f99d; color: #18181b; }
+      .p-mint-teal { background: #4ade80; color: #18181b; }
+      .p-offwhite { background: #f4f4f5; color: #18181b; border: 1px solid #e4e4e7; }
+      .p-light-blue { background: #bae6fd; color: #18181b; }
+
+      .pocket-front {
+        transform-origin: center bottom;
+        transition: transform 380ms cubic-bezier(.25, 1, .5, 1), background 300ms ease;
+      }
+
+      .pocket:hover .pocket-front,
+      .pocket.open .pocket-front,
+      .pocket:focus-within .pocket-front {
+        transform: perspective(700px) rotateX(-32deg) translateY(4px);
+      }
+
+      .pocket-front .pocket-view-badge {
+        top: 14px;
+        right: 14px;
+        bottom: auto;
+        left: auto;
+        z-index: 4;
+        display: inline-flex;
+        padding: 7px 12px;
+        border: 1px solid rgba(23, 23, 23, .08);
+        border-radius: 999px;
+        background: var(--pocket-color);
+        box-shadow: 0 7px 18px rgba(23, 23, 23, .1);
+        color: var(--ink);
+        font: 700 8px "Space Mono", "DM Mono", monospace;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(5px) scale(.8);
+        transition: opacity 240ms ease, transform 350ms cubic-bezier(.34, 1.56, .64, 1);
+      }
+
+      .pocket:hover .pocket-view-badge,
+      .pocket.open .pocket-view-badge,
+      .pocket:focus-within .pocket-view-badge {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      @media (max-width: 760px) {
+        .physics-pill { gap: 6px; padding: 9px 13px; font-size: 9px; }
+        .physics-pill svg { width: 14px; height: 14px; }
+        .physics-circle { width: 38px; height: 38px; }
+        .physics-circle svg { width: 17px; height: 17px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .physics-pill { will-change: auto; }
+      }
