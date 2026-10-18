@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Project details from Shemaiah Ezra Magpayo's portfolio.">
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#101012">
   <title>Project | Shemaiah Ezra</title>
   <link rel="icon" type="image/png" href="assets/images/DarkLogo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/css/redesign.css?v=20261018-mobile-nav">
   <link rel="stylesheet" href="assets/css/portfolio-pages.css">
   <link rel="stylesheet" href="assets/css/footer.css?v=2">
-  <link rel="stylesheet" href="assets/css/project-detail.css">
+  <link rel="stylesheet" href="assets/css/project-detail.css?v=dark-project-layout">
 </head>
 <body class="portfolio-page project-detail-page has-floating-nav">
   <header class="nav-container">
@@ -37,12 +37,17 @@
     <section class="project-detail-intro" aria-labelledby="project-title">
       <h1 id="project-title"></h1>
       <p class="project-detail-description" id="project-description"></p>
-      <div class="project-detail-meta" id="project-meta"></div>
-      <nav class="project-detail-actions" id="project-actions" aria-label="Project links"></nav>
+      <div class="project-detail-info-row">
+        <div class="project-detail-meta" id="project-meta"></div>
+        <nav class="project-detail-actions" id="project-actions" aria-label="Project links"></nav>
+      </div>
     </section>
     <section class="project-gallery" aria-label="Project screenshots">
       <figure class="project-detail-preview" id="project-preview"></figure>
-      <div class="project-gallery-count" id="project-gallery-count" aria-live="polite"></div>
+      <div class="project-gallery-controls">
+        <span class="project-gallery-count" id="project-gallery-count" aria-live="polite"></span>
+        <div><button type="button" aria-label="Previous screenshot" disabled>←</button><button type="button" aria-label="Next screenshot" disabled>→</button></div>
+      </div>
     </section>
     <section class="project-detail-section" aria-labelledby="overview-title">
       <h2 id="overview-title">Overview</h2>
@@ -77,6 +82,6 @@
     </div>
   </footer>
   <script src="assets/js/portfolio-pages.js" defer></script>
-  <script src="assets/js/project-detail.js" defer></script>
+  <script src="assets/js/project-detail.js?v=dark-project-layout" defer></script>
 </body>
 </html>

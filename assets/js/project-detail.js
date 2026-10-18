@@ -73,7 +73,7 @@
       overview: ["PUP Dash is an educational 2D game built in Python, with a focus on gameplay and game interface design."],
       features: ["Educational 2D gameplay."],
       highlights: [{ text: "Role", detail: "Game UI / development" }],
-      builtWith: ["Python"],
+      builtWith: [{ text: "Language", detail: "Python" }],
       links: [{ label: "View repository", href: "https://github.com/shemaiahezra-m/PUP-Dash" }]
     },
     "instax-mini-evo": {
