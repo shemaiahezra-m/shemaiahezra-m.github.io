@@ -1116,6 +1116,30 @@ body.portfolio-page {
   background: #fff;
 }
 
+.catalog-placeholder-card .catalog-placeholder-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  margin: 7px;
+  padding: 24px;
+  background: linear-gradient(135deg, #f0efe9, #faf9f5 58%, #e8e6dd);
+  color: #24231f;
+}
+
+.catalog-placeholder-visual span,
+.catalog-placeholder-visual small {
+  color: #77756d;
+  font: 9px "DM Mono", monospace;
+  letter-spacing: .12em;
+}
+
+.catalog-placeholder-visual strong {
+  font: 500 clamp(30px, 4vw, 54px)/1 "DM Sans", sans-serif;
+  letter-spacing: -.07em;
+}
+
 .catalog-visual > img {
   display: block;
   width: 100%;
@@ -2324,6 +2348,81 @@ body.portfolio-page {
 
 .work-catalog-page .catalog-grid {
     align-items: start
+}
+
+.work-catalog-page .catalog-layout {
+    display: block;
+    min-height: 0
+}
+
+.work-catalog-page .catalog-main {
+    width: min(100%, 1680px);
+    margin: 0 auto
+}
+
+.work-catalog-page .catalog-section-heading {
+    align-items: center;
+    margin-bottom: 20px;
+    scroll-margin-top: 100px
+}
+
+.work-catalog-page .catalog-section-heading h2 {
+    margin: 0;
+    color: #282824;
+    font: 500 clamp(20px, 2vw, 27px) "DM Sans", sans-serif;
+    letter-spacing: -.05em
+}
+
+.work-catalog-page .catalog-section-heading > span {
+    flex: 0 0 auto
+}
+
+.work-catalog-page .project-group {
+    padding-top: 28px;
+    scroll-margin-top: 90px
+}
+
+.work-catalog-page .project-group + .project-group {
+    padding-top: 18px
+}
+
+.catalog-section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 30px
+}
+
+.catalog-section-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 12px;
+    border: 1px solid #e5e4df;
+    border-radius: 999px;
+    background: #ffffffa8;
+    color: #53524d;
+    font-size: 11px;
+    text-decoration: none;
+    transition: background .18s, border-color .18s, color .18s
+}
+
+.catalog-section-nav a:hover,
+.catalog-section-nav a:focus-visible {
+    border-color: #292826;
+    background: #292826;
+    color: #fff
+}
+
+.catalog-section-nav a span {
+    color: #96948d;
+    font: 9px "DM Mono", monospace
+}
+
+.catalog-section-nav a:hover span,
+.catalog-section-nav a:focus-visible span {
+    color: #ffffffa8
 }
 
 .work-catalog-page .project-card {

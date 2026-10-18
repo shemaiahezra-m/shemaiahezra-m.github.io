@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Project details from Shemaiah Ezra Magpayo's portfolio.">
+  <meta name="theme-color" content="#fafafa">
+  <title>Project | Shemaiah Ezra</title>
+  <link rel="icon" type="image/png" href="assets/images/DarkLogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/redesign.css?v=20261018-mobile-nav">
+  <link rel="stylesheet" href="assets/css/portfolio-pages.css">
+  <link rel="stylesheet" href="assets/css/footer.css?v=2">
+  <link rel="stylesheet" href="assets/css/project-detail.css">
+</head>
+<body class="portfolio-page project-detail-page has-floating-nav">
+  <header class="nav-container">
+    <div class="nav-pill-wrapper">
+      <nav class="nav-pill" aria-label="Main navigation">
+        <a class="nav-monogram" href="index.html#home" aria-label="Shemaiah Ezra home"><img src="assets/images/DarkLogo.png" alt=""></a>
+        <button class="nav-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu-links">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+        <div class="nav-links" id="mobile-menu-links"><a class="nav-link" href="projects.html" aria-current="page"><span>Work</span></a>
+          <a class="nav-link" href="creative.html"><span>Playground</span></a>
+          <a class="nav-link" href="about.html"><span>About</span></a>
+          <a class="nav-link" href="experience.html"><span>CV</span></a></div>
+      </nav>
+      <a class="nav-contact" href="mailto:magpayo.shemaiahezra@gmail.com" aria-label="Email Shemaiah"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg></a>
+    </div>
+  </header>
+
+  <main class="project-detail-main" id="project-detail" aria-live="polite">
+    <a class="project-back-link" href="projects.html">← All projects</a>
+    <section class="project-detail-intro" aria-labelledby="project-title">
+      <p class="mono" id="project-category"></p>
+      <h1 id="project-title"></h1>
+      <p class="project-detail-description" id="project-description"></p>
+      <div class="project-detail-meta" id="project-meta"></div>
+      <nav class="project-detail-actions" id="project-actions" aria-label="Project links"></nav>
+    </section>
+    <figure class="project-detail-preview" id="project-preview"></figure>
+    <section class="project-detail-section" aria-labelledby="overview-title">
+      <p class="mono">ABOUT THE PROJECT</p>
+      <h2 id="overview-title">Overview</h2>
+      <div id="project-overview"></div>
+    </section>
+    <section class="project-detail-section project-info-section" id="project-info-section" aria-labelledby="project-info-title" hidden>
+      <p class="mono">AT A GLANCE</p>
+      <h2 id="project-info-title">Project details</h2>
+      <dl id="project-facts"></dl>
+    </section>
+    <section class="project-detail-section" id="project-built-section" aria-labelledby="project-built-title" hidden>
+      <p class="mono">TOOLS AND TECHNOLOGY</p>
+      <h2 id="project-built-title">Built with</h2>
+      <p id="project-built"></p>
+    </section>
+  </main>
+
+  <footer class="framer-footer-wrapper">
+    <div class="footer-content">
+      <div class="footer-eyes-row" aria-hidden="true"><div class="eye-box"><span class="pupil"></span></div><div class="eye-box"><span class="pupil"></span></div></div>
+      <p class="footer-cta-text">Let’s connect.<br>I'm always down for a chat.</p>
+      <nav class="footer-action-buttons" aria-label="Contact and social links">
+        <a href="mailto:magpayo.shemaiahezra@gmail.com" class="footer-pill-btn">Email me <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/shemaiahezra" target="_blank" rel="noopener noreferrer" class="footer-pill-btn">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/shemaiahezra-m" target="_blank" rel="noopener noreferrer" class="footer-pill-btn">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://www.instagram.com/shemaiahezra" target="_blank" rel="noopener noreferrer" class="footer-pill-btn">Instagram <span aria-hidden="true">↗</span></a>
+      </nav>
+      <p class="footer-big-name">Shemaiah Ezra</p>
+      <div class="footer-bottom-info"><span>© 2026 Shemaiah Ezra Magpayo. All rights reserved.</span></div>
+    </div>
+  </footer>
+  <script src="assets/js/portfolio-pages.js" defer></script>
+  <script src="assets/js/project-detail.js" defer></script>
+</body>
+</html>

@@ -36,84 +36,72 @@
     </div>
   </header>
   <div class="catalog-layout">
-    <aside class="catalog-sidebar" aria-label="Work filters">
-      <div class="catalog-sidebar-top">
-        <div class="catalog-sidebar-heading"><span>FILTER ARCHIVE</span><span><i aria-hidden="true"></i> LIVE</span>
-        </div>
-        <nav class="catalog-categories" aria-label="Filter work by discipline">
-          <button class="catalog-filter is-active" type="button" data-filter="all" aria-pressed="true"><span
-              class="catalog-filter-label"><span class="category-icon icon-all" aria-hidden="true">◆</span>All
-              Work</span><span class="catalog-filter-count">06</span></button>
-          <button class="catalog-filter" id="ecommerce" type="button" data-filter="ecommerce" aria-pressed="false"><span
-              class="catalog-filter-label"><span class="category-icon icon-commerce"
-                aria-hidden="true">↗</span>E-commerce</span><span class="catalog-filter-count">02</span></button>
-          <button class="catalog-filter" id="web-development" type="button" data-filter="web-development"
-            aria-pressed="false"><span class="catalog-filter-label"><span class="category-icon icon-web"
-                aria-hidden="true">⌘</span>Web Development</span><span class="catalog-filter-count">05</span></button>
-          <button class="catalog-filter" id="multimedia" type="button" data-filter="multimedia"
-            aria-pressed="false"><span class="catalog-filter-label"><span class="category-icon icon-media"
-                aria-hidden="true">✳</span>Multimedia</span><span class="catalog-filter-count">20</span></button>
-          <button class="catalog-filter" id="game-development" type="button" data-filter="game-development"
-            aria-pressed="false"><span class="catalog-filter-label"><span class="category-icon icon-game"
-                aria-hidden="true">▣</span>Game Development</span><span class="catalog-filter-count">01</span></button>
-        </nav>
-      </div>
-    </aside>
     <main class="catalog-main">
       <section class="catalog-hero" aria-labelledby="catalog-title">
         <h1 id="catalog-title">Discover the work<br>behind the interface.</h1>
         <p>Digital products, websites, and interactive ideas shaped by curiosity, design, and code.</p>
-        <a class="catalog-hero-action" href="#catalog-grid">Explore the collection <span>↓</span></a>
+        <a class="catalog-hero-action" href="#web-development">Explore the collection <span>↓</span></a>
+        <nav class="catalog-section-nav" aria-label="Jump to project categories">
+          <a href="#web-development">Web Development <span>06</span></a>
+          <a href="#ui-ux-prototypes">UI/UX &amp; Prototypes <span>01</span></a>
+          <a href="#game-development">Game Development <span>01</span></a>
+        </nav>
       </section>
-      <section class="catalog-section" id="catalog-grid" aria-label="Selected projects">
+      <section class="catalog-section project-group" id="web-development" aria-labelledby="web-development-title">
+        <div class="catalog-section-heading"><h2 id="web-development-title">Web Development</h2><span>06 PROJECTS</span></div>
         <div class="catalog-grid">
-          <details class="catalog-card project-card" id="sidequest-bento-layout" data-category="web-development">
-            <summary class="project-card-summary" aria-expanded="false" aria-label="View Sidequest Bento Layout project details">
+          <details class="catalog-card project-card catalog-placeholder-card" data-category="web-development" data-project-slug="playform">
+            <summary class="project-card-summary" aria-label="Open Playform project page">
+              <span class="catalog-visual catalog-placeholder-visual" aria-hidden="true"><span>02</span><strong>Playform</strong><small>Spaces with a point of view</small></span>
+              <span class="catalog-card-copy"><span class="project-identity"><span><span class="project-name">Playform</span><span
+                      class="project-summary">Spaces with a point of view · In progress</span></span></span><span class="project-detail-state">View project details <b
+                  aria-hidden="true">+</b></span></span>
+            </summary>
+            <div class="project-detail-panel"><p class="mono">WEB DEVELOPMENT · IN PROGRESS</p><p>Playform is a web project in progress. More details will be added as it develops.</p></div>
+          </details>
+          <details class="catalog-card project-card" id="sidequest-bento-layout" data-category="web-development" data-project-slug="sidequest-bento-layout">
+            <summary class="project-card-summary" aria-label="Open Sidequest Bento Layout project page">
               <span class="catalog-visual catalog-live-preview"><iframe
                   src="https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html"
                   title="Live preview of Sidequest Bento Layout" loading="lazy" sandbox="allow-scripts allow-same-origin"
                   tabindex="-1"></iframe></span>
               <span class="catalog-card-copy"><span class="project-identity"><span><span class="project-name">Sidequest — Bento Layout</span><span
-                      class="project-summary">Bento layout
-                      website · Interactive Design</span></span></span><span class="project-categories tags-row"><span>UX Research</span><span>UI Design</span></span><span class="project-detail-state">View project details <b
+                      class="project-summary">An interactive website with a bento-style layout.</span></span></span><span class="project-detail-state">View project details <b
                     aria-hidden="true">+</b></span></span>
             </summary>
             <div class="project-detail-panel">
               <p class="mono">PROJECT 01 / WEB DEVELOPMENT</p>
-              <p>A bento layout website published in the Web-Development sidequest.</p><a
+              <p>An interactive bento-style website published as part of the Web Development sidequest.</p><a
                 href="https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html" target="_blank"
                 rel="noopener noreferrer">Open live website ↗</a>
             </div>
           </details>
-          <details class="catalog-card project-card" id="MATrack" data-category="web-development">
-            <summary class="project-card-summary" aria-expanded="false" aria-label="View MATrack project details">
+          <details class="catalog-card project-card" id="MATrack" data-category="web-development" data-project-slug="matrack">
+            <summary class="project-card-summary" aria-label="Open MATrack project page">
               <span class="catalog-visual"><img src="assets/images/projects/matrack.png"
                   alt="MATrack material tracking system screenshot" loading="lazy"></span>
               <span class="catalog-card-copy"><span class="project-identity"><span><span class="project-name">MATrack</span><span
                       class="project-summary">Material Tracking System · Web
-                      Application</span></span></span><span class="project-categories tags-row"><span>Product Design</span><span>Frontend</span></span><span class="project-detail-state">View project details <b
+                      Application</span></span></span><span class="project-detail-state">View project details <b
                     aria-hidden="true">+</b></span></span>
             </summary>
             <div class="project-detail-panel">
               <p class="mono">PROJECT 02 / WEB DEVELOPMENT</p>
-              <p>A material tracking system for managing inventory and logistics.</p><a href="https://matrack.freedev.app/"
+              <p>A web application for tracking materials and managing inventory.</p><a href="https://matrack.freedev.app/"
                 target="_blank" rel="noopener noreferrer">Open live website ↗</a>
             </div>
           </details>
-
-          <details class="catalog-card project-card" id="makikonek" data-category="web-development">
-            <summary class="project-card-summary" aria-expanded="false" aria-label="View MakiKonek project details">
+          <details class="catalog-card project-card" id="makikonek" data-category="web-development" data-project-slug="makikonek">
+            <summary class="project-card-summary" aria-label="Open MakiKonek project page">
               <span class="catalog-visual"><img src="assets/images/projects/makikonek.png"
                   alt="MakiKonek barangay digital service portal screenshot" loading="lazy"></span>
               <span class="catalog-card-copy"><span class="project-identity"><span><span
-                      class="project-name">MakiKonek</span><span class="project-summary">Barangay Digital Service
-                      Portal</span></span></span><span class="project-categories tags-row"><span>UX Redesign</span><span>Web Portal</span></span><span class="project-detail-state">View project details <b
+                      class="project-name">MakiKonek</span><span class="project-summary">Digital portal for barangay services.</span></span></span><span class="project-detail-state">View project details <b
                     aria-hidden="true">+</b></span></span>
             </summary>
             <div class="project-detail-panel">
               <p class="mono">PROJECT 02 / WEB DEVELOPMENT</p>
-              <p>Barangay Service Portal. The earlier project record also describes it as a Barangay Digital Service
-                Portal.</p>
+              <p>A digital portal that helps residents access barangay services.</p>
               <dl>
                 <div>
                   <dt>Year</dt>
@@ -131,22 +119,17 @@
                 repository ↗</a>
             </div>
           </details>
-
-          <details class="catalog-card project-card" id="pickled" data-category="web-development">
-            <summary class="project-card-summary" aria-expanded="false" aria-label="View PICKLED project details">
+          <details class="catalog-card project-card" id="pickled" data-category="web-development" data-project-slug="pickled">
+            <summary class="project-card-summary" aria-label="Open PICKLED project page">
               <span class="catalog-visual"><img src="assets/images/projects/pickled.png"
                   alt="PICKLED court and session booking system screenshot" loading="lazy"></span>
-              <span class="catalog-card-copy"><span class="project-identity"><span class="project-logo"><img
-                      src="assets/images/projects/logos/pickled.png" alt="PICKLED logo"
-                      loading="lazy"></span><span><span class="project-name">PICKLED</span><span
-                      class="project-summary">Court and Session Booking System</span></span></span><span
-                  class="project-categories"><span>Web Development</span></span><span class="project-detail-state">View
-                  project details <b aria-hidden="true">+</b></span></span>
+              <span class="catalog-card-copy"><span class="project-identity"><span><span class="project-name">PICKLED</span><span
+                      class="project-summary">A booking system for courts and sessions.</span></span></span><span
+                  class="project-detail-state">View project details <b aria-hidden="true">+</b></span></span>
             </summary>
             <div class="project-detail-panel">
               <p class="mono">PROJECT 03 / WEB DEVELOPMENT</p>
-              <p>Court and Events Booking Management System. The existing record lists database, scheduling, and
-                management workflows as case-study topics.</p>
+              <p>A booking management system for court sessions and events.</p>
               <dl>
                 <div>
                   <dt>Year</dt>
@@ -164,21 +147,17 @@
                 ↗</a>
             </div>
           </details>
-
-          <details class="catalog-card project-card" id="camerent" data-category="ecommerce web-development">
-            <summary class="project-card-summary" aria-expanded="false" aria-label="View CameRent project details">
+          <details class="catalog-card project-card" id="camerent" data-category="web-development" data-project-slug="camerent">
+            <summary class="project-card-summary" aria-label="Open CameRent project page">
               <span class="catalog-visual"><img src="assets/images/projects/camerent.png"
                   alt="CameRent camera rental website screenshot" loading="lazy"></span>
-              <span class="catalog-card-copy"><span class="project-identity"><span class="project-logo"><img
-                      src="assets/images/projects/logos/camerent.png" alt="CameRent logo"
-                      loading="lazy"></span><span><span class="project-name">CameRent</span><span
-                      class="project-summary">Camera Rental Website</span></span></span><span
-                  class="project-categories"><span>E-commerce</span><span>Web Development</span></span><span
+              <span class="catalog-card-copy"><span class="project-identity"><span><span class="project-name">CameRent</span><span
+                      class="project-summary">A website for browsing and renting cameras.</span></span></span><span
                   class="project-detail-state">View project details <b aria-hidden="true">+</b></span></span>
             </summary>
             <div class="project-detail-panel">
               <p class="mono">PROJECT 04 / WEB DEVELOPMENT</p>
-              <p>Camera Rental Website.</p>
+              <p>A camera rental website with an online catalog and booking flow.</p>
               <dl>
                 <div>
                   <dt>Year</dt>
@@ -196,22 +175,42 @@
                 live website ↗</a>
             </div>
           </details>
-
-          <details class="catalog-card project-card" id="pup-dash" data-category="game-development">
-            <summary class="project-card-summary" aria-expanded="false" aria-label="View PUP Dash project details">
+        </div>
+      </section>
+      <section class="catalog-section project-group" id="ui-ux-prototypes" aria-labelledby="ui-ux-prototypes-title">
+        <div class="catalog-section-heading"><h2 id="ui-ux-prototypes-title">UI/UX &amp; Prototypes</h2><span>01 PROJECT</span></div>
+        <div class="catalog-grid">
+          <details class="catalog-card project-card" id="instax-mini-evo" data-category="ui-ux-prototypes" data-project-slug="instax-mini-evo">
+            <summary class="project-card-summary" aria-label="Open Instax Mini Evo project page">
+              <span class="catalog-visual"><img src="assets/images/projects/instax-mini-evo.png"
+                  alt="Instax Mini Evo product website prototype screenshot" loading="lazy"></span>
+              <span class="catalog-card-copy"><span class="project-identity"><span><span class="project-name">Instax
+                      Mini Evo</span><span class="project-summary">A product website prototype for the Instax Mini Evo.</span></span></span><span
+                  class="project-detail-state">View project details <b aria-hidden="true">+</b></span></span>
+            </summary>
+            <div class="project-detail-panel">
+              <p class="mono">PROJECT 06 / PRODUCT WEBSITE</p>
+              <p>A product website concept for the Instax Mini Evo camera. Explore the interactive prototype in Figma.</p><a
+                href="https://www.figma.com/proto/UOpbCrLi2crXRJsvMc9tLG/INSTAX-mini-Evo?node-id=152-1178&amp;t=0jdrAe3ygvNF2zvw-1&amp;scaling=contain&amp;content-scaling=responsive&amp;page-id=148%3A2&amp;starting-point-node-id=152%3A1178"
+                target="_blank" rel="noopener noreferrer">Open Figma prototype ↗</a>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="catalog-section project-group" id="game-development" aria-labelledby="game-development-title">
+        <div class="catalog-section-heading"><h2 id="game-development-title">Game Development</h2><span>01 PROJECT</span></div>
+        <div class="catalog-grid">
+          <details class="catalog-card project-card" id="pup-dash" data-category="game-development" data-project-slug="pup-dash">
+            <summary class="project-card-summary" aria-label="Open PUP Dash project page">
               <span class="catalog-visual"><img src="assets/images/projects/pup-dash.png"
                   alt="PUP Dash educational 2D game screenshot" loading="lazy"></span>
-              <span class="catalog-card-copy"><span class="project-identity"><span
-                    class="project-logo project-logo-type"
-                    aria-hidden="true">PUP<br><small>DASH</small></span><span><span class="project-name">PUP
-                      Dash</span><span class="project-summary">Educational 2D Game</span></span></span><span
-                  class="project-categories"><span>Game Development</span></span><span class="project-detail-state">View
+              <span class="catalog-card-copy"><span class="project-identity"><span><span class="project-name">PUP
+                      Dash</span><span class="project-summary">An educational 2D game built with Python.</span></span></span><span class="project-detail-state">View
                   project details <b aria-hidden="true">+</b></span></span>
             </summary>
             <div class="project-detail-panel">
               <p class="mono">PROJECT 05 / GAME DEVELOPMENT</p>
-              <p>The existing project record notes the gameplay concept, Python implementation, and UI direction as
-                case-study topics.</p>
+              <p>An educational game built in Python, with a focus on gameplay and game interface design.</p>
               <dl>
                 <div>
                   <dt>Year</dt>
@@ -233,34 +232,7 @@
                 repository ↗</a>
             </div>
           </details>
-
-          <details class="catalog-card project-card" id="instax-mini-evo" data-category="ecommerce web-development">
-            <summary class="project-card-summary" aria-expanded="false"
-              aria-label="View Instax Mini Evo project details">
-              <span class="catalog-visual"><img src="assets/images/projects/instax-mini-evo.png"
-                  alt="Instax Mini Evo product website prototype screenshot" loading="lazy"></span>
-              <span class="catalog-card-copy"><span class="project-identity"><span
-                    class="project-logo project-logo-instax"><img src="assets/images/projects/logos/instax-mini-evo.png"
-                      alt="Instax and Fujifilm wordmark" loading="lazy"></span><span><span class="project-name">Instax
-                      Mini Evo</span><span class="project-summary">Product Website Prototype</span></span></span><span
-                  class="project-categories"><span>E-commerce</span><span>Web Development</span></span><span
-                  class="project-detail-state">View project details <b aria-hidden="true">+</b></span></span>
-            </summary>
-            <div class="project-detail-panel">
-              <p class="mono">PROJECT 06 / PRODUCT WEBSITE</p>
-              <p>Instax Mini Evo product website prototype. The available project link opens a Figma prototype.</p><a
-                href="https://www.figma.com/proto/UOpbCrLi2crXRJsvMc9tLG/INSTAX-mini-Evo?node-id=152-1178&amp;t=0jdrAe3ygvNF2zvw-1&amp;scaling=contain&amp;content-scaling=responsive&amp;page-id=148%3A2&amp;starting-point-node-id=152%3A1178"
-                target="_blank" rel="noopener noreferrer">Open Figma prototype ↗</a>
-            </div>
-          </details>
-
         </div>
-        <aside class="catalog-empty" id="multimedia-empty" hidden>
-          <p class="mono">MULTIMEDIA / CREATIVE ARCHIVE</p>
-          <h2>Visual work lives in the archive.</h2>
-          <p>Browse the campaign, visual design, and motion collections on the Creative Archive page.</p><a
-            href="creative.html">Open Playground ↗</a>
-        </aside>
       </section>
     </main>
   </div>
@@ -280,7 +252,6 @@
       <p class="footer-big-name">Shemaiah Ezra</p>
       <div class="footer-bottom-info">
         <span>© 2026 Shemaiah Ezra Magpayo. All rights reserved.</span>
-        <span>Designed &amp; built with care ✦</span>
       </div>
     </div>
   </footer>
