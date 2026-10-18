@@ -501,7 +501,7 @@
 .home-page .home-footer {
   padding: 68px clamp(24px, 4vw, 80px) 28px;
   border-radius: 48px 48px 0 0;
-  background: #09090a;
+  background: #18181b;
 }
 
 .home-page .home-footer .footer-content {
@@ -549,14 +549,14 @@
   height: 58px;
   place-items: center;
   padding: 0;
-  border-color: #29292d;
-  background: #151517;
-  color: #e7e6e3;
+  border-color: #3f3f46;
+  background: #27272a;
+  color: #e4e4e7;
 }
 
 .home-page .home-footer .footer-pill-btn:hover {
-  border-color: #4b4a4d;
-  background: #222225;
+  border-color: #71717a;
+  background: #3f3f46;
 }
 
 .home-page .home-footer .footer-pill-btn svg {
@@ -582,7 +582,7 @@
 .home-page .home-footer .footer-bottom-info {
   grid-area: bottom;
   padding-top: 18px;
-  border-color: #29292d;
+  border-color: #3f3f46;
 }
 
 @media (max-width: 600px) {
