@@ -4,14 +4,14 @@
 }
 
 .project-detail-main {
-  width: min(100% - 48px, 1280px);
+  width: min(100% - 48px, 1180px);
   margin: 0 auto;
-  padding: 118px 0 120px;
+  padding: 104px 0 92px;
 }
 
 .project-back-link {
   display: inline-flex;
-  margin-bottom: 48px;
+  margin-bottom: 34px;
   color: #a5a3a8;
   font-size: 15px;
   text-decoration: none;
@@ -24,7 +24,7 @@
 .project-detail-intro h1 {
   margin: 0;
   color: #f3f2f4;
-  font-size: clamp(46px, 7vw, 72px);
+  font-size: clamp(40px, 5.4vw, 62px);
   font-weight: 500;
   letter-spacing: -.065em;
   line-height: 1;
@@ -32,7 +32,7 @@
 
 .project-detail-description {
   max-width: 1120px;
-  margin: 48px 0 0;
+  margin: 27px 0 0;
   color: #aaa8ae;
   font-size: clamp(18px, 2.3vw, 30px);
   line-height: 1.45;
@@ -41,12 +41,12 @@
 
 .project-detail-info-row {
   display: flex;
-  min-height: 118px;
+  min-height: 94px;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-top: clamp(84px, 13vw, 170px);
-  padding: 23px 0;
+  margin-top: clamp(60px, 8.5vw, 112px);
+  padding: 18px 0;
   border-top: 1px solid #303034;
   border-bottom: 1px solid #303034;
 }
@@ -84,14 +84,14 @@
 .project-detail-actions a:hover,
 .project-detail-actions a:focus-visible { color: #fff; }
 
-.project-gallery { margin-top: 78px; }
+.project-gallery { margin-top: 56px; }
 
 .project-detail-preview {
   display: grid;
   width: 100%;
   min-height: 260px;
-  max-height: 790px;
-  aspect-ratio: 1.7;
+  max-height: 680px;
+  aspect-ratio: 1.8;
   place-items: center;
   overflow: hidden;
   margin: 0;
@@ -136,7 +136,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 48px;
+  margin-top: 27px;
 }
 
 .project-gallery-count {
@@ -148,11 +148,11 @@
 
 .project-gallery-controls button {
   display: grid;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   place-items: center;
   border: 1px solid #35353b;
-  border-radius: 16px;
+  border-radius: 14px;
   background: transparent;
   color: #d1cfd4;
   font-size: 27px;
@@ -167,11 +167,11 @@
 
 .project-detail-section {
   max-width: 1160px;
-  margin-top: 78px;
+  margin-top: 62px;
 }
 
 .project-detail-section h2 {
-  margin: 0 0 24px;
+  margin: 0 0 17px;
   color: #aaa8ae;
   font-size: clamp(20px, 2vw, 26px);
   font-weight: 500;
@@ -187,7 +187,7 @@
 
 .project-detail-list {
   display: grid;
-  gap: 18px;
+  gap: 13px;
   margin: 0;
   padding-left: 23px;
   color: #aaa8ae;
@@ -214,7 +214,7 @@
   display: grid;
   grid-template-columns: minmax(150px, 30%) 1fr;
   gap: 24px;
-  padding: 20px 0;
+  padding: 16px 0;
   border-top: 1px solid #303034;
   color: #aaa8ae;
   font-size: clamp(16px, 1.8vw, 23px);
@@ -237,21 +237,21 @@
 }
 
 @media (max-width: 700px) {
-  .project-detail-main { width: min(100% - 32px, 1280px); padding: 98px 0 80px; }
-  .project-back-link { margin-bottom: 36px; }
-  .project-detail-description { margin-top: 26px; }
+  .project-detail-main { width: min(100% - 32px, 1180px); padding: 90px 0 64px; }
+  .project-back-link { margin-bottom: 27px; }
+  .project-detail-description { margin-top: 20px; }
   .project-detail-info-row {
     min-height: 0;
     align-items: flex-start;
     flex-direction: column;
-    margin-top: 72px;
-    padding: 18px 0;
+    margin-top: 52px;
+    padding: 15px 0;
   }
   .project-detail-actions { justify-content: flex-start; }
-  .project-gallery { margin-top: 42px; }
-  .project-detail-preview { min-height: 190px; border-radius: 16px; }
-  .project-gallery-controls { margin-top: 24px; }
-  .project-gallery-controls button { width: 46px; height: 46px; border-radius: 13px; }
-  .project-detail-section { margin-top: 56px; }
+  .project-gallery { margin-top: 32px; }
+  .project-detail-preview { min-height: 170px; aspect-ratio: 1.4; border-radius: 14px; }
+  .project-gallery-controls { margin-top: 18px; }
+  .project-gallery-controls button { width: 42px; height: 42px; border-radius: 12px; }
+  .project-detail-section { margin-top: 44px; }
   .project-built-list li { grid-template-columns: 1fr; gap: 4px; padding: 15px 0; }
 }
