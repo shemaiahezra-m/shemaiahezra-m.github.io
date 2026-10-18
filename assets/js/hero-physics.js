@@ -14,18 +14,18 @@
   let frameId;
 
   const positions = [
-    { x: 0.47, y: 0.24, angle: -0.06 },
-    { x: 0.54, y: 0.20, angle: 0.1 },
-    { x: 0.78, y: 0.45, angle: 0.22 },
-    { x: 0.2, y: 0.51, angle: -0.16 },
-    { x: 0.5, y: 0.38, angle: -0.04 },
-    { x: 0.32, y: 0.18, angle: 0.12 },
-    { x: 0.82, y: 0.31, angle: -0.2 },
-    { x: 0.24, y: 0.29, angle: 0.08 },
-    { x: 0.25, y: 0.55, angle: 0 },
-    { x: 0.5, y: 0.5, angle: 0 },
-    { x: 0.7, y: 0.4, angle: 0 },
-    { x: 0.83, y: 0.3, angle: 0 },
+    { x: 0.47, angle: -0.06 },
+    { x: 0.54, angle: 0.1 },
+    { x: 0.78, angle: 0.22 },
+    { x: 0.2, angle: -0.16 },
+    { x: 0.5, angle: -0.04 },
+    { x: 0.32, angle: 0.12 },
+    { x: 0.82, angle: -0.2 },
+    { x: 0.24, angle: 0.08 },
+    { x: 0.25, angle: 0 },
+    { x: 0.5, angle: 0 },
+    { x: 0.7, angle: 0 },
+    { x: 0.83, angle: 0 },
   ];
 
   const rebuildWalls = () => {
@@ -33,9 +33,8 @@
     const wall = { isStatic: true, friction: 0.06, restitution: 0.32 };
     walls = [
       Bodies.rectangle(width / 2, height * 0.97, width * 1.5, 24, wall),
-      Bodies.rectangle(-12, height / 2, 24, height * 2, wall),
-      Bodies.rectangle(width + 12, height / 2, 24, height * 2, wall),
-      Bodies.rectangle(width / 2, -50, width * 1.5, 24, wall),
+      Bodies.rectangle(-12, height / 2, 24, height + window.innerHeight * 2, wall),
+      Bodies.rectangle(width + 12, height / 2, 24, height + window.innerHeight * 2, wall),
     ];
     Composite.add(engine.world, walls);
   };
@@ -52,17 +51,18 @@
       labels.forEach((element, index) => {
         const pillWidth = element.offsetWidth || 150;
         const pillHeight = element.offsetHeight || 40;
-        const spawn = positions[index] || { x: Math.random(), y: 0.3, angle: 0 };
+        const spawn = positions[index] || { x: Math.random(), angle: 0 };
         const x = Math.max(pillWidth / 2 + 6, Math.min(width - pillWidth / 2 - 6, width * spawn.x));
+        const startY = -bounds.top - pillHeight / 2 - index * Math.max(18, pillHeight * 0.65);
         const isCircle = element.classList.contains("physics-circle");
         const body = isCircle
-          ? Bodies.circle(x, height * spawn.y, Math.min(pillWidth, pillHeight) / 2, {
+          ? Bodies.circle(x, startY, Math.min(pillWidth, pillHeight) / 2, {
               restitution: 0.5,
               friction: 0.05,
               frictionAir: 0.018,
               density: 0.001,
             })
-          : Bodies.rectangle(x, height * spawn.y, pillWidth, pillHeight, {
+          : Bodies.rectangle(x, startY, pillWidth, pillHeight, {
               chamfer: { radius: pillHeight / 2 },
               restitution: 0.42,
               friction: 0.08,

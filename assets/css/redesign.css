@@ -567,6 +567,8 @@
       }
 
       .pockets-section {
+        position: relative;
+        z-index: 2;
         min-height: 1135px;
         padding: 105px 7vw 115px;
         background:
@@ -574,6 +576,28 @@
           radial-gradient(circle at 86% 72%, rgba(246, 216, 105, 0.13) 0 8%, transparent 8.5%),
           #f8f7f2;
         overflow: hidden;
+      }
+
+      .pockets-section .scroll-drop {
+        opacity: 0;
+        transform: translateY(-72px);
+        transition: opacity 650ms ease, transform 750ms cubic-bezier(.2, .75, .25, 1);
+      }
+
+      .pockets-section .scroll-drop.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .pocket-grid .pocket:nth-child(2) { transition-delay: 100ms; }
+      .pocket-grid .pocket:nth-child(3) { transition-delay: 200ms; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .pockets-section .scroll-drop {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
       }
 
       .pockets-heading {
@@ -2406,8 +2430,11 @@
           position: sticky;
           top: 74px;
           z-index: 1;
-          height: calc(100svh - 74px);
+          height: auto;
           min-height: max(620px, calc(100svh - 74px));
+          padding-top: 40px;
+          padding-bottom: 160px;
+          align-items: start;
         }
       }
 
@@ -2577,9 +2604,12 @@
         position: absolute;
         inset: 0;
         z-index: 11;
-        overflow: hidden;
+        overflow: visible;
         pointer-events: none;
       }
+
+      #home,
+      #home .physics-stage { overflow: visible; }
 
       .physics-pill {
         position: absolute;
