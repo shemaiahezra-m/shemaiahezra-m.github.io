@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=Space+Mono:wght@400;700&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/redesign.css?v=20261018-footer">
+    <link rel="stylesheet" href="assets/css/redesign.css?v=20261018-mobile-nav">
     <link rel="stylesheet" href="assets/css/footer.css?v=2">
 </head>
 
@@ -22,10 +22,14 @@
         <div class="nav-pill-wrapper">
             <nav class="nav-pill" aria-label="Main navigation">
                 <a class="nav-monogram" href="#home" aria-label="Shemaiah Ezra home" aria-current="page"><img src="assets/images/DarkLogo.png" alt=""></a>
-                <a class="nav-link" href="projects.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg><span>Work</span></a>
+
+        <button class="nav-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu-links">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+        <div class="nav-links" id="mobile-menu-links"><a class="nav-link" href="projects.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg><span>Work</span></a>
                 <a class="nav-link" href="creative.html"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Playground</span></a>
                 <a class="nav-link" href="about.html"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg><span>About</span></a>
-                <a class="nav-link" href="experience.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg><span>CV</span></a>
+                <a class="nav-link" href="experience.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg><span>CV</span></a></div>
             </nav>
             <a class="nav-contact" href="mailto:magpayo.shemaiahezra@gmail.com" aria-label="Email Shemaiah"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg></a>
         </div>
@@ -94,38 +98,41 @@
                 <p>Open a pocket to pull out a piece of my personal archive.</p>
             </div>
             <div class="pocket-grid">
-                <a class="pocket" href="projects.html" aria-label="Open selected work and projects">
+                <a class="pocket" href="projects.html" aria-label="Open Work projects">
+                    <div class="folder-wrapper" aria-hidden="true">
                     <div class="pocket-file">
-                        <small>DIGITAL PROJECTS</small>
                         <div class="pocket-projects">
-                            <span class="mini-project"><img src="assets/images/projects/makikonek.png" alt="MakiKonek barangay service portal preview" loading="lazy"><i>01</i><strong>MakiKonek</strong><small>BARANGAY SERVICE PORTAL</small></span>
-                            <span class="mini-project"><img src="assets/images/projects/pickled.png" alt="PICKLED booking system preview" loading="lazy"><i>02</i><strong>PICKLED</strong><small>BOOKING SYSTEM</small></span>
-                            <span class="mini-project mini-project-live"><iframe data-src="https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html" title="Live preview of Sidequest Bento Layout" loading="lazy" sandbox="allow-scripts allow-same-origin" tabindex="-1"></iframe><i>03</i><strong>Sidequest Bento Layout</strong><small>WEB DEVELOPMENT · LIVE PREVIEW</small></span>
+                            <span class="mini-project mini-project-live"><iframe data-src="https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html" title="Live preview of Sidequest Bento Layout" loading="lazy" sandbox="allow-scripts allow-same-origin" tabindex="-1"></iframe><i>01</i><strong>Sidequest Bento Layout</strong><small>WEB DEVELOPMENT · LIVE PREVIEW</small></span>
+                            <span class="mini-project"><img src="assets/images/projects/makikonek.png" alt="MakiKonek barangay service portal preview" loading="lazy"><i>02</i><strong>MakiKonek</strong><small>BARANGAY SERVICE PORTAL</small></span>
+                            <span class="mini-project"><img src="assets/images/projects/pickled.png" alt="PICKLED booking system preview" loading="lazy"><i>03</i><strong>PICKLED</strong><small>BOOKING SYSTEM</small></span>
                         </div>
                     </div>
-                    <div class="pocket-front"><span class="pocket-view-badge">View ↗</span><span class="folder-tags"><i>UI/UX</i><i>Frontend</i><i>Game UI</i></span><span class="pocket-copy"><strong>Selected Work</strong><small>Interfaces, web builds, and game development projects.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                    <div class="pocket-front"><span class="folder-tags"><i>UI/UX</i><i>Frontend</i><i>Game UI</i></span><span class="pocket-copy"><strong>Work</strong><small>Interfaces, web builds, and game development projects.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                    </div>
                 </a>
-                <a class="pocket yellow" href="creative.html" aria-label="Open Creative Archive">
+                <a class="pocket yellow" href="creative.html" aria-label="Open Playground">
+                    <div class="folder-wrapper" aria-hidden="true">
                     <div class="pocket-file">
-                        <small>CREATIVE COLLECTIONS</small>
                         <div class="pocket-projects">
                             <span class="mini-project"><img src="assets/images/brand-campaigns/lalal-co/Screenshot%202026-06-22%20at%201.05.40%E2%80%AFAM.png" alt="Lalal Co campaign brand study preview" loading="lazy"><i>01</i><strong>Brand Campaigns</strong><small>LALAL CO. · BRAND STUDY</small></span>
                             <span class="mini-project"><img src="assets/images/stage-designs/cornucopia.png" alt="Cornucopia stage design preview" loading="lazy"><i>02</i><strong>Stage Design</strong><small>EVENT VISUALS</small></span>
                             <span class="mini-project"><img src="assets/images/brand-campaigns/wabbles/wabbles1.png" alt="Wabbles campaign branding preview" loading="lazy"><i>03</i><strong>Campaign Branding</strong><small>WABBLES · BRAND SYSTEMS</small></span>
                         </div>
                     </div>
-                    <div class="pocket-front"><span class="pocket-view-badge">View ↗</span><span class="folder-tags"><i>Campaigns</i><i>Pubmats</i><i>Motion</i></span><span class="pocket-copy"><strong>Creative Archive</strong><small>Campaigns, publication materials, stage visuals, and motion work.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                    <div class="pocket-front"><span class="folder-tags"><i>Campaigns</i><i>Pubmats</i><i>Motion</i></span><span class="pocket-copy"><strong>Playground</strong><small>Campaigns, publication materials, stage visuals, and motion work.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                    </div>
                 </a>
                 <a class="pocket pink" href="about.html" aria-label="Read about Shemaiah and her leadership journey">
+                    <div class="folder-wrapper" aria-hidden="true">
                     <div class="pocket-file">
-                        <small>PERSONAL · STORY &amp; LEADERSHIP</small>
                         <div class="pocket-projects">
-                            <span class="mini-project"><img src="assets/images/Shemaiah-2.JPG" alt="Portrait of Shemaiah Ezra Magpayo" loading="lazy"><i>01</i><strong>About Me</strong><small>BSIT · PUP STO. TOMAS</small></span>
-                            <span class="mini-project"><img src="assets/images/milestones/dc-award.JPG" alt="Outstanding Design Committee Member recognition" loading="lazy"><i>02</i><strong>Design Committee</strong><small>RECOGNITION · 2025</small></span>
+                            <span class="mini-project"><img src="assets/images/milestones/dc-award.JPG" alt="Outstanding Design Committee Member recognition" loading="lazy"><i>01</i><strong>Design Committee</strong><small>RECOGNITION · 2025</small></span>
+                            <span class="mini-project"><img src="assets/images/Shemaiah-2.JPG" alt="Portrait of Shemaiah Ezra Magpayo" loading="lazy"><i>02</i><strong>About Me</strong><small>BSIT · PUP STO. TOMAS</small></span>
                             <span class="mini-project"><img src="assets/images/milestones/lpu-talk.png" alt="Student Council Candidacy Orientation Talk certificate" loading="lazy"><i>03</i><strong>Student Council Talk</strong><small>CANDIDACY ORIENTATION · 2024</small></span>
                         </div>
                     </div>
-                    <div class="pocket-front"><span class="pocket-view-badge">View ↗</span><span class="folder-tags"><i>BSIT</i><i>Leadership</i><i>Personal</i></span><span class="pocket-copy"><strong>About &amp; Leadership</strong><small>My background, creative journey, and student leadership story.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                    <div class="pocket-front"><span class="folder-tags"><i>BSIT</i><i>Leadership</i><i>Personal</i></span><span class="pocket-copy"><strong>About</strong><small>My background, creative journey, and student leadership story.</small></span><span class="pocket-cta">Explore folder <b aria-hidden="true">↗</b></span></div>
+                    </div>
                 </a>
             </div>
         </section>
@@ -230,28 +237,12 @@
             };
             const hydrateVisiblePreviews = () => projectStack.querySelectorAll(".mini-project:nth-child(-n + 3)").forEach(hydratePreview);
             hydrateVisiblePreviews();
-            let cycleTimer;
-
             pocket.addEventListener("click", (event) => {
                 if (!window.matchMedia("(pointer: coarse)").matches || pocket.classList.contains("open")) return;
                 event.preventDefault();
                 pocket.classList.add("open");
             });
 
-            function reshufflePreview() {
-                projectStack.append(projectStack.firstElementChild);
-                hydrateVisiblePreviews();
-            }
-
-            pocket.addEventListener("pointerenter", (event) => {
-                if (event.pointerType !== "mouse" && event.pointerType !== "pen") return;
-                reshufflePreview();
-                if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-                    cycleTimer = window.setInterval(reshufflePreview, 1500);
-                }
-            });
-            pocket.addEventListener("pointerleave", () => window.clearInterval(cycleTimer));
-            pocket.addEventListener("focus", reshufflePreview);
         });
 
     </script>

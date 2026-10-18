@@ -3,7 +3,7 @@ footer.framer-footer-wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
-  margin: 64px 0 0;
+  margin: 0;
   padding: 72px 24px 32px;
   border-radius: 44px 44px 0 0;
   background: #18181b;
@@ -107,7 +107,7 @@ footer.framer-footer-wrapper {
 
 @media (max-width: 600px) {
   footer.framer-footer-wrapper {
-    margin-top: 40px;
+    margin-top: 0;
     padding: 52px 20px 24px;
     border-radius: 28px 28px 0 0;
   }

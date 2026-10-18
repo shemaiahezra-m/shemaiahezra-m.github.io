@@ -15,9 +15,9 @@ Then open <http://localhost:8000> in a browser. The homepage is `index.html`.
 ## Main pages
 
 - `projects.html` — selected work and case studies
-- `creative.html` — creative archive
+- `creative.html` — Playground creative archive
 - `about.html` — about and personal story
 - `experience.html` — education, leadership, and skills
-- `milestones.html` and `certifications.html` — milestones and credentials
+- `milestones.html` — milestone and credential records
 
 Stylesheets, scripts, and media are organized under `assets/`.

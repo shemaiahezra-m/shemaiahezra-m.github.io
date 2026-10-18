@@ -632,7 +632,7 @@
         --pocket-color: var(--orange);
         --file-color: #fff1e8;
         position: relative;
-        height: 520px;
+        height: 350px;
       }
 
       .pocket.yellow {
@@ -1231,8 +1231,8 @@
       }
 
       .mini-project:nth-child(1) {
-        z-index: 1;
-        transform: translate(-15px, 18px) rotate(-3deg);
+        z-index: 3;
+        transform: translate(19px, -3px) rotate(3deg);
       }
 
       .mini-project:nth-child(2) {
@@ -1241,8 +1241,8 @@
       }
 
       .mini-project:nth-child(3) {
-        z-index: 3;
-        transform: translate(19px, -3px) rotate(3deg);
+        z-index: 1;
+        transform: translate(-15px, 18px) rotate(-3deg);
       }
 
       .mini-project:nth-child(2)::before {
@@ -1294,7 +1294,7 @@
       }
 
       .pocket-file {
-        top: 165px;
+        top: 35px;
         right: 2%;
         left: 2%;
         height: 310px;
@@ -1307,7 +1307,7 @@
 
       .pocket.open .pocket-file,
       .pocket:hover .pocket-file {
-        top: 54px;
+        top: 20px;
         transform: rotate(0);
       }
 
@@ -1418,7 +1418,7 @@
       }
 
       .pocket:focus-within .pocket-file {
-        top: 54px;
+        top: 20px;
         transform: rotate(0);
       }
 
@@ -1479,17 +1479,17 @@
 
       .pocket:hover .mini-project:nth-child(1),
       .pocket.open .mini-project:nth-child(1) {
-        transform: translate(-25px, -2px) rotate(-6deg);
+        transform: translate(-40px, -82px) rotate(-14deg) scale(1.04);
       }
 
       .pocket:hover .mini-project:nth-child(2),
       .pocket.open .mini-project:nth-child(2) {
-        transform: translate(3px, -18px) rotate(0deg);
+        transform: translateY(-104px) scale(1.1);
       }
 
       .pocket:hover .mini-project:nth-child(3),
       .pocket.open .mini-project:nth-child(3) {
-        transform: translate(28px, -5px) rotate(6deg);
+        transform: translate(40px, -82px) rotate(14deg) scale(1.04);
       }
 
       .pocket:hover .mini-project,
@@ -1498,15 +1498,15 @@
       }
 
       .pocket:focus-within .mini-project:nth-child(1) {
-        transform: translate(-25px, -2px) rotate(-6deg);
+        transform: translate(-40px, -82px) rotate(-14deg) scale(1.04);
       }
 
       .pocket:focus-within .mini-project:nth-child(2) {
-        transform: translate(3px, -18px) rotate(0deg);
+        transform: translateY(-104px) scale(1.1);
       }
 
       .pocket:focus-within .mini-project:nth-child(3) {
-        transform: translate(28px, -5px) rotate(6deg);
+        transform: translate(40px, -82px) rotate(14deg) scale(1.04);
       }
 
       .pocket:focus-within .mini-project {
@@ -1744,7 +1744,7 @@
 
         .pocket {
           width: min(100%, 390px);
-          height: 455px;
+          height: 350px;
           margin: 0 auto;
         }
 
@@ -1831,7 +1831,7 @@
         }
 
         .pocket {
-          height: 440px;
+          height: 350px;
         }
 
         .pocket-front {
@@ -1844,7 +1844,7 @@
 
         .pocket.open .pocket-file,
         .pocket:hover .pocket-file {
-          top: 42px;
+          top: 20px;
         }
       }
 
@@ -2370,7 +2370,7 @@
         inset: 0;
         height: auto;
         overflow: hidden;
-        border-radius: 0;
+        border-radius: 14px;
         pointer-events: none;
       }
 
@@ -2850,4 +2850,360 @@
         .nav-container .nav-link svg { display: none; }
         .nav-container .nav-contact { width: 38px; height: 38px; }
         .nav-contact svg { width: 15px; height: 15px; }
+      }
+
+      /* Give each folder a tall, icon-like silhouette instead of a wide card. */
+      .pocket {
+        display: flex;
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 22px 20px;
+      }
+
+      .pocket-grid { margin-top: 56px; }
+
+      .pockets-section {
+        min-height: 0;
+        padding-bottom: 48px;
+      }
+
+      .pocket:hover,
+      .pocket:focus-within { transform: translateY(-6px); }
+
+      .folder-wrapper {
+        position: relative;
+        width: 220px;
+        height: 190px;
+        flex: 0 0 190px;
+        align-self: center;
+        margin: 8px auto 0;
+        perspective: 1000px;
+      }
+
+      .pocket-file {
+        position: absolute;
+        inset: auto 0 0;
+        width: 220px;
+        height: 170px;
+        padding: 0;
+        border: 0;
+        border-radius: 16px;
+        background: var(--pocket-color);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, .08);
+        overflow: visible;
+        transform: none;
+        transition: none;
+      }
+
+      .pocket-file::after {
+        position: absolute;
+        top: -12px;
+        left: 18px;
+        width: 76px;
+        height: 20px;
+        border-radius: 9px 9px 0 0;
+        background: var(--pocket-color);
+        content: "";
+      }
+
+      .pocket:hover .pocket-file,
+      .pocket.open .pocket-file,
+      .pocket:focus-within .pocket-file {
+        top: auto;
+        transform: none;
+      }
+
+      .pocket-projects {
+        position: absolute;
+        inset: auto 0 12px;
+        width: 220px;
+        height: 100%;
+        margin: 0;
+        z-index: 2;
+      }
+
+      .mini-project,
+      .mini-project:nth-child(n + 4) {
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        width: 118px;
+        height: 165px;
+        padding: 0;
+        border: 1px solid #d4d4d8;
+        border-radius: 10px;
+        background: #fff;
+        transform-origin: bottom center;
+      }
+
+      .mini-project:nth-child(1) { z-index: 1; transform: translateX(calc(-50% - 8px)) rotate(-4deg); }
+      .mini-project:nth-child(2) { z-index: 2; transform: translateX(-50%); }
+      .mini-project:nth-child(3) { z-index: 1; transform: translateX(calc(-50% + 8px)) rotate(4deg); }
+      .mini-project:nth-child(n + 4) { z-index: 0; opacity: 0; visibility: hidden; }
+
+      .mini-project > img,
+      .mini-project > iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        object-fit: cover;
+      }
+
+      .mini-project > iframe {
+        width: 300%;
+        height: 300%;
+        transform: scale(.333333);
+        transform-origin: top left;
+      }
+
+      .mini-project::after { height: 16px; }
+      .mini-project i,
+      .mini-project strong,
+      .mini-project small { display: none; }
+
+      .pocket-front {
+        position: absolute;
+        inset: auto 0 0;
+        display: grid;
+        width: 220px;
+        height: 140px;
+        place-items: center;
+        margin: 0;
+        padding: 0;
+        border: 1px solid rgba(255,255,255,.68);
+        border-radius: 16px 16px 20px 20px;
+        background: linear-gradient(165deg,
+          color-mix(in srgb, var(--pocket-color) 67%, rgba(255,255,255,.82)),
+          color-mix(in srgb, var(--pocket-color) 82%, transparent));
+        box-shadow: 0 12px 24px rgba(55,54,65,.14), inset 0 1px rgba(255,255,255,.72);
+        backdrop-filter: blur(8px);
+        transform-origin: bottom center;
+        transition: transform .4s cubic-bezier(.25,1,.5,1);
+      }
+
+      .pocket-front::before {
+        display: block;
+        top: -20px;
+        left: -1px;
+        width: 84px;
+        height: 30px;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .pocket-front::after { display: none; }
+      .pocket-front > svg { display: none; }
+
+      .pocket:hover .pocket-front,
+      .pocket.open .pocket-front,
+      .pocket:focus-within .pocket-front {
+        transform: perspective(700px) rotateX(-34deg) translateY(4px);
+      }
+
+      .pocket-front .pocket-view-badge {
+        top: 45%;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        border: 0;
+        border-radius: 999px;
+        background: #facc15;
+        color: #171717;
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(.6);
+        transition: opacity .35s ease, transform .35s cubic-bezier(.34,1.56,.64,1);
+      }
+
+      .pocket:hover .pocket-view-badge,
+      .pocket.open .pocket-view-badge,
+      .pocket:focus-within .pocket-view-badge {
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+      }
+
+      .pocket:hover .mini-project:nth-child(1),
+      .pocket.open .mini-project:nth-child(1),
+      .pocket:focus-within .mini-project:nth-child(1) { transform: translate(calc(-50% - 62px), -76px) rotate(-14deg); }
+
+      .pocket:hover .mini-project:nth-child(2),
+      .pocket.open .mini-project:nth-child(2),
+      .pocket:focus-within .mini-project:nth-child(2) { transform: translate(-50%, -92px) scale(1.06); }
+
+      .pocket:hover .mini-project:nth-child(3),
+      .pocket.open .mini-project:nth-child(3),
+      .pocket:focus-within .mini-project:nth-child(3) { transform: translate(calc(-50% + 62px), -76px) rotate(14deg); }
+
+      .pocket-details { display: grid; gap: 5px; width: 100%; text-align: left; }
+      .pocket-title { font-size: 23px; font-weight: 500; letter-spacing: -.045em; line-height: 1; }
+      .pocket-count { color: var(--muted); font: 8px "DM Mono", monospace; letter-spacing: .04em; }
+
+      @media (max-width: 760px) {
+        .pocket-grid { gap: 28px; }
+        .pocket { width: min(100%, 390px); margin-inline: auto; }
+        .folder-wrapper { transform: scale(.92); transform-origin: top center; margin-bottom: -14px; }
+      }
+
+      /* Restore the full folder label and use landscape project thumbnails. */
+      .folder-wrapper {
+        width: 100%;
+        max-width: 340px;
+        height: 250px;
+        flex-basis: 250px;
+      }
+
+      .pocket-file {
+        width: 100%;
+        height: 220px;
+        border-radius: 16px;
+      }
+
+      .pocket-file::after {
+        top: -14px;
+        left: 18px;
+        width: 82px;
+        height: 22px;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .pocket-projects {
+        inset: auto 0 120px;
+        width: 100%;
+        height: 220px;
+      }
+
+      .mini-project,
+      .mini-project:nth-child(n + 4) {
+        width: min(88%, 292px);
+        height: 184px;
+        border: 7px solid #fff;
+        border-radius: 14px;
+        box-shadow: 0 12px 25px rgba(23, 23, 23, .15);
+      }
+
+      .mini-project::after { height: 18px; }
+
+      .pocket-front {
+        width: 100%;
+        height: 190px;
+        padding: 58px 24px 18px;
+        box-sizing: border-box;
+        border-radius: 16px 16px 20px 20px;
+      }
+
+      .pocket-front::before {
+        top: -24px;
+        left: -1px;
+        width: 100px;
+        height: 36px;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .pocket-front .pocket-copy {
+        top: 54px;
+        right: 24px;
+        left: 24px;
+      }
+
+      .pocket-copy strong { font-size: clamp(21px, 2vw, 25px); }
+      .pocket-copy small { font-size: 11px; }
+
+      .pocket-front .folder-tags {
+        right: 24px !important;
+        bottom: 44px !important;
+        left: 24px !important;
+      }
+
+      .pocket-front .pocket-cta {
+        right: 24px;
+        bottom: 14px;
+        left: 24px;
+      }
+
+      .pocket:hover .mini-project:nth-child(1),
+      .pocket.open .mini-project:nth-child(1),
+      .pocket:focus-within .mini-project:nth-child(1) {
+        transform: translate(calc(-50% - 52px), -74px) rotate(-10deg);
+      }
+
+      .pocket:hover .mini-project:nth-child(2),
+      .pocket.open .mini-project:nth-child(2),
+      .pocket:focus-within .mini-project:nth-child(2) {
+        transform: translate(-50%, -90px) scale(1.04);
+      }
+
+      .pocket:hover .mini-project:nth-child(3),
+      .pocket.open .mini-project:nth-child(3),
+      .pocket:focus-within .mini-project:nth-child(3) {
+        transform: translate(calc(-50% + 52px), -74px) rotate(10deg);
+      }
+
+      @media (max-width: 760px) {
+        .folder-wrapper { max-width: 340px; }
+        .mini-project,
+        .mini-project:nth-child(n + 4) { width: 88%; height: 176px; }
+      }
+
+      .nav-pill { position: relative; }
+      .nav-links { display: flex; align-items: center; gap: 4px; }
+      .nav-menu-toggle { display: none; }
+
+      @media (max-width: 760px) {
+        .nav-pill { gap: 4px; padding: 5px; }
+        .nav-menu-toggle {
+          display: grid;
+          width: 32px;
+          height: 32px;
+          flex: 0 0 auto;
+          place-items: center;
+          padding: 0;
+          border: 0;
+          border-radius: 50%;
+          background: transparent;
+          color: #27272a;
+          cursor: pointer;
+        }
+
+        .nav-menu-toggle svg {
+          width: 18px;
+          height: 18px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 1.8;
+          stroke-linecap: round;
+          transition: transform 180ms ease;
+        }
+
+        .nav-container.menu-open .nav-menu-toggle svg { transform: rotate(90deg); }
+        .nav-links {
+          position: absolute;
+          top: calc(100% + 10px);
+          left: 50%;
+          display: none;
+          width: min(260px, calc(100vw - 32px));
+          flex-direction: column;
+          align-items: stretch;
+          gap: 4px;
+          padding: 8px;
+          border: 1px solid rgba(228, 228, 237, .9);
+          border-radius: 20px;
+          background: rgba(255, 255, 255, .96);
+          box-shadow: 0 14px 35px rgba(0, 0, 0, .12);
+          backdrop-filter: blur(16px);
+          transform: translateX(-50%);
+        }
+
+        .nav-container.menu-open .nav-links { display: flex; }
+        .nav-container .nav-link {
+          display: flex;
+          width: 100%;
+          gap: 10px;
+          padding: 11px 13px;
+          border-radius: 12px;
+          font-size: 13px;
+        }
+
+        .nav-container .nav-link svg { display: block; width: 16px; height: 16px; }
       }

@@ -19,6 +19,31 @@
   }
 
   if (document.querySelector(".nav-container")) {
+    const nav = document.querySelector(".nav-container");
+    const menuToggle = nav.querySelector(".nav-menu-toggle");
+    const menuLinks = nav.querySelector(".nav-links");
+
+    const setMenuOpen = (open) => {
+      nav.classList.toggle("menu-open", open);
+      if (menuToggle) {
+        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      }
+    };
+
+    menuToggle?.addEventListener("click", () => {
+      setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+    });
+    menuLinks?.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setMenuOpen(false);
+    });
+    document.addEventListener("pointerdown", (event) => {
+      if (!nav.contains(event.target)) setMenuOpen(false);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    });
+
     let previousY = window.scrollY;
     let ticking = false;
 
