@@ -76,10 +76,27 @@
       meta: [{ text: "Game project", emphasis: true }, { text: "2025" }, { text: "Repository" }],
       kind: "image",
       preview: "assets/images/projects/pup-dash.png",
-      overview: ["PUP Dash is an educational 2D game built around a simple, approachable gameplay concept. The project combines game interface design with implementation in Python."],
-      features: ["Educational 2D game experience.", "Custom game interface designed around the gameplay."],
-      highlights: [{ text: "Year", detail: "2025" }, { text: "Role", detail: "Game UI / development" }, { text: "Project type", detail: "Educational 2D game" }],
-      builtWith: [{ text: "Language", detail: "Python" }],
+      overview: ["PUP Dash! is a fast-paced campus delivery game inspired by student life at the Polytechnic University of the Philippines – Sto. Tomas Campus. Players take on the role of Pio P., a student helper tasked with collecting keys and requested items and delivering them to the correct classrooms before time runs out."],
+      role: "Lead Designer & Programmer — contributed to the game's visual design, gameplay programming, and overall player experience.",
+      features: [
+        { text: "Randomized Requests", detail: "Introduces varying delivery tasks for replayable gameplay." },
+        { text: "Click-to-Move Controls", detail: "Enables simple and accessible navigation." },
+        { text: "Item Collection & Delivery", detail: "Challenges players to collect the correct keys and items and deliver them to designated classrooms." },
+        { text: "Time-Based Challenges", detail: "Encourages quick decisions and efficient movement." },
+        { text: "Scoring & Strike System", detail: "Rewards successful deliveries and penalizes mistakes or delays." },
+        { text: "Scoreboard", detail: "Tracks high scores across gameplay sessions." }
+      ],
+      highlights: [
+        "Campus-inspired concept based on real student experiences.",
+        "Fast-paced gameplay that challenges players to manage time and complete requests.",
+        "Collaborative development with a student team from PUP Sto. Tomas Campus."
+      ],
+      builtWith: [
+        { text: "Game Development", detail: "Python, Pygame" },
+        { text: "Version Control", detail: "Git, GitHub" },
+        { text: "Distribution", detail: "itch.io" }
+      ],
+      builtTitle: "Built with",
       links: [{ label: "View repository", href: "https://github.com/shemaiahezra-m/PUP-Dash" }]
     },
     "instax-mini-evo": {
@@ -178,6 +195,14 @@
     overview.append(node);
   });
 
+  if (project.role) {
+    const role = document.querySelector("#project-role");
+    const paragraph = document.createElement("p");
+    paragraph.textContent = project.role;
+    role.append(paragraph);
+    role.closest(".project-detail-section").hidden = false;
+  }
+
   addList("#project-features", project.features || []);
   addList("#project-highlights", project.highlights || []);
   const builtRows = document.querySelector("#project-built");
@@ -191,5 +216,8 @@
     row.append(label, value);
     builtRows.append(row);
   });
-  if (project.builtWith?.length) builtRows.closest(".project-detail-section").hidden = false;
+  if (project.builtWith?.length) {
+    builtRows.closest(".project-detail-section").hidden = false;
+    if (project.builtTitle) setText("#project-built-title", project.builtTitle);
+  }
 })();
