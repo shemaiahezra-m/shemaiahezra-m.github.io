@@ -4,8 +4,8 @@
       title: "Playform",
       tagline: "Spaces with a point of view",
       meta: [{ text: "Live website", emphasis: true }, { text: "Web development" }],
-      kind: "image",
-      preview: "assets/images/projects/playform.svg",
+      kind: "iframe",
+      preview: "https://shemaiahezra-m.github.io/Web-Development/02-json/index.html",
       overview: ["PLAYFORM is a furniture showcase website concept centered on playful, characterful furniture and expressive interior styling. The design combines bold colors, sculptural forms, and editorial-style layouts to present furniture collections through a visually engaging and lifestyle-driven browsing experience."],
       role: "UI/UX Designer & Frontend Developer — designed and developed the website concept, focusing on visual storytelling, product presentation, layout composition, and an engaging browsing experience.",
       highlights: [
