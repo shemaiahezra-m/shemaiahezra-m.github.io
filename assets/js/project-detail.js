@@ -28,10 +28,32 @@
       meta: [{ text: "Web application", emphasis: true }, { text: "Live" }],
       kind: "image",
       preview: "assets/images/projects/matrack.png",
-      overview: ["MATrack is a material tracking system for keeping inventory and logistics activity in one place. Its dashboard surfaces stock, active borrowings, and recent transactions."],
-      features: ["Review material totals and inventory status.", "Track active borrowings and recent activity."],
-      highlights: [{ text: "Project type", detail: "Material tracking system" }, { text: "Focus", detail: "Inventory and logistics workflows" }],
-      builtWith: [{ text: "Format", detail: "Web application" }],
+      overview: ["MATrack is a web-based department materials inventory system designed to organize material records, manage borrower information, and track inventory-related transactions. It features a centralized dashboard and dedicated modules for managing materials, borrowers, and transactions, with PostgreSQL integration for database-backed operations."],
+      role: "Developer & UI/UX Designer — developed the application's interface and inventory management modules, focusing on usability, organized workflows, and consistent page layouts.",
+      highlights: [
+        "Built a modular inventory management system using PHP and PostgreSQL.",
+        "Designed a consistent interface with a shared layout and right-side form drawers.",
+        "Implemented database-backed operations for managing materials, borrowers, and transactions.",
+        "Created a dashboard for inventory summaries, recent transactions, and stock status.",
+        "Added input validation and safeguards for inventory quantities and transaction records."
+      ],
+      features: [
+        { text: "Dashboard", detail: "Displays inventory summaries, recent transactions, and inventory status." },
+        { text: "Materials Management", detail: "Supports creating, viewing, editing, and deleting material records." },
+        { text: "Borrower Management", detail: "Organizes borrower details, contact information, and departments." },
+        { text: "Transaction Management", detail: "Records additions, borrowings, returns, and material usage." },
+        { text: "Database Integration", detail: "Connects to PostgreSQL for persistent data storage." },
+        { text: "Form Validation", detail: "Validates transaction inputs and enforces database constraints." },
+        { text: "Preview Mode", detail: "Displays sample data when the application is running without an active database connection." }
+      ],
+      builtWith: [
+        { text: "Frontend", detail: "HTML, CSS" },
+        { text: "Backend", detail: "PHP" },
+        { text: "Database", detail: "PostgreSQL, SQL" },
+        { text: "Development Tools", detail: "Git, GitHub" },
+        { text: "Deployment", detail: "InfinityFree" }
+      ],
+      builtTitle: "Built with",
       links: [{ label: "Open live website", href: "https://matrack.freedev.app/" }]
     },
     makikonek: {
