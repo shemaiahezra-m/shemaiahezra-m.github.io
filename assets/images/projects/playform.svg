@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 810" role="img" aria-labelledby="title desc">
+  <title id="title">Playform furniture showcase</title>
+  <desc id="desc">An editorial furniture website preview with colorful sculptural chairs and a warm cream background.</desc>
+  <defs>
+    <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#f6f2e9"/><stop offset="1" stop-color="#e9e2d5"/></linearGradient>
+    <linearGradient id="chair" x2="1" y2="1"><stop stop-color="#f1a27f"/><stop offset="1" stop-color="#df755e"/></linearGradient>
+    <linearGradient id="chair2" x2="1" y2="1"><stop stop-color="#d7dfbd"/><stop offset="1" stop-color="#9eaa7d"/></linearGradient>
+    <filter id="shadow" x="-.3" y="-.3" width="1.7" height="1.8"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#3c342b" flood-opacity=".14"/></filter>
+  </defs>
+  <rect width="1200" height="810" fill="url(#paper)"/>
+  <circle cx="1030" cy="115" r="175" fill="#f4d66f" opacity=".62"/>
+  <path d="M0 674c229-58 354 35 555 0s411-76 645-19v155H0z" fill="#d7dfbd" opacity=".7"/>
+  <text x="72" y="72" fill="#292822" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="4">PLAYFORM</text>
+  <text x="820" y="72" fill="#57534b" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">SEATING　 TABLES　 LIGHTING</text>
+  <text x="72" y="190" fill="#24231f" font-family="Georgia,serif" font-size="77">Objects with</text>
+  <text x="72" y="274" fill="#24231f" font-family="Georgia,serif" font-size="77" font-style="italic">a little more soul.</text>
+  <text x="77" y="321" fill="#726d62" font-family="Arial,sans-serif" font-size="17" letter-spacing="1">Furniture for spaces that feel like you.</text>
+  <g filter="url(#shadow)">
+    <ellipse cx="600" cy="675" rx="400" ry="30" fill="#736b5c" opacity=".17"/>
+    <path d="M293 400c0-58 47-105 105-105h97c35 0 63 28 63 63v95H293z" fill="url(#chair)"/>
+    <path d="M318 445h240l-34 179h-28l11-132H368l10 132h-29z" fill="#34342f"/>
+    <path d="M566 382c0-43 35-78 78-78h102c43 0 78 35 78 78v108H566z" fill="url(#chair2)"/>
+    <path d="M589 469h212l-26 155h-28l8-113H636l8 113h-28z" fill="#34342f"/>
+    <path d="M779 443h246v24H779z" fill="#b77d58"/>
+    <path d="M805 466h18v156h-18zm178 0h18v156h-18z" fill="#34342f"/>
+    <path d="M827 443c0-34 28-62 62-62s62 28 62 62" fill="#e6a889"/>
+    <path d="M857 381v-38m32 38v-54m30 54v-38" stroke="#34342f" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <rect x="72" y="710" width="1056" height="1" fill="#aaa394"/>
+  <text x="72" y="755" fill="#716c62" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">A PLAYFUL STUDY IN FORM, COLOR &amp; COMFORT</text>
+  <text x="1010" y="755" fill="#716c62" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">COLLECTION 01</text>
+</svg>

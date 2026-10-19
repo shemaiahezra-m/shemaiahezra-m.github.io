@@ -4,7 +4,7 @@ footer.framer-footer-wrapper {
   overflow: hidden;
   width: 100%;
   margin: 0;
-  padding: 72px 24px 32px;
+  padding: clamp(48px, 6vw, 82px) clamp(24px, 4vw, 82px) 30px;
   border-radius: 44px 44px 0 0;
   background: #18181b;
   color: #fafafa;
@@ -12,27 +12,30 @@ footer.framer-footer-wrapper {
 }
 
 .framer-footer-wrapper .footer-content {
-  display: flex;
-  width: min(100%, 1200px);
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto auto auto;
+  align-items: start;
+  column-gap: 32px;
+  row-gap: 26px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .framer-footer-wrapper .footer-eyes-row {
   display: flex;
+  grid-column: 1;
+  grid-row: 1;
   align-items: center;
-  justify-content: center;
   gap: 14px;
 }
 
 .framer-footer-wrapper .eye-box {
   position: relative;
   display: grid;
-  width: 48px;
-  height: 64px;
+  width: 52px;
+  height: 76px;
   place-items: center;
   overflow: hidden;
   border-radius: 50%;
@@ -42,60 +45,84 @@ footer.framer-footer-wrapper {
 .framer-footer-wrapper .pupil {
   display: block;
   width: 16px;
-  height: 16px;
+  height: 20px;
   border-radius: 50%;
   background: #18181b;
   transition: transform 100ms ease-out;
 }
 
 .framer-footer-wrapper .footer-cta-text {
+  grid-column: 1;
+  grid-row: 2;
   margin: 0;
-  color: #fafafa;
-  font-size: clamp(20px, 3vw, 28px);
-  line-height: 1.4;
+  color: #e8e7e9;
+  font-size: clamp(18px, 2vw, 27px);
+  line-height: 1.45;
 }
 
 .framer-footer-wrapper .footer-action-buttons {
   display: flex;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
 .framer-footer-wrapper .footer-pill-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 11px 18px;
-  border: 1px solid #3f3f46;
-  border-radius: 999px;
-  background: #27272a;
-  color: #e4e4e7;
-  font-size: 13px;
+  display: grid;
+  width: 70px;
+  height: 70px;
+  flex: 0 0 70px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #39393e;
+  border-radius: 50%;
+  background: #242428;
+  color: #e4e3e6;
+  font-size: 0;
   text-decoration: none;
   transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
 .framer-footer-wrapper .footer-pill-btn:hover {
   transform: translateY(-2px);
-  border-color: #71717a;
-  background: #3f3f46;
+  border-color: #696970;
+  background: #303035;
 }
 
+.framer-footer-wrapper .footer-pill-btn svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.framer-footer-wrapper .footer-pill-btn .footer-link-label { display: none; }
+
 .framer-footer-wrapper .footer-big-name {
+  grid-column: 1 / -1;
+  grid-row: 3;
   width: 100%;
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   color: #fafafa;
   font-family: "Instrument Serif", Georgia, serif;
-  font-size: clamp(64px, 14vw, 176px);
+  font-size: clamp(100px, 17vw, 360px);
   font-weight: 400;
-  letter-spacing: -.045em;
-  line-height: .95;
+  letter-spacing: -.065em;
+  line-height: .78;
+  white-space: nowrap;
   user-select: none;
 }
 
 .framer-footer-wrapper .footer-bottom-info {
   display: flex;
+  grid-column: 1 / -1;
+  grid-row: 4;
   width: 100%;
   justify-content: space-between;
   gap: 16px;
@@ -105,20 +132,46 @@ footer.framer-footer-wrapper {
   font-size: 12px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   footer.framer-footer-wrapper {
-    margin-top: 0;
-    padding: 52px 20px 24px;
-    border-radius: 28px 28px 0 0;
+    padding: 48px 22px 24px;
+    border-radius: 30px 30px 0 0;
   }
 
-  .framer-footer-wrapper .footer-content { gap: 26px; }
-  .framer-footer-wrapper .footer-big-name { font-size: clamp(56px, 17vw, 100px); }
-  .framer-footer-wrapper .footer-bottom-info {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    text-align: center;
+  .framer-footer-wrapper .footer-content {
+    grid-template-columns: 1fr;
+    row-gap: 22px;
   }
+
+  .framer-footer-wrapper .footer-action-buttons {
+    grid-column: 1;
+    grid-row: 3;
+    justify-content: flex-start;
+    gap: 9px;
+  }
+
+  .framer-footer-wrapper .footer-pill-btn {
+    width: 54px;
+    height: 54px;
+    flex-basis: 54px;
+  }
+
+  .framer-footer-wrapper .footer-big-name {
+    grid-row: 4;
+    margin-top: 4px;
+    font-size: clamp(60px, 16vw, 125px);
+    letter-spacing: -.07em;
+  }
+
+  .framer-footer-wrapper .footer-bottom-info {
+    grid-row: 5;
+    align-items: flex-start;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .framer-footer-wrapper .eye-box { width: 42px; height: 60px; }
+  .framer-footer-wrapper .footer-cta-text { font-size: 18px; }
+  .framer-footer-wrapper .footer-big-name { font-size: clamp(60px, 16vw, 88px); }
 }
