@@ -428,6 +428,176 @@
   background: #e8e4dc;
 }
 
+/* Homepage motion stays on the objects themselves so the artwork's layout transforms remain intact. */
+.home-page .hero-greeting,
+.home-page .hero-name {
+  display: block;
+  clip-path: inset(0 0 100% 0);
+  animation: hero-type-reveal .82s cubic-bezier(.2, .8, .2, 1) forwards;
+}
+
+.home-page .hero-name { animation-delay: .18s; }
+.home-page .hero-bio { animation: hero-support-reveal .65s .52s both; }
+.home-page .hero .actions { animation: hero-support-reveal .65s .66s both; }
+
+@keyframes hero-type-reveal {
+  from { clip-path: inset(0 0 100% 0); translate: 0 .16em; }
+  to { clip-path: inset(-.08em 0 -.12em 0); translate: 0 0; }
+}
+
+@keyframes hero-support-reveal {
+  from { opacity: 0; translate: 0 10px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+.home-page .primary-action {
+  translate: var(--mag-x, 0px) var(--mag-y, 0px);
+  transition: translate .28s cubic-bezier(.2, 1.4, .35, 1), background-color .18s, box-shadow .18s;
+}
+
+.home-page .primary-action:hover { box-shadow: 0 8px 18px #28262222; }
+.home-page .primary-action > span { display: inline-block; transition: translate .2s ease; }
+.home-page .primary-action:hover > span { translate: 0 3px; }
+
+.home-page .text-action > span {
+  display: inline-block;
+  transition: translate .2s cubic-bezier(.2, 1.4, .35, 1);
+}
+
+.home-page .text-action:hover > span { translate: 4px 0; }
+
+.home-page .hero-visual-container > .layer-figma-wireframe,
+.home-page .hero-visual-container > .layer-token-badge,
+.home-page .hero-visual-container > .layer-wireframe-flow,
+.home-page .hero-visual-container > .layer-keyboard,
+.home-page .hero-visual-container > .layer-sticky-note {
+  transition: scale .28s cubic-bezier(.2, 1.4, .35, 1), filter .28s ease;
+  will-change: translate;
+}
+
+.home-page .layer-figma-wireframe:hover,
+.home-page .layer-token-badge:hover,
+.home-page .layer-token-badge:focus-visible,
+.home-page .layer-wireframe-flow:hover,
+.home-page .layer-keyboard:hover,
+.home-page .layer-sticky-note:hover { scale: 1.018; }
+
+.home-page .layer-token-badge {
+  cursor: pointer;
+  text-align: left;
+}
+
+.home-page .layer-token-badge:focus-visible {
+  outline: 3px solid #85ccff;
+  outline-offset: 4px;
+}
+
+.home-page .artboard-spec { background: var(--home-accent, #f3a17e); }
+.home-page .artboard-orbit { background: var(--home-accent-soft, #f4a8cd); transition: transform .4s cubic-bezier(.2, 1.4, .35, 1), background-color .25s; }
+
+.home-page .design-artboard,
+.home-page .wireframe-mini-screen,
+.home-page .wireframe-connector { transition: border-radius .35s cubic-bezier(.2, 1.4, .35, 1), transform .45s cubic-bezier(.2, .8, .2, 1), border-color .25s, color .25s; }
+
+.home-page .layer-figma-wireframe.is-rounding .design-artboard { border-radius: 26px; }
+.home-page .layer-figma-wireframe.is-rounding .artboard-orbit { transform: scale(.86); }
+.home-page .layer-figma-wireframe.is-popping .artboard-orbit { transform: scale(1.18); }
+.home-page .layer-figma-wireframe.is-popping .design-artboard { border-color: var(--home-accent, #f3a17e); }
+.home-page .layer-figma-wireframe.is-shifted .wireframe-mini-screen:nth-of-type(1) { transform: translateY(5px) rotate(-2deg); }
+.home-page .layer-figma-wireframe.is-shifted .wireframe-mini-screen:nth-of-type(2) { transform: translateY(-5px) rotate(1.5deg); }
+.home-page .layer-figma-wireframe.is-shifted .wireframe-mini-screen:nth-of-type(3) { transform: translateY(4px) rotate(-1deg); }
+.home-page .layer-figma-wireframe.is-prototyping .wireframe-mini-screen { border-color: var(--home-accent, #f3a17e); }
+.home-page .layer-figma-wireframe.is-testing .artboard-spec { animation: spec-tap .48s ease; }
+.home-page .layer-figma-wireframe.is-systems .wireframe-mini-screen { border-color: var(--home-accent, #f3a17e); box-shadow: 0 4px 12px #28262212; }
+.home-page .layer-figma-wireframe.is-ux .artboard-orbit { transform: translateX(10px) scale(.9); }
+.home-page .layer-figma-wireframe.is-reframing .design-artboard strong { transform: translateX(10px); }
+.home-page .design-artboard strong { transition: transform .4s cubic-bezier(.2, .8, .2, 1); }
+
+@keyframes spec-tap { 50% { scale: .88; } }
+
+.home-page .physics-pill,
+.home-page .physics-circle {
+  transition: scale .26s cubic-bezier(.2, 1.5, .35, 1), filter .2s ease, box-shadow .2s ease;
+}
+
+.home-page .physics-pill:focus-visible,
+.home-page .physics-circle:focus-visible {
+  z-index: 20;
+  scale: 1.08;
+  filter: brightness(1.025);
+  box-shadow: 0 13px 28px #25232124;
+  outline: none;
+}
+
+.home-page .physics-pill:hover,
+.home-page .physics-circle:hover { filter: none; }
+
+.home-page .physics-pill[role="button"] { cursor: grab; }
+.home-page .physics-pill[role="button"]:focus-visible,
+.home-page .physics-circle:focus-visible { outline: 3px solid #282622; outline-offset: 3px; }
+
+.home-page .principle-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 12px;
+  z-index: 30;
+  width: max-content;
+  max-width: min(230px, 72vw);
+  padding: 10px 12px;
+  border: 1px solid #d8d3c9;
+  border-radius: 12px;
+  background: #fffdfa;
+  box-shadow: 0 8px 24px #28262220;
+  color: #383630;
+  font: 11px/1.45 "DM Sans", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  scale: .92;
+  transform-origin: bottom left;
+  transition: opacity .16s ease, scale .2s cubic-bezier(.2, 1.4, .35, 1);
+}
+
+.home-page .physics-pill.is-tip-open .principle-tooltip { opacity: 1; scale: 1; }
+
+.home-page .key {
+  transition: transform .11s ease, box-shadow .11s ease, background-color .16s ease;
+}
+
+.home-page .key:active,
+.home-page .key.is-pressed {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 2px #28262218;
+}
+
+.reduce-motion .home-page .hero-greeting,
+.reduce-motion .home-page .hero-name,
+.reduce-motion .home-page .hero-bio,
+.reduce-motion .home-page .hero .actions { animation: none; clip-path: none; translate: none; opacity: 1; }
+.reduce-motion .home-page .hero-visual-container > *,
+.reduce-motion .home-page .physics-pill,
+.reduce-motion .home-page .physics-circle,
+.reduce-motion .home-page .principle-tooltip,
+.reduce-motion .home-page .key { transition: none !important; }
+.reduce-motion .home-page .hero-physics-pills {
+  position: relative;
+  inset: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 18px 4vw;
+  pointer-events: auto;
+}
+.reduce-motion .home-page .physics-pill,
+.reduce-motion .home-page .physics-circle {
+  position: relative;
+  inset: auto;
+  transform: none !important;
+  will-change: auto;
+}
+
 .home-page .flow-action {
   background: #f4c4e2;
 }

@@ -8,6 +8,7 @@
     <title>Personal Archive — Shemaiah Ezra</title>
     <meta name="description"
         content="The personal portfolio archive of Shemaiah Ezra Magpayo, a BSIT student, UI/UX enthusiast, frontend developer, and multimedia creative.">
+    <script src="assets/js/motion-preferences.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
@@ -39,11 +40,11 @@
         <section class="hero" id="home">
             <div class="intro">
                 <span class="mono intro-label sub-label">UI/UX Designer &amp; Front-end Developer</span>
-                <h1>hi, i'm <em>shemaiah ezra!</em></h1>
+                <h1><span class="hero-greeting">hi, i'm</span><em class="hero-name">shemaiah ezra!</em></h1>
                 <p class="hero-bio">Designing intuitive interfaces and building digital products with purpose, clarity, and attention to detail.</p>
                 <div class="actions">
-                    <a class="primary-action btn-primary" href="projects.html">View Case Studies ↓</a> <a
-                        class="text-action" href="experience.html">Read my story →</a>
+                    <a class="primary-action btn-primary" href="projects.html">View Case Studies <span aria-hidden="true">↓</span></a> <a
+                        class="text-action" href="experience.html">Read my story <span aria-hidden="true">→</span></a>
                 </div>
             </div>
             <div class="hero-visual-container" role="group" aria-label="Interactive design workspace collage">
@@ -61,7 +62,7 @@
                     </div>
                     <span class="figma-caption">PORTFOLIO HOME · DESIGN SYSTEM PREVIEW</span>
                 </div>
-                <div class="layer-token-badge" role="img" aria-label="Portfolio color palette: peach #F3A17E, yellow #F1D35B, rose #E99BD5, and warm white #FAF9F6">
+                <div class="layer-token-badge" role="button" tabindex="0" aria-label="Cycle the portfolio accent color" title="Click to try another accent color">
                     <div class="palette-card-heading"><span>COLOR PALETTE</span><small>PORTFOLIO / 01</small></div>
                     <div class="palette-card-swatches">
                         <span><i class="swatch-peach"></i><code>#F3A17E</code></span>
@@ -93,14 +94,14 @@
                 </aside>
             </div>
             <div class="hero-physics-pills" aria-label="Design principles you can drag">
-                <span class="physics-pill p-pink-pastel">THINKING SYSTEMS<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
-                <span class="physics-pill p-yellow-bright">IMPROVING UX<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span>
-                <span class="physics-pill p-mint-teal">REFRAMING PROBLEMS<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 9h16M4 15h16M10 3 8 21m8-18-2 18"/></svg></span>
-                <span class="physics-pill p-sky-blue">MOVING RECTANGLES<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m5 9-3 3 3 3m4-10 3-3 3 3m0 14 3 3 3-3m-3-10 3 3-3 3"/></svg></span>
-                <span class="physics-pill p-lavender">TESTING<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2zM14 2v6h6"/></svg></span>
-                <span class="physics-pill p-coral-bright">MAKING IT POP<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m15 14 5-5-5-5M4 19v-4a5 5 0 0 1 5-5h11"/></svg></span>
-                <span class="physics-pill p-lime-green">ROUNDING CORNERS<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="5"/></svg></span>
-                <span class="physics-pill p-offwhite">PROTOTYPING<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg></span>
+                <span class="physics-pill p-pink-pastel" data-tip="I connect interface decisions into one clear, consistent system." data-effect="systems">THINKING SYSTEMS<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                <span class="physics-pill p-yellow-bright" data-tip="I look for the small changes that make an experience easier to use." data-effect="ux">IMPROVING UX<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span>
+                <span class="physics-pill p-mint-teal" data-tip="I reframe the task before deciding what the interface should do." data-effect="reframe">REFRAMING PROBLEMS<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 9h16M4 15h16M10 3 8 21m8-18-2 18"/></svg></span>
+                <span class="physics-pill p-sky-blue" data-tip="Move these screens around and see the flow shift." data-effect="move">MOVING RECTANGLES<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m5 9-3 3 3 3m4-10 3-3 3 3m0 14 3 3 3-3m-3-10 3 3-3 3"/></svg></span>
+                <span class="physics-pill p-lavender" data-tip="I test the details, then refine what does not feel right." data-effect="test">TESTING<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2zM14 2v6h6"/></svg></span>
+                <span class="physics-pill p-coral-bright" data-tip="A little contrast and motion can make the important part stand out." data-effect="pop">MAKING IT POP<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m15 14 5-5-5-5M4 19v-4a5 5 0 0 1 5-5h11"/></svg></span>
+                <span class="physics-pill p-lime-green" data-tip="Try a softer corner radius on the artboard." data-effect="round">ROUNDING CORNERS<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="5"/></svg></span>
+                <span class="physics-pill p-offwhite" data-tip="Explore a tiny prototype state in the wireframe." data-effect="prototype">PROTOTYPING<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg></span>
                 <span class="physics-circle p-coral-bright" aria-label="Iteration"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m15 14 5-5-5-5M4 19v-4a5 5 0 0 1 5-5h11"/></svg></span>
                 <span class="physics-circle p-yellow-bright" aria-label="Ideas"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3zM19 16l.9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9L19 16z"/></svg></span>
                 <span class="physics-circle p-light-blue" aria-label="Time"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
@@ -267,6 +268,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js" defer></script>
     <script src="assets/js/hero-physics.js" defer></script>
+    <script src="assets/js/home-interactions.js?v=20261019-home-motion" defer></script>
     <script src="assets/js/footer.js?v=1" defer></script>
     <script src="assets/js/portfolio-pages.js" defer></script>
     <script src="assets/js/scroll-drop.js" defer></script>

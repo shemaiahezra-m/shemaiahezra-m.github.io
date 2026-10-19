@@ -3616,3 +3616,59 @@ body.portfolio-page {
         font-size: 9px
     }
 }
+
+/* Motion on the Work page reveals cards as they enter and keeps previews tactile. */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(project-visual) {
+    animation-duration: 560ms;
+    animation-timing-function: cubic-bezier(.2, .8, .2, 1);
+}
+
+.work-catalog-page.work-motion-ready .project-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 520ms ease, transform 560ms cubic-bezier(.2, .8, .2, 1), background .2s, border-color .2s, box-shadow .2s;
+}
+
+.work-catalog-page.work-motion-ready .project-card.is-in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.work-catalog-page.work-motion-ready .project-card.is-in-view:hover,
+.work-catalog-page.work-motion-ready .project-card.is-in-view:focus-within {
+    transform: translateY(-3px);
+}
+
+.work-catalog-page .project-card:nth-child(3n + 2) { transition-delay: 65ms; }
+.work-catalog-page .project-card:nth-child(3n + 3) { transition-delay: 120ms; }
+
+.work-catalog-page .project-card-summary > .catalog-visual img {
+    transition: transform 440ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.work-catalog-page .project-card:hover .catalog-visual img,
+.work-catalog-page .project-card:focus-within .catalog-visual img {
+    transform: scale(1.035);
+}
+
+.work-catalog-page .catalog-section-nav a {
+    transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s cubic-bezier(.2, 1.4, .35, 1);
+}
+
+.work-catalog-page .catalog-section-nav a:hover,
+.work-catalog-page .catalog-section-nav a:focus-visible,
+.work-catalog-page .catalog-section-nav a.is-active {
+    transform: translateY(-2px);
+}
+
+.reduce-motion .work-catalog-page.work-motion-ready .project-card,
+.reduce-motion .work-catalog-page .project-card-summary > .catalog-visual img,
+.reduce-motion .work-catalog-page .catalog-section-nav a {
+    opacity: 1;
+    transform: none;
+    transition: none !important;
+}

@@ -314,6 +314,13 @@
     setText("#project-gallery-count", "1 / 1");
   }
 
+  try {
+    if (sessionStorage.getItem("portfolio-project-transition") === new URLSearchParams(location.search).get("project")) {
+      preview.style.viewTransitionName = "project-visual";
+      sessionStorage.removeItem("portfolio-project-transition");
+    }
+  } catch (_) {}
+
   const overview = document.querySelector("#project-overview");
   project.overview.forEach((paragraph) => {
     const node = document.createElement("p");

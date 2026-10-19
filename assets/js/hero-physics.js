@@ -3,6 +3,8 @@
   const labels = [...document.querySelectorAll(".physics-pill, .physics-circle")];
   if (!container || !labels.length || !window.Matter) return;
 
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
   const { Bodies, Body, Composite, Engine, Mouse, MouseConstraint } = Matter;
   const engine = Engine.create({ enableSleeping: true });
   engine.gravity.y = 0.3;
