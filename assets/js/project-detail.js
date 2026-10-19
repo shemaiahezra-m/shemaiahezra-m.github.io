@@ -30,7 +30,8 @@
         { text: "Data & Content", detail: "JSON" },
         { text: "Visual Assets", detail: "Unsplash" }
       ],
-      builtTitle: "Built with"
+      builtTitle: "Built with",
+      links: [{ label: "View live website", href: "https://shemaiahezra-m.github.io/Web-Development/02-json/index.html" }]
     },
     "sidequest-bento-layout": {
       title: "Sidequest — Bento Layout",
