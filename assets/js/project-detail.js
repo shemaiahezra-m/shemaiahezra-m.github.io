@@ -5,10 +5,32 @@
       tagline: "Spaces with a point of view",
       meta: [{ text: "In progress", emphasis: true }, { text: "Web development" }],
       kind: "placeholder",
-      overview: ["Playform is a web development project exploring how a clear point of view can shape a digital space. The project is currently in progress."],
-      features: ["A web experience centered on the Playform identity."],
-      highlights: [{ text: "Project status", detail: "In progress" }, { text: "Focus", detail: "Web design and development" }],
-      builtWith: [{ text: "Format", detail: "Web project" }]
+      overview: ["PLAYFORM is a furniture showcase website concept centered on playful, characterful furniture and expressive interior styling. The design combines bold colors, sculptural forms, and editorial-style layouts to present furniture collections through a visually engaging and lifestyle-driven browsing experience."],
+      role: "UI/UX Designer & Frontend Developer — designed and developed the website concept, focusing on visual storytelling, product presentation, layout composition, and an engaging browsing experience.",
+      highlights: [
+        "Developed a distinctive visual direction inspired by playful contemporary furniture and colorful interiors.",
+        "Used editorial-style typography, spacious layouts, and large imagery to create a premium brand experience.",
+        "Designed product cards to showcase furniture categories, descriptions, and pricing.",
+        "Created a cohesive visual identity across the homepage, collection sections, and brand storytelling.",
+        "Balanced expressive visuals with clear navigation and product discovery."
+      ],
+      features: [
+        { text: "Hero Section", detail: "Introduces the brand through bold typography and lifestyle imagery." },
+        { text: "Featured Collection", detail: "Highlights selected furniture pieces and product categories." },
+        { text: "Product Cards", detail: "Presents product imagery, names, categories, and prices." },
+        { text: "Category Navigation", detail: "Organizes furniture into seating, tables, and lighting." },
+        { text: "Brand Storytelling", detail: "Communicates the brand's personality through editorial content and imagery." },
+        { text: "Lifestyle Gallery", detail: "Showcases colorful interiors and furniture styling inspiration." },
+        { text: "Contact Links", detail: "Provides direct access for inquiries and project collaborations." },
+        { text: "Responsive Layout", detail: "Designed to present content across different screen sizes." }
+      ],
+      builtWith: [
+        { text: "Frontend", detail: "HTML5, CSS3, JavaScript" },
+        { text: "CSS Framework", detail: "Bootstrap" },
+        { text: "Data & Content", detail: "JSON" },
+        { text: "Visual Assets", detail: "Unsplash" }
+      ],
+      builtTitle: "Built with"
     },
     "sidequest-bento-layout": {
       title: "Sidequest — Bento Layout",
