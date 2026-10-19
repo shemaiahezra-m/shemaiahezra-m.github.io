@@ -192,10 +192,25 @@
       meta: [{ text: "UI/UX prototype", emphasis: true }, { text: "Figma prototype" }],
       kind: "image",
       preview: "assets/images/projects/instax-mini-evo.png",
-      overview: ["An e-commerce style product website prototype for the Instax Mini Evo. The concept explores how product information and visual storytelling can work together in a focused camera landing page."],
-      features: ["Product-focused presentation for the Instax Mini Evo.", "Prototype interaction available in Figma."],
-      highlights: [{ text: "Project type", detail: "Product website prototype" }, { text: "Prototype", detail: "Figma" }],
-      builtWith: [{ text: "Prototype", detail: "Figma" }],
+      overview: ["Instax Mini Evo is a product website prototype centered on Fujifilm's hybrid instant camera. The concept explores how product information, visual storytelling, and focused page layouts can work together to create an engaging product discovery experience."],
+      role: "UI/UX Designer — designed the product website concept and interactive prototype, focusing on visual hierarchy, product presentation, and a cohesive browsing experience.",
+      highlights: [
+        "Created a focused landing page concept for a specific camera product.",
+        "Explored visual storytelling through product imagery and information layout.",
+        "Designed an interactive prototype to demonstrate the intended user experience.",
+        "Used Figma to communicate the website concept and interface flow."
+      ],
+      features: [
+        { text: "Product Showcase", detail: "Highlights the Instax Mini Evo through a product-focused presentation." },
+        { text: "Product Information", detail: "Organizes key product details into a clear browsing experience." },
+        { text: "Visual Storytelling", detail: "Uses imagery and layout to emphasize the camera's design and appeal." },
+        { text: "Interactive Prototype", detail: "Allows users to explore the proposed interface through Figma." }
+      ],
+      builtWith: [
+        { text: "UI/UX Design", detail: "Figma" },
+        { text: "Prototyping", detail: "Figma Interactive Prototypes" }
+      ],
+      builtTitle: "Built with",
       links: [{ label: "Open Figma prototype", href: "https://www.figma.com/proto/UOpbCrLi2crXRJsvMc9tLG/INSTAX-mini-Evo?node-id=152-1178&t=0jdrAe3ygvNF2zvw-1&scaling=contain&content-scaling=responsive&page-id=148%3A2&starting-point-node-id=152%3A1178" }]
     }
   };
