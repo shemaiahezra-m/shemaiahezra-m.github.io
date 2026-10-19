@@ -5,9 +5,10 @@
       tagline: "Spaces with a point of view",
       meta: [{ text: "In progress", emphasis: true }, { text: "Web development" }],
       kind: "placeholder",
-      overview: ["Playform is a web project in progress. More details will be added as it develops."],
-      features: [],
-      highlights: []
+      overview: ["Playform is a web development project exploring how a clear point of view can shape a digital space. The project is currently in progress."],
+      features: ["A web experience centered on the Playform identity."],
+      highlights: [{ text: "Project status", detail: "In progress" }, { text: "Focus", detail: "Web design and development" }],
+      builtWith: [{ text: "Format", detail: "Web project" }]
     },
     "sidequest-bento-layout": {
       title: "Sidequest — Bento Layout",
@@ -15,9 +16,10 @@
       meta: [{ text: "Web project", emphasis: true }, { text: "Live" }],
       kind: "iframe",
       preview: "https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html",
-      overview: ["A bento-style website published as part of the Web Development sidequest."],
-      features: ["Interactive website presented in a bento-style layout."],
-      highlights: ["Published as part of the Web Development sidequest."],
+      overview: ["Sidequest is a playful Metro South adventure guide, presented in a bento-style interface. The layout gives visitors a quick way to explore destinations by neighborhood."],
+      features: ["Browse destinations by neighborhood, including Makati, Alabang, and BF Homes.", "Search for destinations and save interesting spots."],
+      highlights: [{ text: "Format", detail: "Interactive web design" }, { text: "Published as", detail: "Web Development sidequest" }],
+      builtWith: [{ text: "Format", detail: "Responsive website" }],
       links: [{ label: "Open live website", href: "https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html" }]
     },
     matrack: {
@@ -26,9 +28,10 @@
       meta: [{ text: "Web application", emphasis: true }, { text: "Live" }],
       kind: "image",
       preview: "assets/images/projects/matrack.png",
-      overview: ["MATrack is a web application for tracking materials and managing inventory and logistics."],
-      features: ["Track materials and inventory.", "Support logistics workflows."],
-      highlights: [],
+      overview: ["MATrack is a material tracking system for keeping inventory and logistics activity in one place. Its dashboard surfaces stock, active borrowings, and recent transactions."],
+      features: ["Review material totals and inventory status.", "Track active borrowings and recent activity."],
+      highlights: [{ text: "Project type", detail: "Material tracking system" }, { text: "Focus", detail: "Inventory and logistics workflows" }],
+      builtWith: [{ text: "Format", detail: "Web application" }],
       links: [{ label: "Open live website", href: "https://matrack.freedev.app/" }]
     },
     makikonek: {
@@ -37,9 +40,10 @@
       meta: [{ text: "Web portal", emphasis: true }, { text: "2026" }, { text: "Repository" }],
       kind: "image",
       preview: "assets/images/projects/makikonek.png",
-      overview: ["MakiKonek is a digital portal that helps residents access barangay services."],
-      features: ["Brings barangay services into a single digital portal."],
-      highlights: [{ text: "Role", detail: "Frontend / UI" }],
+      overview: ["MakiKonek is a barangay digital service portal designed to make local services easier to find and access online. The project focuses on presenting community information through a clear, approachable interface."],
+      features: ["Brings barangay information and services together in one portal.", "Provides residents with a central place to explore community updates and service information."],
+      highlights: [{ text: "Year", detail: "2026" }, { text: "Role", detail: "Frontend / UI" }, { text: "Project type", detail: "Barangay digital service portal" }],
+      builtWith: [{ text: "Format", detail: "Web portal" }],
       links: [{ label: "View repository", href: "https://github.com/MNJ-S/MakiKonek" }]
     },
     pickled: {
@@ -48,9 +52,10 @@
       meta: [{ text: "Web application", emphasis: true }, { text: "2026" }, { text: "Live" }],
       kind: "image",
       preview: "assets/images/projects/pickled.png",
-      overview: ["PICKLED supports court and event bookings, with scheduling and management workflows."],
+      overview: ["PICKLED is a court and events booking management system. It brings booking, scheduling, and management workflows into a single web experience."],
       features: ["Manage court and event bookings.", "Coordinate schedules and booking records."],
-      highlights: [{ text: "Role", detail: "Full-stack" }],
+      highlights: [{ text: "Year", detail: "2026" }, { text: "Role", detail: "Full-stack" }, { text: "Project type", detail: "Booking management system" }],
+      builtWith: [{ text: "Format", detail: "Web application" }],
       links: [{ label: "Visit website", href: "https://pickled.freedev.app/" }]
     },
     camerent: {
@@ -59,9 +64,10 @@
       meta: [{ text: "E-commerce website", emphasis: true }, { text: "2025" }, { text: "Live" }],
       kind: "image",
       preview: "assets/images/projects/camerent.png",
-      overview: ["CameRent is a camera rental website with an online catalog and booking flow."],
-      features: ["Browse cameras available for rent.", "Follow an online rental booking flow."],
-      highlights: [{ text: "Role", detail: "Frontend / UI" }],
+      overview: ["CameRent is an e-commerce experience for renting camera equipment. The website presents rental options and guides visitors through the rental flow."],
+      features: ["Browse camera rental offerings.", "Move from product discovery toward a rental booking."],
+      highlights: [{ text: "Year", detail: "2025" }, { text: "Role", detail: "Frontend / UI" }, { text: "Project type", detail: "Camera rental website" }],
+      builtWith: [{ text: "Format", detail: "E-commerce website" }],
       links: [{ label: "Visit website", href: "https://shemaiahezra-m.github.io/CameRent/" }]
     },
     "pup-dash": {
@@ -70,9 +76,9 @@
       meta: [{ text: "Game project", emphasis: true }, { text: "2025" }, { text: "Repository" }],
       kind: "image",
       preview: "assets/images/projects/pup-dash.png",
-      overview: ["PUP Dash is an educational 2D game built in Python, with a focus on gameplay and game interface design."],
-      features: ["Educational 2D gameplay."],
-      highlights: [{ text: "Role", detail: "Game UI / development" }],
+      overview: ["PUP Dash is an educational 2D game built around a simple, approachable gameplay concept. The project combines game interface design with implementation in Python."],
+      features: ["Educational 2D game experience.", "Custom game interface designed around the gameplay."],
+      highlights: [{ text: "Year", detail: "2025" }, { text: "Role", detail: "Game UI / development" }, { text: "Project type", detail: "Educational 2D game" }],
       builtWith: [{ text: "Language", detail: "Python" }],
       links: [{ label: "View repository", href: "https://github.com/shemaiahezra-m/PUP-Dash" }]
     },
@@ -82,9 +88,10 @@
       meta: [{ text: "UI/UX prototype", emphasis: true }, { text: "Figma prototype" }],
       kind: "image",
       preview: "assets/images/projects/instax-mini-evo.png",
-      overview: ["A product website concept for the Instax Mini Evo camera."],
-      features: ["Product-focused website prototype."],
-      highlights: [],
+      overview: ["An e-commerce style product website prototype for the Instax Mini Evo. The concept explores how product information and visual storytelling can work together in a focused camera landing page."],
+      features: ["Product-focused presentation for the Instax Mini Evo.", "Prototype interaction available in Figma."],
+      highlights: [{ text: "Project type", detail: "Product website prototype" }, { text: "Prototype", detail: "Figma" }],
+      builtWith: [{ text: "Prototype", detail: "Figma" }],
       links: [{ label: "Open Figma prototype", href: "https://www.figma.com/proto/UOpbCrLi2crXRJsvMc9tLG/INSTAX-mini-Evo?node-id=152-1178&t=0jdrAe3ygvNF2zvw-1&scaling=contain&content-scaling=responsive&page-id=148%3A2&starting-point-node-id=152%3A1178" }]
     }
   };
@@ -173,5 +180,16 @@
 
   addList("#project-features", project.features || []);
   addList("#project-highlights", project.highlights || []);
-  addList("#project-built", project.builtWith || []);
+  const builtRows = document.querySelector("#project-built");
+  (project.builtWith || []).forEach(({ text, detail }) => {
+    const row = document.createElement("tr");
+    const label = document.createElement("th");
+    const value = document.createElement("td");
+    label.scope = "row";
+    label.textContent = text;
+    value.textContent = detail;
+    row.append(label, value);
+    builtRows.append(row);
+  });
+  if (project.builtWith?.length) builtRows.closest(".project-detail-section").hidden = false;
 })();
