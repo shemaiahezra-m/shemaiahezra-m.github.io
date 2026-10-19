@@ -12,14 +12,34 @@
     },
     "sidequest-bento-layout": {
       title: "Sidequest — Bento Layout",
-      tagline: "An interactive website with a bento-style layout",
+      tagline: "A playful guide to cafés, activities, and local discoveries",
       meta: [{ text: "Web project", emphasis: true }, { text: "Live" }],
       kind: "iframe",
       preview: "https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html",
-      overview: ["Sidequest is a playful Metro South adventure guide, presented in a bento-style interface. The layout gives visitors a quick way to explore destinations by neighborhood."],
-      features: ["Browse destinations by neighborhood, including Makati, Alabang, and BF Homes.", "Search for destinations and save interesting spots."],
-      highlights: [{ text: "Format", detail: "Interactive web design" }, { text: "Published as", detail: "Web Development sidequest" }],
-      builtWith: [{ text: "Format", detail: "Responsive website" }],
+      overview: ["Sidequest! is a colorful café and activity discovery guide designed to help users explore local spots and plan their next side quest. Built with a playful bento-style layout, the website organizes places, activities, and recommendations into visually engaging sections for an intuitive browsing experience."],
+      role: "UI/UX Designer & Frontend Developer — designed and developed the website's visual layout, responsive components, and interactive elements, focusing on clear content organization and an engaging user experience.",
+      highlights: [
+        "Applied a bento grid layout to organize content into visually distinct sections.",
+        "Created a playful visual identity inspired by café hopping and spontaneous adventures.",
+        "Used Bootstrap's grid system to structure the page layout.",
+        "Designed reusable content cards for a consistent browsing experience.",
+        "Focused on readability, visual hierarchy, and responsive presentation."
+      ],
+      features: [
+        { text: "Bento Grid Layout", detail: "Organizes content into a structured, card-based interface." },
+        { text: "Café Discovery", detail: "Showcases café destinations and recommendations." },
+        { text: "Activity Highlights", detail: "Presents places and activities worth exploring." },
+        { text: "Visual Content Cards", detail: "Combines imagery, labels, and descriptions for quick browsing." },
+        { text: "Responsive Layout", detail: "Adapts the content arrangement to different screen sizes." },
+        { text: "Interactive Elements", detail: "Uses JavaScript to support interface interactions." }
+      ],
+      builtWith: [
+        { text: "Frontend", detail: "HTML5, CSS3, JavaScript" },
+        { text: "CSS Framework", detail: "Bootstrap 5.3.2" },
+        { text: "Typography", detail: "Google Fonts" },
+        { text: "Development Tools", detail: "Visual Studio Code, Git, GitHub" }
+      ],
+      builtTitle: "Built with",
       links: [{ label: "Open live website", href: "https://shemaiahezra-m.github.io/Web-Development/01-bento-layout/index.html" }]
     },
     matrack: {
