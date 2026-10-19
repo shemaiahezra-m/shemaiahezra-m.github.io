@@ -86,10 +86,33 @@
       meta: [{ text: "E-commerce website", emphasis: true }, { text: "2025" }, { text: "Live" }],
       kind: "image",
       preview: "assets/images/projects/camerent.png",
-      overview: ["CameRent is an e-commerce experience for renting camera equipment. The website presents rental options and guides visitors through the rental flow."],
-      features: ["Browse camera rental offerings.", "Move from product discovery toward a rental booking."],
-      highlights: [{ text: "Year", detail: "2025" }, { text: "Role", detail: "Frontend / UI" }, { text: "Project type", detail: "Camera rental website" }],
-      builtWith: [{ text: "Format", detail: "E-commerce website" }],
+      overview: ["CameRent is a camera rental web platform designed to make professional photography and videography equipment more accessible to students, photographers, content creators, and media enthusiasts. It provides a digital rental experience where users can browse equipment, compare products, manage bookings, and proceed through checkout using an interactive interface."],
+      role: "UI/UX Designer & Developer — contributed to the website's interface design, front-end development, and system functionality, focusing on usability, responsive layouts, and a streamlined rental experience.",
+      highlights: [
+        "Designed a complete camera rental platform with user and admin interfaces.",
+        "Developed an end-to-end rental workflow, from product discovery to checkout and booking management.",
+        "Implemented product comparison to help users evaluate camera equipment.",
+        "Created an admin dashboard for managing users, rental orders, bookings, and inventory.",
+        "Integrated front-end interactions with Python and SQLite for application functionality and data management."
+      ],
+      features: [
+        { text: "Camera Catalog", detail: "Displays available equipment with detailed product specifications and rental information." },
+        { text: "Product Comparison", detail: "Allows users to compare camera equipment before making a rental decision." },
+        { text: "Cart & Checkout", detail: "Supports a structured rental checkout process." },
+        { text: "Booking Management", detail: "Organizes rental bookings and related records." },
+        { text: "User Authentication", detail: "Includes login, registration, password recovery, and profile management pages." },
+        { text: "Admin Dashboard", detail: "Provides tools for monitoring users, orders, bookings, and inventory." },
+        { text: "Rental Information", detail: "Includes rental agreements, FAQs, terms of use, and resource pages." },
+        { text: "Interactive Interface", detail: "Combines dynamic front-end behavior with a consistent website layout." }
+      ],
+      builtWith: [
+        { text: "Frontend", detail: "HTML5, CSS3, JavaScript" },
+        { text: "Backend", detail: "Python" },
+        { text: "Database", detail: "SQLite" },
+        { text: "Development Tools", detail: "Visual Studio Code, Git, GitHub" },
+        { text: "Deployment", detail: "GitHub Pages" }
+      ],
+      builtTitle: "Built with",
       links: [{ label: "Visit website", href: "https://shemaiahezra-m.github.io/CameRent/" }]
     },
     "pup-dash": {
