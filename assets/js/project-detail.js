@@ -62,10 +62,32 @@
       meta: [{ text: "Web portal", emphasis: true }, { text: "2026" }, { text: "Repository" }],
       kind: "image",
       preview: "assets/images/projects/makikonek.png",
-      overview: ["MakiKonek is a barangay digital service portal designed to make local services easier to find and access online. The project focuses on presenting community information through a clear, approachable interface."],
-      features: ["Brings barangay information and services together in one portal.", "Provides residents with a central place to explore community updates and service information."],
-      highlights: [{ text: "Year", detail: "2026" }, { text: "Role", detail: "Frontend / UI" }, { text: "Project type", detail: "Barangay digital service portal" }],
-      builtWith: [{ text: "Format", detail: "Web portal" }],
+      overview: ["MakiKonek is a digital service portal for Barangay Makiling that centralizes community requests, document processing, announcements, and facility reservations. Developed collaboratively, the platform aims to make barangay services more accessible through an organized, user-friendly web interface for residents, administrators, and the public."],
+      role: "UI/UX Designer & Frontend Developer — led the design and implementation of multiple user-facing interfaces, including the public homepage, authentication pages, resident dashboard, and service pages. Also contributed to responsive design, profile and settings interfaces, and UI testing and debugging.",
+      highlights: [
+        "Designed and implemented multiple public-facing and resident dashboard interfaces.",
+        "Established consistent layouts and responsive styling across the platform.",
+        "Collaborated with a four-member team using GitHub Issues to organize development tasks across project phases.",
+        "Contributed to testing and debugging, including form validation, account settings, and password recovery.",
+        "Worked on a community-centered platform intended to improve access to local government services."
+      ],
+      features: [
+        { text: "Public Information Pages", detail: "Presents barangay information, announcements, emergency hotlines, and official profiles." },
+        { text: "Resident Dashboard", detail: "Provides a centralized interface for accessing resident services and account information." },
+        { text: "Document Requests", detail: "Supports document-related requests and status tracking." },
+        { text: "Facility Reservations", detail: "Provides an interface for submitting and managing reservation requests." },
+        { text: "User Authentication", detail: "Includes login, registration, and password recovery interfaces." },
+        { text: "Profile & Account Settings", detail: "Allows residents to access and manage account details." },
+        { text: "Notifications", detail: "Includes a notification panel for resident updates." },
+        { text: "Admin Dashboard", detail: "Supports administrative workflows for managing users, requests, appointments, and related records." }
+      ],
+      builtWith: [
+        { text: "Frontend", detail: "HTML, CSS, JavaScript" },
+        { text: "Backend", detail: "PHP" },
+        { text: "Database", detail: "Database integration (specific database engine not confirmed)" },
+        { text: "Collaboration & Version Control", detail: "Git, GitHub" }
+      ],
+      builtTitle: "Built with",
       links: [{ label: "View repository", href: "https://github.com/MNJ-S/MakiKonek" }]
     },
     pickled: {
