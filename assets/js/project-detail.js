@@ -236,6 +236,26 @@
       ],
       builtTitle: "Built with",
       links: [{ label: "Open Figma prototype", href: "https://www.figma.com/proto/UOpbCrLi2crXRJsvMc9tLG/INSTAX-mini-Evo?node-id=152-1178&t=0jdrAe3ygvNF2zvw-1&scaling=contain&content-scaling=responsive&page-id=148%3A2&starting-point-node-id=152%3A1178" }]
+    },
+    "portfolio-website": {
+      title: "Portfolio Website",
+      tagline: "A personal portfolio design for desktop and mobile",
+      meta: [{ text: "UI/UX design", emphasis: true }, { text: "Responsive website" }],
+      kind: "image",
+      preview: "assets/images/projects/portfolio-1.png",
+      gallery: [
+        { src: "assets/images/projects/portfolio-1.png", alt: "Full-page desktop portfolio website design", label: "Desktop" },
+        { src: "assets/images/projects/portfolio-2.png", alt: "Full-page mobile portfolio website design", label: "Mobile" }
+      ],
+      overview: ["A personal portfolio website design that presents selected work, project details, and creative materials in a clear editorial layout. The desktop and mobile designs explore how the same portfolio content can adapt across screen sizes."],
+      role: "UI/UX Designer — designed the portfolio interface for desktop and mobile, with a focus on clear content hierarchy and presenting selected work.",
+      features: [
+        { text: "Selected Work", detail: "Presents projects in a scannable portfolio layout." },
+        { text: "Responsive Design", detail: "Includes desktop and mobile layouts for browsing the portfolio across screen sizes." },
+        { text: "Portfolio Sections", detail: "Organizes profile, selected work, and creative materials into distinct sections." }
+      ],
+      builtWith: [{ text: "Design", detail: "UI/UX design" }, { text: "Layouts", detail: "Desktop and mobile" }],
+      builtTitle: "Project details"
     }
   };
 
@@ -288,6 +308,8 @@
   });
 
   const preview = document.querySelector("#project-preview");
+  const galleryCount = document.querySelector("#project-gallery-count");
+  const galleryButtons = [...document.querySelectorAll(".project-gallery-controls button")];
   if (project.kind === "placeholder") {
     preview.classList.add("is-placeholder");
     const title = document.createElement("strong");
@@ -305,6 +327,32 @@
     frame.referrerPolicy = "strict-origin-when-cross-origin";
     preview.append(frame);
     setText("#project-gallery-count", "Live preview");
+  } else if (project.gallery?.length) {
+    preview.classList.add("is-scrollable");
+    let activeImage = 0;
+    const showGalleryImage = () => {
+      const imageData = project.gallery[activeImage];
+      const image = document.createElement("img");
+      image.src = imageData.src;
+      image.alt = imageData.alt;
+      image.fetchPriority = "high";
+      preview.replaceChildren(image);
+      preview.scrollTop = 0;
+      galleryCount.textContent = `${activeImage + 1} / ${project.gallery.length} · ${imageData.label}`;
+      galleryButtons[0].disabled = activeImage === 0;
+      galleryButtons[1].disabled = activeImage === project.gallery.length - 1;
+    };
+    galleryButtons[0].addEventListener("click", () => {
+      if (activeImage === 0) return;
+      activeImage -= 1;
+      showGalleryImage();
+    });
+    galleryButtons[1].addEventListener("click", () => {
+      if (activeImage >= project.gallery.length - 1) return;
+      activeImage += 1;
+      showGalleryImage();
+    });
+    showGalleryImage();
   } else {
     const image = document.createElement("img");
     image.src = project.preview;
@@ -312,6 +360,7 @@
     image.fetchPriority = "high";
     preview.append(image);
     setText("#project-gallery-count", "1 / 1");
+    galleryButtons.forEach((button) => { button.disabled = true; });
   }
 
   try {

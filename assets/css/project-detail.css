@@ -112,6 +112,19 @@
   object-fit: cover;
 }
 
+.project-detail-preview.is-scrollable {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.project-detail-preview.is-scrollable img {
+  width: 100%;
+  height: auto;
+  object-fit: initial;
+}
+
 .project-detail-preview.is-placeholder {
   align-content: center;
   justify-items: start;
