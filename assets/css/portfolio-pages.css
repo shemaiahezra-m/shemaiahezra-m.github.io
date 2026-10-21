@@ -3650,6 +3650,10 @@ body.portfolio-page {
     transition: transform 440ms cubic-bezier(.2, .8, .2, 1);
 }
 
+.work-catalog-page .project-card-summary > .catalog-visual img.portfolio-card-preview {
+    object-position: top center;
+}
+
 .work-catalog-page .project-card:hover .catalog-visual img,
 .work-catalog-page .project-card:focus-within .catalog-visual img {
     transform: scale(1.035);
